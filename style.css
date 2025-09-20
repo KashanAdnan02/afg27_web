@@ -11,8 +11,9 @@
   align-items: center;
   justify-content: space-between;
   /* margin: 25px 100px; */
-  width: 80%;
+  width: 100%;
   margin: 25px auto;
+  padding: 10px 25px;
 }
 .right {
   display: flex;
@@ -31,9 +32,10 @@
   height: 49px;
 }
 .nav-ins {
-  width: 80%;
+  width: 100%;
   margin: 25px auto;
   display: flex;
+  padding: 10px 25px;
   align-items: center;
   justify-content: space-between;
   /* gap: 20px; */
@@ -90,7 +92,7 @@ font-weight: 600;
 .sign-up-btn {
   padding: 10px 20px;
   background-color: transparent;
-  border-radius: 3px;
+  border-radius: 5px;
   text-decoration: none;
   color: black;
   font-weight: 600;
@@ -98,7 +100,7 @@ font-weight: 600;
 .sign-in-btn {
   padding: 10px 20px;
   background-color: #d0011c;
-  border-radius: 3px;
+  border-radius: 5px;
   text-decoration: none;
   border: 0;
   color: white;

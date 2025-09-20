@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel with Indicators under Donate Button</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .carousel-indicators-custom {
+        display: flex;
+        gap: 6px;
+        margin-top: 6px;
+        justify-content: flex-start;
+      }
+
+      .carousel-indicators-custom button {
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        opacity: 0.5;
+        border: none;
+        transition: all 0.3s ease;
+      }
+
+      .carousel-indicators-custom .active {
+        opacity: 1;
+        background-color: #ff004f;
+      }
+
+      .carousel-caption {
+        bottom: 20%;
+        text-align: left;
+        max-width: 650px;
+      }
+      .carousel-caption h2 {
+        line-height: 50px;
+      }
+
+      .btn-custom-red {
+        background-color: #e63946;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-right: 10px;
+        position: relative;
+      }
+
+      /* Wrapper for Donate button and indicators */
+      .donate-wrapper {
+        display: inline-block;
+        vertical-align: top;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <!-- Slides -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images/mainpage.png" class="d-block w-100" alt="..." />
+          <div class="carousel-caption">
+            <h5>Back to School, Back to Hope</h5>
+            <h2>
+              Your support helps children <br />
+              return to classrooms with <br />
+              books, teachers, and a <br />
+              brighter future.
+            </h2>
+
+            <!-- Buttons in one line -->
+            <div class="d-flex align-items-start gap-3">
+              <!-- Donate button + indicators below it -->
+              <div class="donate-wrapper">
+                <button class="btn-custom-red">❤️ Donate Now</button>
+                <div class="carousel-indicators-custom">
+                  <button
+                    type="button"
+                    data-bs-target="#heroCarousel"
+                    data-bs-slide-to="0"
+                    class="active"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#heroCarousel"
+                    data-bs-slide-to="1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#heroCarousel"
+                    data-bs-slide-to="2"
+                  ></button>
+                </div>
+              </div>
+
+              <!-- View Programs button -->
+              <button class="btn btn-outline-light">View Programs</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="./images/mainpage.png" class="d-block w-100" alt="..." />
+          <div class="carousel-caption">
+            <h5>Give Hope</h5>
+            <h2>
+              Together we can create <br />
+              opportunities for a <br />
+              brighter tomorrow.
+            </h2>
+            <div class="d-flex align-items-start gap-3">
+              <div class="donate-wrapper">
+                <button class="btn-custom-red">❤️ Donate Now</button>
+                <div class="carousel-indicators-custom">
+                  <button
+                    type="button"
+                    data-bs-target="#heroCarousel"
+                    data-bs-slide-to="0"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#heroCarousel"
+                    data-bs-slide-to="1"
+                    class="active"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#heroCarousel"
+                    data-bs-slide-to="2"
+                  ></button>
+                </div>
+              </div>
+              <button class="btn btn-outline-light">View Programs</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="./images/mainpage.png" class="d-block w-100" alt="..." />
+          <div class="carousel-caption">
+            <h5>Education First</h5>
+            <h2>
+              Empower children with <br />
+              knowledge, skills, <br />
+              and hope.
+            </h2>
+            <div class="d-flex align-items-start gap-3">
+              <div class="donate-wrapper">
+                <button class="btn-custom-red">❤️ Donate Now</button>
+                <div class="carousel-indicators-custom">
+                  <button
+                    type="button"
+                    data-bs-target="#heroCarousel"
+                    data-bs-slide-to="0"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#heroCarousel"
+                    data-bs-slide-to="1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#heroCarousel"
+                    data-bs-slide-to="2"
+                    class="active"
+                  ></button>
+                </div>
+              </div>
+              <button class="btn btn-outline-light">View Programs</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

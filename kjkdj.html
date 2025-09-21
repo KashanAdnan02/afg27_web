@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>News Cards with Gradient</title>
+  
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap Icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+
+  <style>
+    body {
+      background-color: transparent;
+    }
+
+    .card-container-wrapper {
+      position: relative;
+      overflow: hidden;
+      padding: 3rem 0;
+    }
+
+    .card-container {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 0 10vw;
+      scroll-padding: 10vw;
+    }
+
+    .card-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .card {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      width: 300px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .card-img-top {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    .card-text {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .small-text {
+      font-size: 0.85rem;
+      color: gray;
+    }
+
+    /* Gradient overlays */
+    .card-container-wrapper::before,
+    .card-container-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 10vw;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .card-container-wrapper::before {
+      left: 0;
+      background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    .card-container-wrapper::after {
+      right: 0;
+      background: linear-gradient(to left, white 0%, rgba(255, 255, 255, 0) 100%);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container-fluid card-container-wrapper">
+    <div class="card-container">
+      
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="./images/Frame 60.png" class="card-img-top" alt="News Image">
+        <div class="card-body">
+          <h5 class="card-title">Tents Provided to 50 Repatriated Families in Baghlan</h5>
+          <p class="card-text">
+            ARCS has distributed 50 tents to 50 repatriated families in Dand-e-Ghori, Markazi Baghlan districts...
+          </p>
+          <div class="d-flex justify-content-between small-text mt-3">
+            <span><i class="bi bi-calendar"></i> 5th May 2025</span>
+            <a href="#" class="text-decoration-none small-text">Share via</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Duplicate the card content as needed -->
+
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="./images/Frame 60.png" class="card-img-top" alt="News Image">
+        <div class="card-body">
+          <h5 class="card-title">Health Support for Returnees in Kandahar</h5>
+          <p class="card-text">
+            A mobile clinic was deployed in Kandahar to provide health services to returnee families in the Spin Boldak...
+          </p>
+          <div class="d-flex justify-content-between small-text mt-3">
+            <span><i class="bi bi-calendar"></i> 8th May 2025</span>
+            <a href="#" class="text-decoration-none small-text">Share via</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="./images/Frame 60.png" class="card-img-top" alt="News Image">
+        <div class="card-body">
+          <h5 class="card-title">Food Aid Distributed to Needy Families</h5>
+          <p class="card-text">
+            Emergency food parcels were delivered to 100+ vulnerable families in remote areas of northern provinces...
+          </p>
+          <div class="d-flex justify-content-between small-text mt-3">
+            <span><i class="bi bi-calendar"></i> 10th May 2025</span>
+            <a href="#" class="text-decoration-none small-text">Share via</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <img src="./images/Frame 60.png" class="card-img-top" alt="News Image">
+        <div class="card-body">
+          <h5 class="card-title">Winter Kits Delivered Before Snowfall</h5>
+          <p class="card-text">
+            Winter relief kits including blankets and heaters were distributed in high-risk regions prior to heavy snow...
+          </p>
+          <div class="d-flex justify-content-between small-text mt-3">
+            <span><i class="bi bi-calendar"></i> 12th May 2025</span>
+            <a href="#" class="text-decoration-none small-text">Share via</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card">
+        <img src="./images/Frame 60.png" class="card-img-top" alt="News Image">
+        <div class="card-body">
+          <h5 class="card-title">Emergency Medical Kits Sent to Nuristan</h5>
+          <p class="card-text">
+            In response to the recent landslide, emergency medical kits and tents were flown to affected villages...
+          </p>
+          <div class="d-flex justify-content-between small-text mt-3">
+            <span><i class="bi bi-calendar"></i> 15th May 2025</span>
+            <a href="#" class="text-decoration-none small-text">Share via</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="card">
+        <img src="./images/Frame 60.png" class="card-img-top" alt="News Image">
+        <div class="card-body">
+          <h5 class="card-title">Tents Provided to 50 Repatriated Families in Baghlan</h5>
+          <p class="card-text">
+            ARCS has distributed 50 tents to 50 repatriated families in Dand-e-Ghori, Markazi Baghlan districts...
+          </p>
+          <div class="d-flex justify-content-between small-text mt-3">
+            <span><i class="bi bi-calendar"></i> 5th May 2025</span>
+            <a href="#" class="text-decoration-none small-text">Share via</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

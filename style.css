@@ -75,7 +75,7 @@ body {
 }
 
 .carousel-caption {
-  bottom: 10%;
+  bottom: 35%;
   text-align: left;
 }
 .carousel-caption h2 {
@@ -573,7 +573,6 @@ footer a:hover {
 
 @media (max-width: 767px) {
   .stories-section .d-flex {
-    flex-direction: column;
     gap: 1rem !important;
   }
 
@@ -753,6 +752,9 @@ footer a:hover {
   .ma-he-2 {
     height: 416px !important;
   }
+  .hero-ress {
+    height: 272px !important;
+  }
 }
 @media (max-width: 460px) {
   .ma-he {
@@ -809,4 +811,5 @@ footer a:hover {
 
 .bg-hero {
   background-image: url("./images/mainpage.png");
+  background-size: cover;
 }

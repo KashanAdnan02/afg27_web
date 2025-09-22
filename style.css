@@ -730,7 +730,15 @@ footer a:hover {
 .video-item:hover .video-info h6 {
   color: #d0011c;
 }
+.container {
+  max-width: 95% !important;
+}
 
+@media (max-width: 1500px) {
+  .container {
+    max-width: 95% !important;
+  }
+}
 /* Responsive adjustments for video section */
 @media (max-width: 991px) {
   .video-container iframe {
@@ -765,8 +773,4 @@ footer a:hover {
 
 :root {
   --bs-gutter-x: 0.2rem !important;
-}
-
-.container {
-  max-width: 80% !important;
 }

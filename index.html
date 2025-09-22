@@ -1063,149 +1063,152 @@
     <!-- Video and Related Content Section -->
     <section class="video-section py-5">
       <div class="container">
-        <div class="row">
+        <div class="row g-4">
           <!-- Main Video -->
-          <div class="col-lg-8 mb-4">
-            <div class="video-container">
-              <iframe
-                width="100%"
-                height="560"
-                src="https://www.youtube.com/embed/jUcneb6rx3M?si=TZHhUHqhT3SwWw7o"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
+          <div class="col-lg-8 col-md-12 mb-4">
+            <div class="video-container position-relative">
+              <div class="ratio ratio-16x9">
+                <iframe
+                  src="https://www.youtube.com/embed/jUcneb6rx3M?si=TZHhUHqhT3SwWw7o"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
             </div>
           </div>
 
           <!-- Related Videos Sidebar -->
-          <div class="col-lg-2" style="width: 31rem !important">
+          <div class="col-lg-4 col-md-12">
             <div class="related-videos">
-              <!-- Video Item 1 -->
-              <div class="video-item d-flex mb-3 rounded">
-                <div class="video-thumbnail me-3">
-                  <img
-                    src="./images/video-section.png"
-                    alt="ARCS Staff"
-                    class="rounded"
-                    style="width: 83px; height: 83px; object-fit: cover"
-                  />
-                </div>
-                <div class="video-info flex-grow-1">
-                  <h6 class="mb-1 fw-bold">
-                    The staff and volunteers of #ARCS tirelessly serve
-                    repatriated ...
-                  </h6>
-                  <div class="d-flex align-items-center text-muted small">
-                    <span class="me-2">Jul 13 2025</span>
-                    <span>Share via</span>
-                  </div>
-                </div>
-              </div>
-              <div class="video-item d-flex mb-3 rounded">
-                <div class="video-thumbnail me-3">
-                  <img
-                    src="./images/video-section.png"
-                    alt="ARCS Staff"
-                    class="rounded"
-                    style="width: 83px; height: 83px; object-fit: cover"
-                  />
-                </div>
-                <div class="video-info flex-grow-1">
-                  <h6 class="mb-1 fw-bold">
-                    The staff and volunteers of #ARCS tirelessly serve
-                    repatriated ...
-                  </h6>
-                  <div class="d-flex align-items-center text-muted small">
-                    <span class="me-2">Jul 13 2025</span>
-                    <span>Share via</span>
-                  </div>
-                </div>
-              </div>
+              <h5 class="mb-3 d-none d-lg-block">Related Videos</h5>
 
-              <!-- Video Item 2 -->
-              <div class="video-item d-flex mb-3 rounded">
-                <div class="video-thumbnail me-3">
-                  <img
-                    src="./images/video-section.png"
-                    alt="ARCS Services"
-                    class="rounded"
-                    style="width: 83px; height: 83px; object-fit: cover"
-                  />
-                </div>
-                <div class="video-info flex-grow-1">
-                  <h6 class="mb-1 fw-bold">
-                    ARCS Services to the Returning Refugees
-                  </h6>
-                  <div class="d-flex align-items-center text-muted small">
-                    <span class="me-2">Jul 13 2025</span>
-                    <span>Share via</span>
+              <!-- Video Items Container - Horizontal scroll on mobile -->
+              <div class="video-items-container">
+                <div class="d-lg-block d-flex flex-nowrap overflow-auto pb-2">
+                  <!-- Video Item 1 -->
+                  <div
+                    class="video-item d-flex mb-3 rounded flex-shrink-0 me-3 me-lg-0"
+                    style="min-width: 280px"
+                  >
+                    <div class="video-thumbnail me-3 flex-shrink-0">
+                      <img
+                        src="./images/video-section.png"
+                        alt="ARCS Staff"
+                        class="rounded"
+                        style="width: 60px; height: 60px; object-fit: cover"
+                      />
+                    </div>
+                    <div class="video-info flex-grow-1">
+                      <h6 class="mb-1 fw-bold small">
+                        The staff and volunteers of #ARCS tirelessly serve
+                        repatriated ...
+                      </h6>
+                      <div class="d-flex align-items-center text-muted small">
+                        <span class="me-2">Jul 13 2025</span>
+                        <span>Share via</span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
 
-              <!-- Video Item 3 -->
-              <div class="video-item d-flex mb-3 rounded">
-                <div class="video-thumbnail me-3">
-                  <img
-                    src="./images/video-section.png"
-                    alt="Humanitarian Services"
-                    class="rounded"
-                    style="width: 83px; height: 83px; object-fit: cover"
-                  />
-                </div>
-                <div class="video-info flex-grow-1">
-                  <h6 class="mb-1 fw-bold">
-                    Through the provision of humanitarian services, #ARCS ...
-                  </h6>
-                  <div class="d-flex align-items-center text-muted small">
-                    <span class="me-2">Jul 13 2025</span>
-                    <span>Share via</span>
+                  <!-- Video Item 2 -->
+                  <div
+                    class="video-item d-flex mb-3 rounded flex-shrink-0 me-3 me-lg-0"
+                    style="min-width: 280px"
+                  >
+                    <div class="video-thumbnail me-3 flex-shrink-0">
+                      <img
+                        src="./images/video-section.png"
+                        alt="ARCS Services"
+                        class="rounded"
+                        style="width: 60px; height: 60px; object-fit: cover"
+                      />
+                    </div>
+                    <div class="video-info flex-grow-1">
+                      <h6 class="mb-1 fw-bold small">
+                        ARCS Services to the Returning Refugees
+                      </h6>
+                      <div class="d-flex align-items-center text-muted small">
+                        <span class="me-2">Jul 13 2025</span>
+                        <span>Share via</span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
 
-              <!-- Video Item 4 -->
-              <div class="video-item d-flex mb-3 rounded">
-                <div class="video-thumbnail me-3">
-                  <img
-                    src="./images/video-section.png"
-                    alt="Medical Teams"
-                    class="rounded"
-                    style="width: 83px; height: 83px; object-fit: cover"
-                  />
-                </div>
-                <div class="video-info flex-grow-1">
-                  <h6 class="mb-1 fw-bold">
-                    The medical teams of #ARCS are committed and dedicated to
-                    ...
-                  </h6>
-                  <div class="d-flex align-items-center text-muted small">
-                    <span class="me-2">Jul 13 2025</span>
-                    <span>Share via</span>
+                  <!-- Video Item 3 -->
+                  <div
+                    class="video-item d-flex mb-3 rounded flex-shrink-0 me-3 me-lg-0"
+                    style="min-width: 280px"
+                  >
+                    <div class="video-thumbnail me-3 flex-shrink-0">
+                      <img
+                        src="./images/video-section.png"
+                        alt="Humanitarian Services"
+                        class="rounded"
+                        style="width: 60px; height: 60px; object-fit: cover"
+                      />
+                    </div>
+                    <div class="video-info flex-grow-1">
+                      <h6 class="mb-1 fw-bold small">
+                        Through the provision of humanitarian services, #ARCS
+                        ...
+                      </h6>
+                      <div class="d-flex align-items-center text-muted small">
+                        <span class="me-2">Jul 13 2025</span>
+                        <span>Share via</span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
 
-              <!-- Video Item 5 -->
-              <div class="video-item d-flex mb-3 rounded">
-                <div class="video-thumbnail me-3">
-                  <img
-                    src="./images/video-section.png"
-                    alt="ARCS Program"
-                    class="rounded"
-                    style="width: 83px; height: 83px; object-fit: cover"
-                  />
-                </div>
-                <div class="video-info flex-grow-1">
-                  <h6 class="mb-1 fw-bold">
-                    #ARCS Program for the Training of Community Health ...
-                  </h6>
-                  <div class="d-flex align-items-center text-muted small">
-                    <span class="me-2">Jul 13 2025</span>
-                    <span>Share via</span>
+                  <!-- Video Item 4 -->
+                  <div
+                    class="video-item d-flex mb-3 rounded flex-shrink-0 me-3 me-lg-0"
+                    style="min-width: 280px"
+                  >
+                    <div class="video-thumbnail me-3 flex-shrink-0">
+                      <img
+                        src="./images/video-section.png"
+                        alt="Medical Teams"
+                        class="rounded"
+                        style="width: 60px; height: 60px; object-fit: cover"
+                      />
+                    </div>
+                    <div class="video-info flex-grow-1">
+                      <h6 class="mb-1 fw-bold small">
+                        The medical teams of #ARCS are committed and dedicated
+                        to ...
+                      </h6>
+                      <div class="d-flex align-items-center text-muted small">
+                        <span class="me-2">Jul 13 2025</span>
+                        <span>Share via</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Video Item 5 -->
+                  <div
+                    class="video-item d-flex mb-3 rounded flex-shrink-0 me-3 me-lg-0"
+                    style="min-width: 280px"
+                  >
+                    <div class="video-thumbnail me-3 flex-shrink-0">
+                      <img
+                        src="./images/video-section.png"
+                        alt="ARCS Program"
+                        class="rounded"
+                        style="width: 60px; height: 60px; object-fit: cover"
+                      />
+                    </div>
+                    <div class="video-info flex-grow-1">
+                      <h6 class="mb-1 fw-bold small">
+                        #ARCS Program for the Training of Community Health ...
+                      </h6>
+                      <div class="d-flex align-items-center text-muted small">
+                        <span class="me-2">Jul 13 2025</span>
+                        <span>Share via</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

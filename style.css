@@ -731,9 +731,32 @@ footer a:hover {
 .video-item:hover .video-info h6 {
   color: #d0011c;
 }
+.container {
+  max-width: 70% !important;
+}
+
 @media (max-width: 1500px) {
   .container {
     max-width: 95% !important;
+  }
+}
+@media (max-width: 760px) {
+  .ma-he {
+    height: 340px !important;
+  }
+  .ma-he-2 {
+    height: 416px !important;
+  }
+}
+@media (max-width: 460px) {
+  .ma-he {
+    height: 320px !important;
+  }
+  .ma-he-2 {
+    height: 480px !important;
+  }
+  .btn-donate {
+    font-size: 10px;
   }
 }
 /* Responsive adjustments for video section */
@@ -755,19 +778,22 @@ footer a:hover {
     height: 250px;
   }
 
-  .video-item {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .video-thumbnail {
-    margin-bottom: 10px;
-    margin-right: 0 !important;
-  }
-
   .video-thumbnail img {
     width: 100% !important;
-    height: 150px !important;
+    height: 45px !important;
+  }
+  .video-res {
+    flex-direction: column !important;
+  }
+  .video-info h6 {
+    font-size: 14px;
+  }
+
+  .related-videos {
+    height: 370px;
+  }
+  .main {
+    padding: 50px 0 !important;
   }
 }
 

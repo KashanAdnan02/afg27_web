@@ -76,7 +76,6 @@ body {
 
 .carousel-caption {
   bottom: 10%;
-  left: 8% !important;
   text-align: left;
 }
 .carousel-caption h2 {
@@ -731,10 +730,17 @@ footer a:hover {
 .video-item:hover .video-info h6 {
   color: #d0011c;
 }
-.container {
-  max-width: 70% !important;
-}
 
+@media (max-width: 1920px) {
+  .container {
+    max-width: 75% !important;
+  }
+}
+@media (max-width: 1700px) {
+  .container {
+    max-width: 85% !important;
+  }
+}
 @media (max-width: 1500px) {
   .container {
     max-width: 95% !important;

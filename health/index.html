@@ -8,346 +8,17 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
-    <style>
-      * {
-        margin: 0;
-      }
-      body {
-        overflow-x: hidden;
-      }
-
-      footer {
-        background-color: #000;
-        color: #fff;
-        position: relative;
-        padding: 290px 0 60px;
-        margin-top: 140px;
-      }
-      footer h5 {
-        font-size: 16px;
-        font-weight: 600;
-        margin-bottom: 15px;
-        color: #a0a0a0;
-      }
-      footer p,
-      footer a {
-        color: #fff;
-        font-size: 16px;
-        text-decoration: none;
-        margin-bottom: 0 !important;
-      }
-      footer a:hover {
-        color: #fff;
-      }
-      .subscribe-input {
-        border-radius: 0;
-        border: 1px solid #ccc;
-      }
-      .social-icons a {
-        display: inline-block;
-        width: 35px;
-        height: 35px;
-        background: #111;
-        border: 1px solid #ccc;
-        margin-right: 8px;
-        text-align: center;
-        line-height: 35px;
-        border-radius: 5px;
-        color: #fff;
-      }
-
-      .fs-48 {
-        font-size: 48px;
-      }
-      .black {
-        width: 110%;
-        position: absolute;
-        background-color: black;
-        height: 9.9375rem;
-        display: flex;
-        top: -86px;
-        left: -20px;
-        align-items: center;
-        justify-content: flex-start;
-        padding-left: 50px;
-        transform: rotate(2deg);
-        transform-origin: center;
-      }
-
-      .black p {
-        font-size: 4vw;
-        color: white;
-      }
-      .red {
-        width: 110%;
-        background-color: #d0011c;
-        height: 9.9375rem;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        padding-left: 50px;
-        position: absolute;
-        top: 0;
-        z-index: 1;
-        transform: rotate(-2deg);
-        transform-origin: center;
-      }
-
-      .red p {
-        font-size: 4vw;
-        color: black;
-      }
-
-      .footer-bottom-line {
-        width: 55%;
-        height: 2px;
-        background-color: #333;
-      }
-
-      .footer-bottom {
-        font-size: 13px;
-        color: #aaa;
-      }
-      .top-bar {
-        background: #000;
-        color: #fff;
-        font-size: 12px;
-      }
-      .top-bar a {
-        color: rgb(165, 159, 159);
-        text-decoration: none;
-      }
-      .important {
-        font-weight: 600;
-        font-family: "Instrument Sans", sans-serif;
-      }
-      .language {
-        border: 1px solid rgb(165, 159, 159);
-        border-radius: 3px;
-        padding: 7px;
-        cursor: pointer;
-        color: rgb(216, 210, 210);
-      }
-      .sign-up-btn {
-        padding: 8px 16px;
-        width: 100px;
-        border-radius: 5px;
-        font-size: 16px;
-        font-weight: 600;
-        background: transparent;
-        border: 1px solid #000;
-        transition: 0.3s;
-      }
-      .sign-up-btn:hover {
-        background-color: #000;
-        color: #fff;
-      }
-      .sign-in-btn {
-        width: 100px;
-        padding: 8px 16px;
-        font-size: 16px;
-        border-radius: 5px;
-        font-weight: 600;
-        background: #d0011c;
-        border: none;
-        border: 1px solid #d0011c;
-        color: #fff;
-        transition: 0.3s;
-      }
-      .sign-in-btn:hover {
-        background-color: #b0031a;
-      }
-      .carousel-indicators-custom {
-        display: flex;
-        gap: 6px;
-        margin-top: 60px;
-        justify-content: flex-start;
-      }
-
-      .carousel-indicators-custom button {
-        width: 30px;
-        height: 3px;
-        background-color: #ffffff7a;
-        opacity: 0.5;
-        border: none;
-        transition: all 0.3s ease;
-      }
-
-      .carousel-indicators-custom .active {
-        opacity: 1;
-        background-color: #ffffff;
-      }
-
-      .carousel-caption {
-        bottom: 10%;
-        text-align: left;
-      }
-      .carousel-caption h2 {
-        line-height: 50px;
-      }
-
-      .btn-custom-red {
-        background-color: #d0011c;
-        color: white;
-        border: none;
-        padding: 12px 25px;
-        border-radius: 6px;
-        position: relative;
-      }
-      .btn-custom-white {
-        padding: 12px 25px;
-        border-radius: 5px;
-        position: relative;
-      }
-
-      .navbar {
-        height: 7.75rem !important;
-      }
-
-      .header-section {
-        width: 100%;
-        background-color: #D0011C;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        color: white;
-        padding: 30px 50px;
-        height: 300px;
-      }
-      .header-section p {
-        color: #ec99a4;
-      }
-      .dropdown {
-        background-color: black;
-        width: 90%;
-        padding-bottom: 7px;
-        border-radius: 15px;
-        position: absolute;
-        top: -165px;
-        transform: translateX(5%);
-      }
-
-      .p1 {
-        color: white;
-        margin-left: 700px;
-        margin-top: 10px;
-      }
-      .fi1stlis {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 300px;
-      }
-      .se2ndlis {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 300px;
-      }
-      .list {
-        background-color: white;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 40px;
-      }
-      .left4 {
-        display: flex;
-      }
-      .ss {
-        position: relative;
-      }
-      .health-progrects {
-        width: 100%;
-        background-color: white;
-        border-top-left-radius: 40px;
-        border-top-right-radius: 40px;
-        top: 65%;
-      }
-      .protect {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 90%;
-        margin: 100px auto 0 auto;
-      }
-      * {
-        font-family: "Instrument Sans";
-      }
-      .card-1text {
-        font-size: 17px;
-        font-weight: bold;
-        margin-left: 10px;
-      }
-      .card-1 {
-        padding: 10px;
-        margin-top: 40px;
-        background-color: #fff;
-        border-radius: 10px;
-        width: 32.4%;
-        box-shadow: 0 2px 0 #e0e0e0;
-      }
-      .progress {
-        background-color: #f1f1f1;
-        height: 4px;
-        border-radius: 50px;
-        margin: 15px 10px 30px;
-      }
-      .progress-bar {
-        background-color: #40db9b;
-        border-radius: 50px;
-      }
-      .main-img {
-        margin-top: 5px;
-        margin-left: 5px;
-        margin-bottom: 20px;
-        width: 97%;
-      }
-      .Amount,
-      .Custom-amount {
-        border: 1px solid black;
-        padding: 4px 18px;
-        border-radius: 5px;
-        font-size: 14px;
-      }
-      .Custom-amount img {
-        margin-right: 6px;
-      }
-      .donate-button {
-        background-color: transparent;
-        color: #d0011c;
-        border: 2px solid #b00017;
-        padding: 3px 35px;
-        width: 80%;
-        height: 43px;
-        font-size: 18px;
-        border-radius: 7px;
-      }
-      @media (max-width: 1500px) {
-        .container {
-          max-width: 95% !important;
-        }
-      }
-      .cart2 {
-        height: 43px;
-        width: 55px;
-        background-color: transparent;
-        border-radius: 7px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .cart2 img {
-        max-height: 22px;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Top Black Bar -->
@@ -559,1032 +230,1328 @@
             </button>
           </div>
         </div>
-        <div
-          class="again-services d-flex flex-wrap gap-4"
-          style="width: 90%; padding: 0% auto; margin: 0% auto"
-        >
-          <div class="card-1">
-            <img
-              class="main-img rounded"
-              src="../images/Frame 1261153463 (1).png"
-              alt="Mobile Clinic Outreach"
-            />
-            <span class="card-1text d-block"
-              >Mobile Clinic Outreach – Kandahar</span
-            >
-            <div class="mt-1">
-              <span class="span"
-                ><img src="../icons/add-square.svg" alt="" /> Health
-                Services</span
-              >
-              <span class="span"
-                ><img src="../icons/location3.svg" alt="" /> Badakhshan</span
-              >
-            </div>
-
-            <!-- Bootstrap progress -->
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 65%"
-              ></div>
-            </div>
-
-            <!-- Loan Info -->
-            <div class="d-flex justify-content-between px-2">
-              <div>
-                <span>$19,200 </span>
-                <span class="text-muted">raised</span>
-              </div>
-              <div>
-                <span>$10,800 </span>
-                <span class="text-muted">remaining</span>
-              </div>
-            </div>
-
-            <!-- Amount Options -->
-            <div class="d-flex justify-content-between mt-3 px-2">
-              <span class="Amount">$20</span>
-              <span class="Amount">$100</span>
-              <span class="Amount">$250</span>
-              <span class="Custom-amount d-flex align-items-center">
-                <img src="../icons/Vector.png" alt="" /> Custom Amount
-              </span>
-            </div>
-
-            <!-- Donate + Cart -->
-            <div
-              class="d-flex justify-content-between align-items-center mt-3 px-2"
-            >
-              <button
-                class="donate-button d-flex align-items-center justify-content-center"
-              >
+        <div class="container-fluid">
+          <div class="row g-4 health-cards-container justify-content-center">
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="health-card">
                 <img
-                  src="../icons/filled-partner.svg"
-                  height="20px"
-                  alt=""
-                />&ensp; Donate
-              </button>
-              <button class="cart2">
-                <img src="../images/cart2.svg" alt="" />
-              </button>
-            </div>
-          </div>
-          <div class="card-1">
-            <img
-              class="main-img rounded"
-              src="../images/Frame 1261153463 (1).png"
-              alt="Mobile Clinic Outreach"
-            />
-            <span class="card-1text d-block"
-              >Mobile Clinic Outreach – Kandahar</span
-            >
-            <div class="mt-1">
-              <span class="span"
-                ><img src="../icons/add-square.svg" alt="" /> Health
-                Services</span
-              >
-              <span class="span"
-                ><img src="../icons/location3.svg" alt="" /> Badakhshan</span
-              >
-            </div>
+                  class="main-img rounded"
+                  src="../images/Frame 1261153463 (1).png"
+                  alt="Mobile Clinic Outreach"
+                />
+                <span class="health-card-title d-block"
+                  >Mobile Clinic Outreach – Kandahar</span
+                >
+                <div class="mt-1">
+                  <span class="span"
+                    ><img src="../icons/add-square.svg" alt="" /> Health
+                    Services</span
+                  >
+                  <span class="span"
+                    ><img src="../icons/location3.svg" alt="" />
+                    Badakhshan</span
+                  >
+                </div>
 
-            <!-- Bootstrap progress -->
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 65%"
-              ></div>
-            </div>
+                <!-- Bootstrap progress -->
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 65%"
+                  ></div>
+                </div>
 
-            <!-- Loan Info -->
-            <div class="d-flex justify-content-between px-2">
-              <div>
-                <span>$19,200 </span>
-                <span class="text-muted">raised</span>
+                <!-- Loan Info -->
+                <div class="d-flex justify-content-between px-2">
+                  <div>
+                    <span>$19,200 </span>
+                    <span class="text-muted">raised</span>
+                  </div>
+                  <div>
+                    <span>$10,800 </span>
+                    <span class="text-muted">remaining</span>
+                  </div>
+                </div>
+
+                <!-- Amount Options -->
+                <div class="d-flex justify-content-between mt-3 px-2">
+                  <span class="donation-amount">$20</span>
+                  <span class="donation-amount">$100</span>
+                  <span class="donation-amount">$250</span>
+                  <span
+                    class="custom-donation-amount d-flex align-items-center"
+                  >
+                    <img src="../icons/Vector.png" alt="" /> Custom Amount
+                  </span>
+                </div>
+
+                <!-- Donate + Cart -->
+                <div
+                  class="d-flex justify-content-between align-items-center mt-3 px-2"
+                >
+                  <button
+                    class="primary-donate-btn d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="../icons/filled-partner.svg"
+                      height="20px"
+                      alt=""
+                    />&ensp; Donate
+                  </button>
+                  <button class="shopping-cart-btn">
+                    <img src="../images/cart2.svg" alt="" />
+                  </button>
+                </div>
               </div>
-              <div>
-                <span>$10,800 </span>
-                <span class="text-muted">remaining</span>
-              </div>
             </div>
-
-            <!-- Amount Options -->
-            <div class="d-flex justify-content-between mt-3 px-2">
-              <span class="Amount">$20</span>
-              <span class="Amount">$100</span>
-              <span class="Amount">$250</span>
-              <span class="Custom-amount d-flex align-items-center">
-                <img src="../icons/Vector.png" alt="" /> Custom Amount
-              </span>
-            </div>
-
-            <!-- Donate + Cart -->
-            <div
-              class="d-flex justify-content-between align-items-center mt-3 px-2"
-            >
-              <button
-                class="donate-button d-flex align-items-center justify-content-center"
-              >
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="health-card">
                 <img
-                  src="../icons/filled-partner.svg"
-                  height="20px"
-                  alt=""
-                />&ensp; Donate
-              </button>
-              <button class="cart2">
-                <img src="../images/cart2.svg" alt="" />
-              </button>
-            </div>
-          </div>
-          <div class="card-1">
-            <img
-              class="main-img rounded"
-              src="../images/Frame 1261153463 (1).png"
-              alt="Mobile Clinic Outreach"
-            />
-            <span class="card-1text d-block"
-              >Mobile Clinic Outreach – Kandahar</span
-            >
-            <div class="mt-1">
-              <span class="span"
-                ><img src="../icons/add-square.svg" alt="" /> Health
-                Services</span
-              >
-              <span class="span"
-                ><img src="../icons/location3.svg" alt="" /> Badakhshan</span
-              >
-            </div>
+                  class="main-img rounded"
+                  src="../images/Frame 1261153463 (1).png"
+                  alt="Mobile Clinic Outreach"
+                />
+                <span class="health-card-title d-block"
+                  >Mobile Clinic Outreach – Kandahar</span
+                >
+                <div class="mt-1">
+                  <span class="span"
+                    ><img src="../icons/add-square.svg" alt="" /> Health
+                    Services</span
+                  >
+                  <span class="span"
+                    ><img src="../icons/location3.svg" alt="" />
+                    Badakhshan</span
+                  >
+                </div>
 
-            <!-- Bootstrap progress -->
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 65%"
-              ></div>
-            </div>
+                <!-- Bootstrap progress -->
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 65%"
+                  ></div>
+                </div>
 
-            <!-- Loan Info -->
-            <div class="d-flex justify-content-between px-2">
-              <div>
-                <span>$19,200 </span>
-                <span class="text-muted">raised</span>
+                <!-- Loan Info -->
+                <div class="d-flex justify-content-between px-2">
+                  <div>
+                    <span>$19,200 </span>
+                    <span class="text-muted">raised</span>
+                  </div>
+                  <div>
+                    <span>$10,800 </span>
+                    <span class="text-muted">remaining</span>
+                  </div>
+                </div>
+
+                <!-- Amount Options -->
+                <div class="d-flex justify-content-between mt-3 px-2">
+                  <span class="donation-amount">$20</span>
+                  <span class="donation-amount">$100</span>
+                  <span class="donation-amount">$250</span>
+                  <span
+                    class="custom-donation-amount d-flex align-items-center"
+                  >
+                    <img src="../icons/Vector.png" alt="" /> Custom Amount
+                  </span>
+                </div>
+
+                <!-- Donate + Cart -->
+                <div
+                  class="d-flex justify-content-between align-items-center mt-3 px-2"
+                >
+                  <button
+                    class="primary-donate-btn d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="../icons/filled-partner.svg"
+                      height="20px"
+                      alt=""
+                    />&ensp; Donate
+                  </button>
+                  <button class="shopping-cart-btn">
+                    <img src="../images/cart2.svg" alt="" />
+                  </button>
+                </div>
               </div>
-              <div>
-                <span>$10,800 </span>
-                <span class="text-muted">remaining</span>
-              </div>
             </div>
-
-            <!-- Amount Options -->
-            <div class="d-flex justify-content-between mt-3 px-2">
-              <span class="Amount">$20</span>
-              <span class="Amount">$100</span>
-              <span class="Amount">$250</span>
-              <span class="Custom-amount d-flex align-items-center">
-                <img src="../icons/Vector.png" alt="" /> Custom Amount
-              </span>
-            </div>
-
-            <!-- Donate + Cart -->
-            <div
-              class="d-flex justify-content-between align-items-center mt-3 px-2"
-            >
-              <button
-                class="donate-button d-flex align-items-center justify-content-center"
-              >
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="health-card">
                 <img
-                  src="../icons/filled-partner.svg"
-                  height="20px"
-                  alt=""
-                />&ensp; Donate
-              </button>
-              <button class="cart2">
-                <img src="../images/cart2.svg" alt="" />
-              </button>
-            </div>
-          </div>
-          <div class="card-1">
-            <img
-              class="main-img rounded"
-              src="../images/Frame 1261153463 (1).png"
-              alt="Mobile Clinic Outreach"
-            />
-            <span class="card-1text d-block"
-              >Mobile Clinic Outreach – Kandahar</span
-            >
-            <div class="mt-1">
-              <span class="span"
-                ><img src="../icons/add-square.svg" alt="" /> Health
-                Services</span
-              >
-              <span class="span"
-                ><img src="../icons/location3.svg" alt="" /> Badakhshan</span
-              >
-            </div>
+                  class="main-img rounded"
+                  src="../images/Frame 1261153463 (1).png"
+                  alt="Mobile Clinic Outreach"
+                />
+                <span class="health-card-title d-block"
+                  >Mobile Clinic Outreach – Kandahar</span
+                >
+                <div class="mt-1">
+                  <span class="span"
+                    ><img src="../icons/add-square.svg" alt="" /> Health
+                    Services</span
+                  >
+                  <span class="span"
+                    ><img src="../icons/location3.svg" alt="" />
+                    Badakhshan</span
+                  >
+                </div>
 
-            <!-- Bootstrap progress -->
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 65%"
-              ></div>
-            </div>
+                <!-- Bootstrap progress -->
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 65%"
+                  ></div>
+                </div>
 
-            <!-- Loan Info -->
-            <div class="d-flex justify-content-between px-2">
-              <div>
-                <span>$19,200 </span>
-                <span class="text-muted">raised</span>
+                <!-- Loan Info -->
+                <div class="d-flex justify-content-between px-2">
+                  <div>
+                    <span>$19,200 </span>
+                    <span class="text-muted">raised</span>
+                  </div>
+                  <div>
+                    <span>$10,800 </span>
+                    <span class="text-muted">remaining</span>
+                  </div>
+                </div>
+
+                <!-- Amount Options -->
+                <div class="d-flex justify-content-between mt-3 px-2">
+                  <span class="donation-amount">$20</span>
+                  <span class="donation-amount">$100</span>
+                  <span class="donation-amount">$250</span>
+                  <span
+                    class="custom-donation-amount d-flex align-items-center"
+                  >
+                    <img src="../icons/Vector.png" alt="" /> Custom Amount
+                  </span>
+                </div>
+
+                <!-- Donate + Cart -->
+                <div
+                  class="d-flex justify-content-between align-items-center mt-3 px-2"
+                >
+                  <button
+                    class="primary-donate-btn d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="../icons/filled-partner.svg"
+                      height="20px"
+                      alt=""
+                    />&ensp; Donate
+                  </button>
+                  <button class="shopping-cart-btn">
+                    <img src="../images/cart2.svg" alt="" />
+                  </button>
+                </div>
               </div>
-              <div>
-                <span>$10,800 </span>
-                <span class="text-muted">remaining</span>
-              </div>
             </div>
-
-            <!-- Amount Options -->
-            <div class="d-flex justify-content-between mt-3 px-2">
-              <span class="Amount">$20</span>
-              <span class="Amount">$100</span>
-              <span class="Amount">$250</span>
-              <span class="Custom-amount d-flex align-items-center">
-                <img src="../icons/Vector.png" alt="" /> Custom Amount
-              </span>
-            </div>
-
-            <!-- Donate + Cart -->
-            <div
-              class="d-flex justify-content-between align-items-center mt-3 px-2"
-            >
-              <button
-                class="donate-button d-flex align-items-center justify-content-center"
-              >
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="health-card">
                 <img
-                  src="../icons/filled-partner.svg"
-                  height="20px"
-                  alt=""
-                />&ensp; Donate
-              </button>
-              <button class="cart2">
-                <img src="../images/cart2.svg" alt="" />
-              </button>
-            </div>
-          </div>
-          <div class="card-1">
-            <img
-              class="main-img rounded"
-              src="../images/Frame 1261153463 (1).png"
-              alt="Mobile Clinic Outreach"
-            />
-            <span class="card-1text d-block"
-              >Mobile Clinic Outreach – Kandahar</span
-            >
-            <div class="mt-1">
-              <span class="span"
-                ><img src="../icons/add-square.svg" alt="" /> Health
-                Services</span
-              >
-              <span class="span"
-                ><img src="../icons/location3.svg" alt="" /> Badakhshan</span
-              >
-            </div>
+                  class="main-img rounded"
+                  src="../images/Frame 1261153463 (1).png"
+                  alt="Mobile Clinic Outreach"
+                />
+                <span class="health-card-title d-block"
+                  >Mobile Clinic Outreach – Kandahar</span
+                >
+                <div class="mt-1">
+                  <span class="span"
+                    ><img src="../icons/add-square.svg" alt="" /> Health
+                    Services</span
+                  >
+                  <span class="span"
+                    ><img src="../icons/location3.svg" alt="" />
+                    Badakhshan</span
+                  >
+                </div>
 
-            <!-- Bootstrap progress -->
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 65%"
-              ></div>
-            </div>
+                <!-- Bootstrap progress -->
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 65%"
+                  ></div>
+                </div>
 
-            <!-- Loan Info -->
-            <div class="d-flex justify-content-between px-2">
-              <div>
-                <span>$19,200 </span>
-                <span class="text-muted">raised</span>
+                <!-- Loan Info -->
+                <div class="d-flex justify-content-between px-2">
+                  <div>
+                    <span>$19,200 </span>
+                    <span class="text-muted">raised</span>
+                  </div>
+                  <div>
+                    <span>$10,800 </span>
+                    <span class="text-muted">remaining</span>
+                  </div>
+                </div>
+
+                <!-- Amount Options -->
+                <div class="d-flex justify-content-between mt-3 px-2">
+                  <span class="donation-amount">$20</span>
+                  <span class="donation-amount">$100</span>
+                  <span class="donation-amount">$250</span>
+                  <span
+                    class="custom-donation-amount d-flex align-items-center"
+                  >
+                    <img src="../icons/Vector.png" alt="" /> Custom Amount
+                  </span>
+                </div>
+
+                <!-- Donate + Cart -->
+                <div
+                  class="d-flex justify-content-between align-items-center mt-3 px-2"
+                >
+                  <button
+                    class="primary-donate-btn d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="../icons/filled-partner.svg"
+                      height="20px"
+                      alt=""
+                    />&ensp; Donate
+                  </button>
+                  <button class="shopping-cart-btn">
+                    <img src="../images/cart2.svg" alt="" />
+                  </button>
+                </div>
               </div>
-              <div>
-                <span>$10,800 </span>
-                <span class="text-muted">remaining</span>
-              </div>
             </div>
-
-            <!-- Amount Options -->
-            <div class="d-flex justify-content-between mt-3 px-2">
-              <span class="Amount">$20</span>
-              <span class="Amount">$100</span>
-              <span class="Amount">$250</span>
-              <span class="Custom-amount d-flex align-items-center">
-                <img src="../icons/Vector.png" alt="" /> Custom Amount
-              </span>
-            </div>
-
-            <!-- Donate + Cart -->
-            <div
-              class="d-flex justify-content-between align-items-center mt-3 px-2"
-            >
-              <button
-                class="donate-button d-flex align-items-center justify-content-center"
-              >
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="health-card">
                 <img
-                  src="../icons/filled-partner.svg"
-                  height="20px"
-                  alt=""
-                />&ensp; Donate
-              </button>
-              <button class="cart2">
-                <img src="../images/cart2.svg" alt="" />
-              </button>
-            </div>
-          </div>
-          <div class="card-1">
-            <img
-              class="main-img rounded"
-              src="../images/Frame 1261153463 (1).png"
-              alt="Mobile Clinic Outreach"
-            />
-            <span class="card-1text d-block"
-              >Mobile Clinic Outreach – Kandahar</span
-            >
-            <div class="mt-1">
-              <span class="span"
-                ><img src="../icons/add-square.svg" alt="" /> Health
-                Services</span
-              >
-              <span class="span"
-                ><img src="../icons/location3.svg" alt="" /> Badakhshan</span
-              >
-            </div>
+                  class="main-img rounded"
+                  src="../images/Frame 1261153463 (1).png"
+                  alt="Mobile Clinic Outreach"
+                />
+                <span class="health-card-title d-block"
+                  >Mobile Clinic Outreach – Kandahar</span
+                >
+                <div class="mt-1">
+                  <span class="span"
+                    ><img src="../icons/add-square.svg" alt="" /> Health
+                    Services</span
+                  >
+                  <span class="span"
+                    ><img src="../icons/location3.svg" alt="" />
+                    Badakhshan</span
+                  >
+                </div>
 
-            <!-- Bootstrap progress -->
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 65%"
-              ></div>
-            </div>
+                <!-- Bootstrap progress -->
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 65%"
+                  ></div>
+                </div>
 
-            <!-- Loan Info -->
-            <div class="d-flex justify-content-between px-2">
-              <div>
-                <span>$19,200 </span>
-                <span class="text-muted">raised</span>
+                <!-- Loan Info -->
+                <div class="d-flex justify-content-between px-2">
+                  <div>
+                    <span>$19,200 </span>
+                    <span class="text-muted">raised</span>
+                  </div>
+                  <div>
+                    <span>$10,800 </span>
+                    <span class="text-muted">remaining</span>
+                  </div>
+                </div>
+
+                <!-- Amount Options -->
+                <div class="d-flex justify-content-between mt-3 px-2">
+                  <span class="donation-amount">$20</span>
+                  <span class="donation-amount">$100</span>
+                  <span class="donation-amount">$250</span>
+                  <span
+                    class="custom-donation-amount d-flex align-items-center"
+                  >
+                    <img src="../icons/Vector.png" alt="" /> Custom Amount
+                  </span>
+                </div>
+
+                <!-- Donate + Cart -->
+                <div
+                  class="d-flex justify-content-between align-items-center mt-3 px-2"
+                >
+                  <button
+                    class="primary-donate-btn d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="../icons/filled-partner.svg"
+                      height="20px"
+                      alt=""
+                    />&ensp; Donate
+                  </button>
+                  <button class="shopping-cart-btn">
+                    <img src="../images/cart2.svg" alt="" />
+                  </button>
+                </div>
               </div>
-              <div>
-                <span>$10,800 </span>
-                <span class="text-muted">remaining</span>
-              </div>
             </div>
-
-            <!-- Amount Options -->
-            <div class="d-flex justify-content-between mt-3 px-2">
-              <span class="Amount">$20</span>
-              <span class="Amount">$100</span>
-              <span class="Amount">$250</span>
-              <span class="Custom-amount d-flex align-items-center">
-                <img src="../icons/Vector.png" alt="" /> Custom Amount
-              </span>
-            </div>
-
-            <!-- Donate + Cart -->
-            <div
-              class="d-flex justify-content-between align-items-center mt-3 px-2"
-            >
-              <button
-                class="donate-button d-flex align-items-center justify-content-center"
-              >
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="health-card">
                 <img
-                  src="../icons/filled-partner.svg"
-                  height="20px"
-                  alt=""
-                />&ensp; Donate
-              </button>
-              <button class="cart2">
-                <img src="../images/cart2.svg" alt="" />
-              </button>
-            </div>
-          </div>
-          <div class="card-1">
-            <img
-              class="main-img rounded"
-              src="../images/Frame 1261153463 (1).png"
-              alt="Mobile Clinic Outreach"
-            />
-            <span class="card-1text d-block"
-              >Mobile Clinic Outreach – Kandahar</span
-            >
-            <div class="mt-1">
-              <span class="span"
-                ><img src="../icons/add-square.svg" alt="" /> Health
-                Services</span
-              >
-              <span class="span"
-                ><img src="../icons/location3.svg" alt="" /> Badakhshan</span
-              >
-            </div>
+                  class="main-img rounded"
+                  src="../images/Frame 1261153463 (1).png"
+                  alt="Mobile Clinic Outreach"
+                />
+                <span class="health-card-title d-block"
+                  >Mobile Clinic Outreach – Kandahar</span
+                >
+                <div class="mt-1">
+                  <span class="span"
+                    ><img src="../icons/add-square.svg" alt="" /> Health
+                    Services</span
+                  >
+                  <span class="span"
+                    ><img src="../icons/location3.svg" alt="" />
+                    Badakhshan</span
+                  >
+                </div>
 
-            <!-- Bootstrap progress -->
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 65%"
-              ></div>
-            </div>
+                <!-- Bootstrap progress -->
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 65%"
+                  ></div>
+                </div>
 
-            <!-- Loan Info -->
-            <div class="d-flex justify-content-between px-2">
-              <div>
-                <span>$19,200 </span>
-                <span class="text-muted">raised</span>
+                <!-- Loan Info -->
+                <div class="d-flex justify-content-between px-2">
+                  <div>
+                    <span>$19,200 </span>
+                    <span class="text-muted">raised</span>
+                  </div>
+                  <div>
+                    <span>$10,800 </span>
+                    <span class="text-muted">remaining</span>
+                  </div>
+                </div>
+
+                <!-- Amount Options -->
+                <div class="d-flex justify-content-between mt-3 px-2">
+                  <span class="donation-amount">$20</span>
+                  <span class="donation-amount">$100</span>
+                  <span class="donation-amount">$250</span>
+                  <span
+                    class="custom-donation-amount d-flex align-items-center"
+                  >
+                    <img src="../icons/Vector.png" alt="" /> Custom Amount
+                  </span>
+                </div>
+
+                <!-- Donate + Cart -->
+                <div
+                  class="d-flex justify-content-between align-items-center mt-3 px-2"
+                >
+                  <button
+                    class="primary-donate-btn d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="../icons/filled-partner.svg"
+                      height="20px"
+                      alt=""
+                    />&ensp; Donate
+                  </button>
+                  <button class="shopping-cart-btn">
+                    <img src="../images/cart2.svg" alt="" />
+                  </button>
+                </div>
               </div>
-              <div>
-                <span>$10,800 </span>
-                <span class="text-muted">remaining</span>
-              </div>
             </div>
-
-            <!-- Amount Options -->
-            <div class="d-flex justify-content-between mt-3 px-2">
-              <span class="Amount">$20</span>
-              <span class="Amount">$100</span>
-              <span class="Amount">$250</span>
-              <span class="Custom-amount d-flex align-items-center">
-                <img src="../icons/Vector.png" alt="" /> Custom Amount
-              </span>
-            </div>
-
-            <!-- Donate + Cart -->
-            <div
-              class="d-flex justify-content-between align-items-center mt-3 px-2"
-            >
-              <button
-                class="donate-button d-flex align-items-center justify-content-center"
-              >
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="health-card">
                 <img
-                  src="../icons/filled-partner.svg"
-                  height="20px"
-                  alt=""
-                />&ensp; Donate
-              </button>
-              <button class="cart2">
-                <img src="../images/cart2.svg" alt="" />
-              </button>
-            </div>
-          </div>
-          <div class="card-1">
-            <img
-              class="main-img rounded"
-              src="../images/Frame 1261153463 (1).png"
-              alt="Mobile Clinic Outreach"
-            />
-            <span class="card-1text d-block"
-              >Mobile Clinic Outreach – Kandahar</span
-            >
-            <div class="mt-1">
-              <span class="span"
-                ><img src="../icons/add-square.svg" alt="" /> Health
-                Services</span
-              >
-              <span class="span"
-                ><img src="../icons/location3.svg" alt="" /> Badakhshan</span
-              >
-            </div>
+                  class="main-img rounded"
+                  src="../images/Frame 1261153463 (1).png"
+                  alt="Mobile Clinic Outreach"
+                />
+                <span class="health-card-title d-block"
+                  >Mobile Clinic Outreach – Kandahar</span
+                >
+                <div class="mt-1">
+                  <span class="span"
+                    ><img src="../icons/add-square.svg" alt="" /> Health
+                    Services</span
+                  >
+                  <span class="span"
+                    ><img src="../icons/location3.svg" alt="" />
+                    Badakhshan</span
+                  >
+                </div>
 
-            <!-- Bootstrap progress -->
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 65%"
-              ></div>
-            </div>
+                <!-- Bootstrap progress -->
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 65%"
+                  ></div>
+                </div>
 
-            <!-- Loan Info -->
-            <div class="d-flex justify-content-between px-2">
-              <div>
-                <span>$19,200 </span>
-                <span class="text-muted">raised</span>
+                <!-- Loan Info -->
+                <div class="d-flex justify-content-between px-2">
+                  <div>
+                    <span>$19,200 </span>
+                    <span class="text-muted">raised</span>
+                  </div>
+                  <div>
+                    <span>$10,800 </span>
+                    <span class="text-muted">remaining</span>
+                  </div>
+                </div>
+
+                <!-- Amount Options -->
+                <div class="d-flex justify-content-between mt-3 px-2">
+                  <span class="donation-amount">$20</span>
+                  <span class="donation-amount">$100</span>
+                  <span class="donation-amount">$250</span>
+                  <span
+                    class="custom-donation-amount d-flex align-items-center"
+                  >
+                    <img src="../icons/Vector.png" alt="" /> Custom Amount
+                  </span>
+                </div>
+
+                <!-- Donate + Cart -->
+                <div
+                  class="d-flex justify-content-between align-items-center mt-3 px-2"
+                >
+                  <button
+                    class="primary-donate-btn d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="../icons/filled-partner.svg"
+                      height="20px"
+                      alt=""
+                    />&ensp; Donate
+                  </button>
+                  <button class="shopping-cart-btn">
+                    <img src="../images/cart2.svg" alt="" />
+                  </button>
+                </div>
               </div>
-              <div>
-                <span>$10,800 </span>
-                <span class="text-muted">remaining</span>
-              </div>
             </div>
-
-            <!-- Amount Options -->
-            <div class="d-flex justify-content-between mt-3 px-2">
-              <span class="Amount">$20</span>
-              <span class="Amount">$100</span>
-              <span class="Amount">$250</span>
-              <span class="Custom-amount d-flex align-items-center">
-                <img src="../icons/Vector.png" alt="" /> Custom Amount
-              </span>
-            </div>
-
-            <!-- Donate + Cart -->
-            <div
-              class="d-flex justify-content-between align-items-center mt-3 px-2"
-            >
-              <button
-                class="donate-button d-flex align-items-center justify-content-center"
-              >
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="health-card">
                 <img
-                  src="../icons/filled-partner.svg"
-                  height="20px"
-                  alt=""
-                />&ensp; Donate
-              </button>
-              <button class="cart2">
-                <img src="../images/cart2.svg" alt="" />
-              </button>
-            </div>
-          </div>
-          <div class="card-1">
-            <img
-              class="main-img rounded"
-              src="../images/Frame 1261153463 (1).png"
-              alt="Mobile Clinic Outreach"
-            />
-            <span class="card-1text d-block"
-              >Mobile Clinic Outreach – Kandahar</span
-            >
-            <div class="mt-1">
-              <span class="span"
-                ><img src="../icons/add-square.svg" alt="" /> Health
-                Services</span
-              >
-              <span class="span"
-                ><img src="../icons/location3.svg" alt="" /> Badakhshan</span
-              >
-            </div>
+                  class="main-img rounded"
+                  src="../images/Frame 1261153463 (1).png"
+                  alt="Mobile Clinic Outreach"
+                />
+                <span class="health-card-title d-block"
+                  >Mobile Clinic Outreach – Kandahar</span
+                >
+                <div class="mt-1">
+                  <span class="span"
+                    ><img src="../icons/add-square.svg" alt="" /> Health
+                    Services</span
+                  >
+                  <span class="span"
+                    ><img src="../icons/location3.svg" alt="" />
+                    Badakhshan</span
+                  >
+                </div>
 
-            <!-- Bootstrap progress -->
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 65%"
-              ></div>
-            </div>
+                <!-- Bootstrap progress -->
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 65%"
+                  ></div>
+                </div>
 
-            <!-- Loan Info -->
-            <div class="d-flex justify-content-between px-2">
-              <div>
-                <span>$19,200 </span>
-                <span class="text-muted">raised</span>
+                <!-- Loan Info -->
+                <div class="d-flex justify-content-between px-2">
+                  <div>
+                    <span>$19,200 </span>
+                    <span class="text-muted">raised</span>
+                  </div>
+                  <div>
+                    <span>$10,800 </span>
+                    <span class="text-muted">remaining</span>
+                  </div>
+                </div>
+
+                <!-- Amount Options -->
+                <div class="d-flex justify-content-between mt-3 px-2">
+                  <span class="donation-amount">$20</span>
+                  <span class="donation-amount">$100</span>
+                  <span class="donation-amount">$250</span>
+                  <span
+                    class="custom-donation-amount d-flex align-items-center"
+                  >
+                    <img src="../icons/Vector.png" alt="" /> Custom Amount
+                  </span>
+                </div>
+
+                <!-- Donate + Cart -->
+                <div
+                  class="d-flex justify-content-between align-items-center mt-3 px-2"
+                >
+                  <button
+                    class="primary-donate-btn d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="../icons/filled-partner.svg"
+                      height="20px"
+                      alt=""
+                    />&ensp; Donate
+                  </button>
+                  <button class="shopping-cart-btn">
+                    <img src="../images/cart2.svg" alt="" />
+                  </button>
+                </div>
               </div>
-              <div>
-                <span>$10,800 </span>
-                <span class="text-muted">remaining</span>
-              </div>
             </div>
-
-            <!-- Amount Options -->
-            <div class="d-flex justify-content-between mt-3 px-2">
-              <span class="Amount">$20</span>
-              <span class="Amount">$100</span>
-              <span class="Amount">$250</span>
-              <span class="Custom-amount d-flex align-items-center">
-                <img src="../icons/Vector.png" alt="" /> Custom Amount
-              </span>
-            </div>
-
-            <!-- Donate + Cart -->
-            <div
-              class="d-flex justify-content-between align-items-center mt-3 px-2"
-            >
-              <button
-                class="donate-button d-flex align-items-center justify-content-center"
-              >
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="health-card">
                 <img
-                  src="../icons/filled-partner.svg"
-                  height="20px"
-                  alt=""
-                />&ensp; Donate
-              </button>
-              <button class="cart2">
-                <img src="../images/cart2.svg" alt="" />
-              </button>
-            </div>
-          </div>
-          <div class="card-1">
-            <img
-              class="main-img rounded"
-              src="../images/Frame 1261153463 (1).png"
-              alt="Mobile Clinic Outreach"
-            />
-            <span class="card-1text d-block"
-              >Mobile Clinic Outreach – Kandahar</span
-            >
-            <div class="mt-1">
-              <span class="span"
-                ><img src="../icons/add-square.svg" alt="" /> Health
-                Services</span
-              >
-              <span class="span"
-                ><img src="../icons/location3.svg" alt="" /> Badakhshan</span
-              >
-            </div>
+                  class="main-img rounded"
+                  src="../images/Frame 1261153463 (1).png"
+                  alt="Mobile Clinic Outreach"
+                />
+                <span class="health-card-title d-block"
+                  >Mobile Clinic Outreach – Kandahar</span
+                >
+                <div class="mt-1">
+                  <span class="span"
+                    ><img src="../icons/add-square.svg" alt="" /> Health
+                    Services</span
+                  >
+                  <span class="span"
+                    ><img src="../icons/location3.svg" alt="" />
+                    Badakhshan</span
+                  >
+                </div>
 
-            <!-- Bootstrap progress -->
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 65%"
-              ></div>
-            </div>
+                <!-- Bootstrap progress -->
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 65%"
+                  ></div>
+                </div>
 
-            <!-- Loan Info -->
-            <div class="d-flex justify-content-between px-2">
-              <div>
-                <span>$19,200 </span>
-                <span class="text-muted">raised</span>
+                <!-- Loan Info -->
+                <div class="d-flex justify-content-between px-2">
+                  <div>
+                    <span>$19,200 </span>
+                    <span class="text-muted">raised</span>
+                  </div>
+                  <div>
+                    <span>$10,800 </span>
+                    <span class="text-muted">remaining</span>
+                  </div>
+                </div>
+
+                <!-- Amount Options -->
+                <div class="d-flex justify-content-between mt-3 px-2">
+                  <span class="donation-amount">$20</span>
+                  <span class="donation-amount">$100</span>
+                  <span class="donation-amount">$250</span>
+                  <span
+                    class="custom-donation-amount d-flex align-items-center"
+                  >
+                    <img src="../icons/Vector.png" alt="" /> Custom Amount
+                  </span>
+                </div>
+
+                <!-- Donate + Cart -->
+                <div
+                  class="d-flex justify-content-between align-items-center mt-3 px-2"
+                >
+                  <button
+                    class="primary-donate-btn d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="../icons/filled-partner.svg"
+                      height="20px"
+                      alt=""
+                    />&ensp; Donate
+                  </button>
+                  <button class="shopping-cart-btn">
+                    <img src="../images/cart2.svg" alt="" />
+                  </button>
+                </div>
               </div>
-              <div>
-                <span>$10,800 </span>
-                <span class="text-muted">remaining</span>
-              </div>
             </div>
-
-            <!-- Amount Options -->
-            <div class="d-flex justify-content-between mt-3 px-2">
-              <span class="Amount">$20</span>
-              <span class="Amount">$100</span>
-              <span class="Amount">$250</span>
-              <span class="Custom-amount d-flex align-items-center">
-                <img src="../icons/Vector.png" alt="" /> Custom Amount
-              </span>
-            </div>
-
-            <!-- Donate + Cart -->
-            <div
-              class="d-flex justify-content-between align-items-center mt-3 px-2"
-            >
-              <button
-                class="donate-button d-flex align-items-center justify-content-center"
-              >
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="health-card">
                 <img
-                  src="../icons/filled-partner.svg"
-                  height="20px"
-                  alt=""
-                />&ensp; Donate
-              </button>
-              <button class="cart2">
-                <img src="../images/cart2.svg" alt="" />
-              </button>
-            </div>
-          </div>
-          <div class="card-1">
-            <img
-              class="main-img rounded"
-              src="../images/Frame 1261153463 (1).png"
-              alt="Mobile Clinic Outreach"
-            />
-            <span class="card-1text d-block"
-              >Mobile Clinic Outreach – Kandahar</span
-            >
-            <div class="mt-1">
-              <span class="span"
-                ><img src="../icons/add-square.svg" alt="" /> Health
-                Services</span
-              >
-              <span class="span"
-                ><img src="../icons/location3.svg" alt="" /> Badakhshan</span
-              >
-            </div>
+                  class="main-img rounded"
+                  src="../images/Frame 1261153463 (1).png"
+                  alt="Mobile Clinic Outreach"
+                />
+                <span class="health-card-title d-block"
+                  >Mobile Clinic Outreach – Kandahar</span
+                >
+                <div class="mt-1">
+                  <span class="span"
+                    ><img src="../icons/add-square.svg" alt="" /> Health
+                    Services</span
+                  >
+                  <span class="span"
+                    ><img src="../icons/location3.svg" alt="" />
+                    Badakhshan</span
+                  >
+                </div>
 
-            <!-- Bootstrap progress -->
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 65%"
-              ></div>
-            </div>
+                <!-- Bootstrap progress -->
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 65%"
+                  ></div>
+                </div>
 
-            <!-- Loan Info -->
-            <div class="d-flex justify-content-between px-2">
-              <div>
-                <span>$19,200 </span>
-                <span class="text-muted">raised</span>
+                <!-- Loan Info -->
+                <div class="d-flex justify-content-between px-2">
+                  <div>
+                    <span>$19,200 </span>
+                    <span class="text-muted">raised</span>
+                  </div>
+                  <div>
+                    <span>$10,800 </span>
+                    <span class="text-muted">remaining</span>
+                  </div>
+                </div>
+
+                <!-- Amount Options -->
+                <div class="d-flex justify-content-between mt-3 px-2">
+                  <span class="donation-amount">$20</span>
+                  <span class="donation-amount">$100</span>
+                  <span class="donation-amount">$250</span>
+                  <span
+                    class="custom-donation-amount d-flex align-items-center"
+                  >
+                    <img src="../icons/Vector.png" alt="" /> Custom Amount
+                  </span>
+                </div>
+
+                <!-- Donate + Cart -->
+                <div
+                  class="d-flex justify-content-between align-items-center mt-3 px-2"
+                >
+                  <button
+                    class="primary-donate-btn d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="../icons/filled-partner.svg"
+                      height="20px"
+                      alt=""
+                    />&ensp; Donate
+                  </button>
+                  <button class="shopping-cart-btn">
+                    <img src="../images/cart2.svg" alt="" />
+                  </button>
+                </div>
               </div>
-              <div>
-                <span>$10,800 </span>
-                <span class="text-muted">remaining</span>
-              </div>
             </div>
-
-            <!-- Amount Options -->
-            <div class="d-flex justify-content-between mt-3 px-2">
-              <span class="Amount">$20</span>
-              <span class="Amount">$100</span>
-              <span class="Amount">$250</span>
-              <span class="Custom-amount d-flex align-items-center">
-                <img src="../icons/Vector.png" alt="" /> Custom Amount
-              </span>
-            </div>
-
-            <!-- Donate + Cart -->
-            <div
-              class="d-flex justify-content-between align-items-center mt-3 px-2"
-            >
-              <button
-                class="donate-button d-flex align-items-center justify-content-center"
-              >
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="health-card">
                 <img
-                  src="../icons/filled-partner.svg"
-                  height="20px"
-                  alt=""
-                />&ensp; Donate
-              </button>
-              <button class="cart2">
-                <img src="../images/cart2.svg" alt="" />
-              </button>
-            </div>
-          </div>
-          <div class="card-1">
-            <img
-              class="main-img rounded"
-              src="../images/Frame 1261153463 (1).png"
-              alt="Mobile Clinic Outreach"
-            />
-            <span class="card-1text d-block"
-              >Mobile Clinic Outreach – Kandahar</span
-            >
-            <div class="mt-1">
-              <span class="span"
-                ><img src="../icons/add-square.svg" alt="" /> Health
-                Services</span
-              >
-              <span class="span"
-                ><img src="../icons/location3.svg" alt="" /> Badakhshan</span
-              >
-            </div>
+                  class="main-img rounded"
+                  src="../images/Frame 1261153463 (1).png"
+                  alt="Mobile Clinic Outreach"
+                />
+                <span class="health-card-title d-block"
+                  >Mobile Clinic Outreach – Kandahar</span
+                >
+                <div class="mt-1">
+                  <span class="span"
+                    ><img src="../icons/add-square.svg" alt="" /> Health
+                    Services</span
+                  >
+                  <span class="span"
+                    ><img src="../icons/location3.svg" alt="" />
+                    Badakhshan</span
+                  >
+                </div>
 
-            <!-- Bootstrap progress -->
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 65%"
-              ></div>
-            </div>
+                <!-- Bootstrap progress -->
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 65%"
+                  ></div>
+                </div>
 
-            <!-- Loan Info -->
-            <div class="d-flex justify-content-between px-2">
-              <div>
-                <span>$19,200 </span>
-                <span class="text-muted">raised</span>
+                <!-- Loan Info -->
+                <div class="d-flex justify-content-between px-2">
+                  <div>
+                    <span>$19,200 </span>
+                    <span class="text-muted">raised</span>
+                  </div>
+                  <div>
+                    <span>$10,800 </span>
+                    <span class="text-muted">remaining</span>
+                  </div>
+                </div>
+
+                <!-- Amount Options -->
+                <div class="d-flex justify-content-between mt-3 px-2">
+                  <span class="donation-amount">$20</span>
+                  <span class="donation-amount">$100</span>
+                  <span class="donation-amount">$250</span>
+                  <span
+                    class="custom-donation-amount d-flex align-items-center"
+                  >
+                    <img src="../icons/Vector.png" alt="" /> Custom Amount
+                  </span>
+                </div>
+
+                <!-- Donate + Cart -->
+                <div
+                  class="d-flex justify-content-between align-items-center mt-3 px-2"
+                >
+                  <button
+                    class="primary-donate-btn d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="../icons/filled-partner.svg"
+                      height="20px"
+                      alt=""
+                    />&ensp; Donate
+                  </button>
+                  <button class="shopping-cart-btn">
+                    <img src="../images/cart2.svg" alt="" />
+                  </button>
+                </div>
               </div>
-              <div>
-                <span>$10,800 </span>
-                <span class="text-muted">remaining</span>
-              </div>
             </div>
-
-            <!-- Amount Options -->
-            <div class="d-flex justify-content-between mt-3 px-2">
-              <span class="Amount">$20</span>
-              <span class="Amount">$100</span>
-              <span class="Amount">$250</span>
-              <span class="Custom-amount d-flex align-items-center">
-                <img src="../icons/Vector.png" alt="" /> Custom Amount
-              </span>
-            </div>
-
-            <!-- Donate + Cart -->
-            <div
-              class="d-flex justify-content-between align-items-center mt-3 px-2"
-            >
-              <button
-                class="donate-button d-flex align-items-center justify-content-center"
-              >
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="health-card">
                 <img
-                  src="../icons/filled-partner.svg"
-                  height="20px"
-                  alt=""
-                />&ensp; Donate
-              </button>
-              <button class="cart2">
-                <img src="../images/cart2.svg" alt="" />
-              </button>
-            </div>
-          </div>
-          <div class="card-1">
-            <img
-              class="main-img rounded"
-              src="../images/Frame 1261153463 (1).png"
-              alt="Mobile Clinic Outreach"
-            />
-            <span class="card-1text d-block"
-              >Mobile Clinic Outreach – Kandahar</span
-            >
-            <div class="mt-1">
-              <span class="span"
-                ><img src="../icons/add-square.svg" alt="" /> Health
-                Services</span
-              >
-              <span class="span"
-                ><img src="../icons/location3.svg" alt="" /> Badakhshan</span
-              >
-            </div>
+                  class="main-img rounded"
+                  src="../images/Frame 1261153463 (1).png"
+                  alt="Mobile Clinic Outreach"
+                />
+                <span class="health-card-title d-block"
+                  >Mobile Clinic Outreach – Kandahar</span
+                >
+                <div class="mt-1">
+                  <span class="span"
+                    ><img src="../icons/add-square.svg" alt="" /> Health
+                    Services</span
+                  >
+                  <span class="span"
+                    ><img src="../icons/location3.svg" alt="" />
+                    Badakhshan</span
+                  >
+                </div>
 
-            <!-- Bootstrap progress -->
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 65%"
-              ></div>
-            </div>
+                <!-- Bootstrap progress -->
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 65%"
+                  ></div>
+                </div>
 
-            <!-- Loan Info -->
-            <div class="d-flex justify-content-between px-2">
-              <div>
-                <span>$19,200 </span>
-                <span class="text-muted">raised</span>
+                <!-- Loan Info -->
+                <div class="d-flex justify-content-between px-2">
+                  <div>
+                    <span>$19,200 </span>
+                    <span class="text-muted">raised</span>
+                  </div>
+                  <div>
+                    <span>$10,800 </span>
+                    <span class="text-muted">remaining</span>
+                  </div>
+                </div>
+
+                <!-- Amount Options -->
+                <div class="d-flex justify-content-between mt-3 px-2">
+                  <span class="donation-amount">$20</span>
+                  <span class="donation-amount">$100</span>
+                  <span class="donation-amount">$250</span>
+                  <span
+                    class="custom-donation-amount d-flex align-items-center"
+                  >
+                    <img src="../icons/Vector.png" alt="" /> Custom Amount
+                  </span>
+                </div>
+
+                <!-- Donate + Cart -->
+                <div
+                  class="d-flex justify-content-between align-items-center mt-3 px-2"
+                >
+                  <button
+                    class="primary-donate-btn d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="../icons/filled-partner.svg"
+                      height="20px"
+                      alt=""
+                    />&ensp; Donate
+                  </button>
+                  <button class="shopping-cart-btn">
+                    <img src="../images/cart2.svg" alt="" />
+                  </button>
+                </div>
               </div>
-              <div>
-                <span>$10,800 </span>
-                <span class="text-muted">remaining</span>
-              </div>
             </div>
-
-            <!-- Amount Options -->
-            <div class="d-flex justify-content-between mt-3 px-2">
-              <span class="Amount">$20</span>
-              <span class="Amount">$100</span>
-              <span class="Amount">$250</span>
-              <span class="Custom-amount d-flex align-items-center">
-                <img src="../icons/Vector.png" alt="" /> Custom Amount
-              </span>
-            </div>
-
-            <!-- Donate + Cart -->
-            <div
-              class="d-flex justify-content-between align-items-center mt-3 px-2"
-            >
-              <button
-                class="donate-button d-flex align-items-center justify-content-center"
-              >
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="health-card">
                 <img
-                  src="../icons/filled-partner.svg"
-                  height="20px"
-                  alt=""
-                />&ensp; Donate
-              </button>
-              <button class="cart2">
-                <img src="../images/cart2.svg" alt="" />
-              </button>
-            </div>
-          </div>
-          <div class="card-1">
-            <img
-              class="main-img rounded"
-              src="../images/Frame 1261153463 (1).png"
-              alt="Mobile Clinic Outreach"
-            />
-            <span class="card-1text d-block"
-              >Mobile Clinic Outreach – Kandahar</span
-            >
-            <div class="mt-1">
-              <span class="span"
-                ><img src="../icons/add-square.svg" alt="" /> Health
-                Services</span
-              >
-              <span class="span"
-                ><img src="../icons/location3.svg" alt="" /> Badakhshan</span
-              >
-            </div>
+                  class="main-img rounded"
+                  src="../images/Frame 1261153463 (1).png"
+                  alt="Mobile Clinic Outreach"
+                />
+                <span class="health-card-title d-block"
+                  >Mobile Clinic Outreach – Kandahar</span
+                >
+                <div class="mt-1">
+                  <span class="span"
+                    ><img src="../icons/add-square.svg" alt="" /> Health
+                    Services</span
+                  >
+                  <span class="span"
+                    ><img src="../icons/location3.svg" alt="" />
+                    Badakhshan</span
+                  >
+                </div>
 
-            <!-- Bootstrap progress -->
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 65%"
-              ></div>
-            </div>
+                <!-- Bootstrap progress -->
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 65%"
+                  ></div>
+                </div>
 
-            <!-- Loan Info -->
-            <div class="d-flex justify-content-between px-2">
-              <div>
-                <span>$19,200 </span>
-                <span class="text-muted">raised</span>
+                <!-- Loan Info -->
+                <div class="d-flex justify-content-between px-2">
+                  <div>
+                    <span>$19,200 </span>
+                    <span class="text-muted">raised</span>
+                  </div>
+                  <div>
+                    <span>$10,800 </span>
+                    <span class="text-muted">remaining</span>
+                  </div>
+                </div>
+
+                <!-- Amount Options -->
+                <div class="d-flex justify-content-between mt-3 px-2">
+                  <span class="donation-amount">$20</span>
+                  <span class="donation-amount">$100</span>
+                  <span class="donation-amount">$250</span>
+                  <span
+                    class="custom-donation-amount d-flex align-items-center"
+                  >
+                    <img src="../icons/Vector.png" alt="" /> Custom Amount
+                  </span>
+                </div>
+
+                <!-- Donate + Cart -->
+                <div
+                  class="d-flex justify-content-between align-items-center mt-3 px-2"
+                >
+                  <button
+                    class="primary-donate-btn d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="../icons/filled-partner.svg"
+                      height="20px"
+                      alt=""
+                    />&ensp; Donate
+                  </button>
+                  <button class="shopping-cart-btn">
+                    <img src="../images/cart2.svg" alt="" />
+                  </button>
+                </div>
               </div>
-              <div>
-                <span>$10,800 </span>
-                <span class="text-muted">remaining</span>
-              </div>
             </div>
-
-            <!-- Amount Options -->
-            <div class="d-flex justify-content-between mt-3 px-2">
-              <span class="Amount">$20</span>
-              <span class="Amount">$100</span>
-              <span class="Amount">$250</span>
-              <span class="Custom-amount d-flex align-items-center">
-                <img src="../icons/Vector.png" alt="" /> Custom Amount
-              </span>
-            </div>
-
-            <!-- Donate + Cart -->
-            <div
-              class="d-flex justify-content-between align-items-center mt-3 px-2"
-            >
-              <button
-                class="donate-button d-flex align-items-center justify-content-center"
-              >
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="health-card">
                 <img
-                  src="../icons/filled-partner.svg"
-                  height="20px"
-                  alt=""
-                />&ensp; Donate
-              </button>
-              <button class="cart2">
-                <img src="../images/cart2.svg" alt="" />
-              </button>
-            </div>
-          </div>
-          <div class="card-1">
-            <img
-              class="main-img rounded"
-              src="../images/Frame 1261153463 (1).png"
-              alt="Mobile Clinic Outreach"
-            />
-            <span class="card-1text d-block"
-              >Mobile Clinic Outreach – Kandahar</span
-            >
-            <div class="mt-1">
-              <span class="span"
-                ><img src="../icons/add-square.svg" alt="" /> Health
-                Services</span
-              >
-              <span class="span"
-                ><img src="../icons/location3.svg" alt="" /> Badakhshan</span
-              >
-            </div>
+                  class="main-img rounded"
+                  src="../images/Frame 1261153463 (1).png"
+                  alt="Mobile Clinic Outreach"
+                />
+                <span class="health-card-title d-block"
+                  >Mobile Clinic Outreach – Kandahar</span
+                >
+                <div class="mt-1">
+                  <span class="span"
+                    ><img src="../icons/add-square.svg" alt="" /> Health
+                    Services</span
+                  >
+                  <span class="span"
+                    ><img src="../icons/location3.svg" alt="" />
+                    Badakhshan</span
+                  >
+                </div>
 
-            <!-- Bootstrap progress -->
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 65%"
-              ></div>
-            </div>
+                <!-- Bootstrap progress -->
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 65%"
+                  ></div>
+                </div>
 
-            <!-- Loan Info -->
-            <div class="d-flex justify-content-between px-2">
-              <div>
-                <span>$19,200 </span>
-                <span class="text-muted">raised</span>
+                <!-- Loan Info -->
+                <div class="d-flex justify-content-between px-2">
+                  <div>
+                    <span>$19,200 </span>
+                    <span class="text-muted">raised</span>
+                  </div>
+                  <div>
+                    <span>$10,800 </span>
+                    <span class="text-muted">remaining</span>
+                  </div>
+                </div>
+
+                <!-- Amount Options -->
+                <div class="d-flex justify-content-between mt-3 px-2">
+                  <span class="donation-amount">$20</span>
+                  <span class="donation-amount">$100</span>
+                  <span class="donation-amount">$250</span>
+                  <span
+                    class="custom-donation-amount d-flex align-items-center"
+                  >
+                    <img src="../icons/Vector.png" alt="" /> Custom Amount
+                  </span>
+                </div>
+
+                <!-- Donate + Cart -->
+                <div
+                  class="d-flex justify-content-between align-items-center mt-3 px-2"
+                >
+                  <button
+                    class="primary-donate-btn d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="../icons/filled-partner.svg"
+                      height="20px"
+                      alt=""
+                    />&ensp; Donate
+                  </button>
+                  <button class="shopping-cart-btn">
+                    <img src="../images/cart2.svg" alt="" />
+                  </button>
+                </div>
               </div>
-              <div>
-                <span>$10,800 </span>
-                <span class="text-muted">remaining</span>
-              </div>
             </div>
-
-            <!-- Amount Options -->
-            <div class="d-flex justify-content-between mt-3 px-2">
-              <span class="Amount">$20</span>
-              <span class="Amount">$100</span>
-              <span class="Amount">$250</span>
-              <span class="Custom-amount d-flex align-items-center">
-                <img src="../icons/Vector.png" alt="" /> Custom Amount
-              </span>
-            </div>
-
-            <!-- Donate + Cart -->
-            <div
-              class="d-flex justify-content-between align-items-center mt-3 px-2"
-            >
-              <button
-                class="donate-button d-flex align-items-center justify-content-center"
-              >
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="health-card">
                 <img
-                  src="../icons/filled-partner.svg"
-                  height="20px"
-                  alt=""
-                />&ensp; Donate
-              </button>
-              <button class="cart2">
-                <img src="../images/cart2.svg" alt="" />
-              </button>
+                  class="main-img rounded"
+                  src="../images/Frame 1261153463 (1).png"
+                  alt="Mobile Clinic Outreach"
+                />
+                <span class="health-card-title d-block"
+                  >Mobile Clinic Outreach – Kandahar</span
+                >
+                <div class="mt-1">
+                  <span class="span"
+                    ><img src="../icons/add-square.svg" alt="" /> Health
+                    Services</span
+                  >
+                  <span class="span"
+                    ><img src="../icons/location3.svg" alt="" />
+                    Badakhshan</span
+                  >
+                </div>
+
+                <!-- Bootstrap progress -->
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 65%"
+                  ></div>
+                </div>
+
+                <!-- Loan Info -->
+                <div class="d-flex justify-content-between px-2">
+                  <div>
+                    <span>$19,200 </span>
+                    <span class="text-muted">raised</span>
+                  </div>
+                  <div>
+                    <span>$10,800 </span>
+                    <span class="text-muted">remaining</span>
+                  </div>
+                </div>
+
+                <!-- Amount Options -->
+                <div class="d-flex justify-content-between mt-3 px-2">
+                  <span class="donation-amount">$20</span>
+                  <span class="donation-amount">$100</span>
+                  <span class="donation-amount">$250</span>
+                  <span
+                    class="custom-donation-amount d-flex align-items-center"
+                  >
+                    <img src="../icons/Vector.png" alt="" /> Custom Amount
+                  </span>
+                </div>
+
+                <!-- Donate + Cart -->
+                <div
+                  class="d-flex justify-content-between align-items-center mt-3 px-2"
+                >
+                  <button
+                    class="primary-donate-btn d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="../icons/filled-partner.svg"
+                      height="20px"
+                      alt=""
+                    />&ensp; Donate
+                  </button>
+                  <button class="shopping-cart-btn">
+                    <img src="../images/cart2.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="health-card">
+                <img
+                  class="main-img rounded"
+                  src="../images/Frame 1261153463 (1).png"
+                  alt="Mobile Clinic Outreach"
+                />
+                <span class="health-card-title d-block"
+                  >Mobile Clinic Outreach – Kandahar</span
+                >
+                <div class="mt-1">
+                  <span class="span"
+                    ><img src="../icons/add-square.svg" alt="" /> Health
+                    Services</span
+                  >
+                  <span class="span"
+                    ><img src="../icons/location3.svg" alt="" />
+                    Badakhshan</span
+                  >
+                </div>
+
+                <!-- Bootstrap progress -->
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 65%"
+                  ></div>
+                </div>
+
+                <!-- Loan Info -->
+                <div class="d-flex justify-content-between px-2">
+                  <div>
+                    <span>$19,200 </span>
+                    <span class="text-muted">raised</span>
+                  </div>
+                  <div>
+                    <span>$10,800 </span>
+                    <span class="text-muted">remaining</span>
+                  </div>
+                </div>
+
+                <!-- Amount Options -->
+                <div class="d-flex justify-content-between mt-3 px-2">
+                  <span class="donation-amount">$20</span>
+                  <span class="donation-amount">$100</span>
+                  <span class="donation-amount">$250</span>
+                  <span
+                    class="custom-donation-amount d-flex align-items-center"
+                  >
+                    <img src="../icons/Vector.png" alt="" /> Custom Amount
+                  </span>
+                </div>
+
+                <!-- Donate + Cart -->
+                <div
+                  class="d-flex justify-content-between align-items-center mt-3 px-2"
+                >
+                  <button
+                    class="primary-donate-btn d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="../icons/filled-partner.svg"
+                      height="20px"
+                      alt=""
+                    />&ensp; Donate
+                  </button>
+                  <button class="shopping-cart-btn">
+                    <img src="../images/cart2.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="health-card">
+                <img
+                  class="main-img rounded"
+                  src="../images/Frame 1261153463 (1).png"
+                  alt="Mobile Clinic Outreach"
+                />
+                <span class="health-card-title d-block"
+                  >Mobile Clinic Outreach – Kandahar</span
+                >
+                <div class="mt-1">
+                  <span class="span"
+                    ><img src="../icons/add-square.svg" alt="" /> Health
+                    Services</span
+                  >
+                  <span class="span"
+                    ><img src="../icons/location3.svg" alt="" />
+                    Badakhshan</span
+                  >
+                </div>
+
+                <!-- Bootstrap progress -->
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 65%"
+                  ></div>
+                </div>
+
+                <!-- Loan Info -->
+                <div class="d-flex justify-content-between px-2">
+                  <div>
+                    <span>$19,200 </span>
+                    <span class="text-muted">raised</span>
+                  </div>
+                  <div>
+                    <span>$10,800 </span>
+                    <span class="text-muted">remaining</span>
+                  </div>
+                </div>
+
+                <!-- Amount Options -->
+                <div class="d-flex justify-content-between mt-3 px-2">
+                  <span class="donation-amount">$20</span>
+                  <span class="donation-amount">$100</span>
+                  <span class="donation-amount">$250</span>
+                  <span
+                    class="custom-donation-amount d-flex align-items-center"
+                  >
+                    <img src="../icons/Vector.png" alt="" /> Custom Amount
+                  </span>
+                </div>
+
+                <!-- Donate + Cart -->
+                <div
+                  class="d-flex justify-content-between align-items-center mt-3 px-2"
+                >
+                  <button
+                    class="primary-donate-btn d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="../icons/filled-partner.svg"
+                      height="20px"
+                      alt=""
+                    />&ensp; Donate
+                  </button>
+                  <button class="shopping-cart-btn">
+                    <img src="../images/cart2.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="health-card">
+                <img
+                  class="main-img rounded"
+                  src="../images/Frame 1261153463 (1).png"
+                  alt="Mobile Clinic Outreach"
+                />
+                <span class="health-card-title d-block"
+                  >Mobile Clinic Outreach – Kandahar</span
+                >
+                <div class="mt-1">
+                  <span class="span"
+                    ><img src="../icons/add-square.svg" alt="" /> Health
+                    Services</span
+                  >
+                  <span class="span"
+                    ><img src="../icons/location3.svg" alt="" />
+                    Badakhshan</span
+                  >
+                </div>
+
+                <!-- Bootstrap progress -->
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 65%"
+                  ></div>
+                </div>
+
+                <!-- Loan Info -->
+                <div class="d-flex justify-content-between px-2">
+                  <div>
+                    <span>$19,200 </span>
+                    <span class="text-muted">raised</span>
+                  </div>
+                  <div>
+                    <span>$10,800 </span>
+                    <span class="text-muted">remaining</span>
+                  </div>
+                </div>
+
+                <!-- Amount Options -->
+                <div class="d-flex justify-content-between mt-3 px-2">
+                  <span class="donation-amount">$20</span>
+                  <span class="donation-amount">$100</span>
+                  <span class="donation-amount">$250</span>
+                  <span
+                    class="custom-donation-amount d-flex align-items-center"
+                  >
+                    <img src="../icons/Vector.png" alt="" /> Custom Amount
+                  </span>
+                </div>
+
+                <!-- Donate + Cart -->
+                <div
+                  class="d-flex justify-content-between align-items-center mt-3 px-2"
+                >
+                  <button
+                    class="primary-donate-btn d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="../icons/filled-partner.svg"
+                      height="20px"
+                      alt=""
+                    />&ensp; Donate
+                  </button>
+                  <button class="shopping-cart-btn">
+                    <img src="../images/cart2.svg" alt="" />
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <div class="loading-message">
+      <span><img src="../icons/loader.svg" alt="" /> loading more...</span>
     </div>
     <footer>
       <div class="black">

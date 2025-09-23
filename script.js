@@ -127,6 +127,128 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     images.forEach(img => imageObserver.observe(img));
+    
+    // Initialize Donation Swiper
+    const donationSwiper = new Swiper('.donation-swiper', {
+        // Basic settings
+        slidesPerView: 'auto',
+        spaceBetween: 24,
+        centeredSlides: false,
+        loop: true,
+        loopFillGroupWithBlank: false,
+        loopAdditionalSlides: 3,
+        grabCursor: true,
+        
+        // Responsive breakpoints
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 16,
+                centeredSlides: true,
+                loopAdditionalSlides: 2
+            },
+            576: {
+                slidesPerView: 1.2,
+                spaceBetween: 20,
+                centeredSlides: true,
+                loopAdditionalSlides: 2
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 24,
+                centeredSlides: false,
+                loopAdditionalSlides: 3
+            },
+            992: {
+                slidesPerView: 2.5,
+                spaceBetween: 24,
+                centeredSlides: false,
+                loopAdditionalSlides: 4
+            },
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 24,
+                centeredSlides: false,
+                loopAdditionalSlides: 4
+            }
+        },
+        
+        // Auto-play settings
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+            reverseDirection: false
+        },
+        
+        // Smooth transitions
+        speed: 800,
+        effect: 'slide',
+        
+        // Touch settings
+        touchRatio: 1,
+        touchAngle: 45,
+        simulateTouch: true,
+        
+        // Pagination (hidden but functional)
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true
+        },
+        
+        // Keyboard navigation
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true
+        },
+        
+        // Mouse wheel control
+        mousewheel: {
+            enabled: true,
+            sensitivity: 1,
+            releaseOnEdges: false
+        },
+        
+        // Accessibility
+        a11y: {
+            enabled: true,
+            prevSlideMessage: 'Previous donation card',
+            nextSlideMessage: 'Next donation card'
+        },
+        
+        // Additional settings for smooth infinite loop
+        watchSlidesProgress: true,
+        watchSlidesVisibility: true,
+        
+        // Prevent issues with loop
+        on: {
+            init: function () {
+                // Ensure smooth infinite scrolling
+                this.loopCreate();
+                this.loopFix();
+            },
+            slideChange: function () {
+                // Maintain smooth transitions
+                if (this.realIndex === 0 && this.previousIndex === this.slides.length - 1) {
+                    // Smooth transition from last to first
+                    this.allowSlideNext = true;
+                }
+            }
+        }
+    });
+    
+    // Add smooth hover effects
+    const swiperSlides = document.querySelectorAll('.donation-swiper .swiper-slide');
+    swiperSlides.forEach(slide => {
+        slide.addEventListener('mouseenter', () => {
+            donationSwiper.autoplay.stop();
+        });
+        
+        slide.addEventListener('mouseleave', () => {
+            donationSwiper.autoplay.start();
+        });
+    });
 });
 
 // Utility function to debounce resize events

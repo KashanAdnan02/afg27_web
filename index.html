@@ -17,7 +17,7 @@
 
 <body>
   <!-- Top Black Bar -->
-  <div class="top-bar py-2">
+  <div class="top-bar py-2 d-flex align-items-center justify-content-between">
     <div class="container">
       <div class="row align-items-center">
         <!-- Left - Announcements -->
@@ -26,10 +26,12 @@
             <img src="./icons/news.svg" alt="News" class="flex-shrink-0" />
             <span class="important flex-shrink-0">Announcement:</span>
             <div class="d-flex align-items-center flex-wrap gap-2">
-              <a class="text-decoration-underline text-nowrap" href="#">Emergency Appeal Launched for Flood Victims in
+              <a class="text-decoration-underline text-nowrap" style="color: #A2A2A2;" href="#">Emergency Appeal
+                Launched for Flood Victims in
                 Jowzjan</a>
               <img src="./icons/Line 1.svg" class="mx-2 d-none d-md-inline" alt="" />
-              <a class="text-decoration-underline text-nowrap d-none d-md-inline" href="#">Winter Aid Distribution
+              <a class="text-decoration-underline text-nowrap d-none d-md-inline" style="color: #A2A2A2;"
+                href="#">Winter Aid Distribution
                 Begins in Bamyan</a>
             </div>
           </div>
@@ -40,12 +42,46 @@
           <div
             class="d-flex flex-column flex-md-row justify-content-lg-end align-items-start align-items-md-center gap-2 gap-md-3">
             <!-- Language Selector -->
-            <div class="language d-flex align-items-center gap-1 order-1 order-md-1">
+            <div class="language dropdown-container d-flex align-items-center gap-1 order-1 order-md-1">
               <span class="important">Language:</span>
-              <img src="./images/Flags.svg" alt="Flag" />
-              <span class="d-none d-sm-inline">English (UK)</span>
-              <span class="d-sm-none">EN</span>
-              <img src="./icons/angle-down.svg" alt="Dropdown" />
+              <img src="./images/Flags.svg" alt="Flag" class="current-flag" />
+              <span class="d-none d-sm-inline selected-language">English (UK)</span>
+              <span class="d-sm-none selected-language-short">EN</span>
+              <img src="./icons/angle-down.svg" alt="Dropdown" class="dropdown-arrow" />
+
+              <!-- Language Dropdown Options -->
+              <div class="language-dropdown-options" style="display: none;">
+                <div class="language-option" data-lang="en" data-flag="./images/Flags.svg" data-full="English (UK)"
+                  data-short="EN">
+                  <img src="./images/Flags.svg" alt="UK Flag" />
+                  <span>English (UK)</span>
+                </div>
+                <div class="language-option" data-lang="en-us" data-flag="./images/Flags.svg" data-full="English (US)"
+                  data-short="EN">
+                  <img src="./images/Flags.svg" alt="US Flag" />
+                  <span>English (US)</span>
+                </div>
+                <div class="language-option" data-lang="ps" data-flag="./images/Flags.svg" data-full="پښتو (Pashto)"
+                  data-short="PS">
+                  <img src="./images/Flags.svg" alt="Afghanistan Flag" />
+                  <span>پښتو (Pashto)</span>
+                </div>
+                <div class="language-option" data-lang="fa" data-flag="./images/Flags.svg" data-full="فارسی (Dari)"
+                  data-short="FA">
+                  <img src="./images/Flags.svg" alt="Afghanistan Flag" />
+                  <span>فارسی (Dari)</span>
+                </div>
+                <div class="language-option" data-lang="ar" data-flag="./images/Flags.svg" data-full="العربية (Arabic)"
+                  data-short="AR">
+                  <img src="./images/Flags.svg" alt="Arabic Flag" />
+                  <span>العربية (Arabic)</span>
+                </div>
+                <div class="language-option" data-lang="ur" data-flag="./images/Flags.svg" data-full="اردو (Urdu)"
+                  data-short="UR">
+                  <img src="./images/Flags.svg" alt="Pakistan Flag" />
+                  <span>اردو (Urdu)</span>
+                </div>
+              </div>
             </div>
 
             <!-- Contact Info -->
@@ -55,7 +91,7 @@
                 <span class="important">
                   <span class="d-none d-sm-inline">Helpline:</span>
                   <span class="d-sm-none">Tel:</span>
-                  <span style="color: rgb(165, 159, 159)">+93(0)078555896</span>
+                  <span style="color: #A2A2A2">+93(0)078555896</span>
                 </span>
               </div>
 
@@ -63,7 +99,7 @@
                 <img src="./icons/email.svg" alt="Email" class="flex-shrink-0" />
                 <span class="important">
                   Email:
-                  <span style="color: rgb(165, 159, 159)">ir@arcs.af</span>
+                  <span style="color: #A2A2A2">ir@arcs.af</span>
                 </span>
               </div>
             </div>
@@ -75,42 +111,44 @@
 
   <!-- Main Navbar -->
   <nav class="navbar navbar-expand-lg bg-white shadow-sm">
-    <div class="container">
+    <div class="container ">
       <!-- Left Logo -->
-      <a class="navbar-brand" href="#">
-        <img src="./logos/main-logo.png" alt="Logo" height="50" />
-      </a>
+      <div class="navbar-container">
+        <a class="navbar-brand" href="#">
+          <img src="./logos/main-logo.png" alt="Logo" height="65" />
+        </a>
 
-      <!-- Toggler (Mobile) -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <!-- Toggler (Mobile) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <!-- Right Menu -->
-      <div class="collapse navbar-collapse" id="mainNavbar">
-        <ul class="navbar-nav ms-auto me-3 gap-3">
-          <li class="nav-item">
-            <a class="nav-link fw-semibold" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link hv-fw" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link hv-fw" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link hv-fw" href="./programs_list/index.html">Programs</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link hv-fw" href="./detail/index.html">Media</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link hv-fw" href="#">Contact</a>
-          </li>
-        </ul>
-        <div class="d-flex gap-2">
-          <button class="sign-up-btn">Sign Up</button>
-          <button class="sign-in-btn">Sign In</button>
+        <!-- Right Menu -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav" style="gap: 22px;">
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hv-fw" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hv-fw" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hv-fw" href="./programs_list/index.html">Programs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hv-fw" href="./detail/index.html">Media</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hv-fw" href="#">Contact</a>
+            </li>
+          </ul>
+          <div class="d-flex" style="gap: 10px; margin-left: 20px;">
+            <button class="sign-up-btn">Sign Up</button>
+            <button class="sign-in-btn">Sign In</button>
+          </div>
         </div>
       </div>
     </div>
@@ -119,41 +157,8 @@
   <!-- Carousel -->
   <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
     <!-- Slides -->
-    <div class="carousel-inner" style="height: 75vh">
-      <div class="carousel-item active bg-hero" style="height: 100vh">
-        <div class="carousel-caption container mx-auto" style="width: 80%">
-          <h5>Back to School, Back to Hope</h5>
-          <h2 class="fw-bold mb-5" style="font-size: 3rem; line-height: 63px">
-            Your support helps children <br />
-            return to classrooms with <br />
-            books, teachers, and a <br />
-            brighter future.
-          </h2>
-
-          <!-- Buttons in one line -->
-          <div class="d-flex align-items-start gap-3">
-            <!-- Donate button + indicators below it -->
-            <div class="donate-wrapper">
-              <button class="btn-custom-red">
-                <img src="./icons/partner.svg" alt="" class="me-2" /> Donate
-                Now
-              </button>
-              <div class="carousel-indicators-custom">
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
-              </div>
-            </div>
-
-            <!-- View Programs button -->
-            <button class="btn btn-outline-light btn-custom-white">
-              View Programs
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item bg-hero" style="height: 100vh">
+    <div class="carousel-inner" style="height: 85vh">
+      <div class="carousel-item bg-hero active">
         <div class="carousel-caption">
           <h5>Back to School, Back to Hope</h5>
           <h2 class="fw-bold mb-5" style="font-size: 2.5vw; line-height: 64px">
@@ -175,11 +180,11 @@
                 <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
               </div>
             </div>
-            <button class="btn btn-outline-light">View Programs</button>
+            <button class="btn btn-outline-light btn-custom-view">View Programs</button>
           </div>
         </div>
       </div>
-      <div class="carousel-item bg-hero" style="height: 100vh">
+      <div class="carousel-item bg-hero">
         <div class="carousel-caption">
           <h5>Back to School, Back to Hope</h5>
           <h2 class="fw-bold mb-5" style="font-size: 2.5vw; line-height: 64px">
@@ -201,11 +206,11 @@
                 <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
               </div>
             </div>
-            <button class="btn btn-outline-light">View Programs</button>
+            <button class="btn btn-outline-light btn-custom-view">View Programs</button>
           </div>
         </div>
       </div>
-      <div class="carousel-item bg-hero" style="height: 100vh">
+      <div class="carousel-item bg-hero">
         <div class="carousel-caption">
           <h5>Back to School, Back to Hope</h5>
           <h2 class="fw-bold mb-5" style="font-size: 2.5vw; line-height: 64px">
@@ -227,813 +232,843 @@
                 <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
               </div>
             </div>
-            <button class="btn btn-outline-light">View Programs</button>
+            <button class="btn btn-outline-light btn-custom-view">View Programs</button>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- Programs Section -->
-  <div class="position-relative ma-he-2" style="height: 255px">
-    <div class="main container-fluid progress_con position-absolute" style="top: -15%">
-      <div class="row align-items-center justify-content-between container mx-auto">
-        <!-- Left Text -->
-        <div class="col-md-6">
-          <span class="text-danger fw-bold">Programs</span>
-          <h2 class="fw-semibold mt-2">
-            We work across key sectors to restore dignity, protect health, and
-            build resilience.
-          </h2>
+  <div class="bg-main">
+    <!-- Programs Section -->
+    <div class="position-relative ma-he-2" style="height: 255px">
+      <div class="main container-fluid progress_con position-absolute" style="top: -40%">
+        <div class="row align-items-center justify-content-between container mx-auto">
+          <!-- Left Text -->
+          <div class="col-md-7" style="padding-left: 0 !important;">
+            <span class="text-danger fw-bold" style="font-size: 20px;">Programs</span>
+            <h2 class="fw-bold mt-2" style="font-size: 38px;">
+              We work across key sectors to restore <br> dignity, protect health, and
+              build resilience.
+            </h2>
+          </div>
+          <!-- Right Buttons -->
+          <div class="col-md-3 d-flex justify-content-md-end gap-2 mt-3 mt-md-0">
+            <button class="btn btn-donate d-flex align-items-center fw-semibold" style="width: 190px;">
+              <img src="./icons/partner.svg" alt="" class="me-2" /> Donate Now
+            </button>
+            <button class="btn border-black text-black px-4 fw-semibold" style="width: 190px;">
+              All Program
+            </button>
+          </div>
         </div>
-        <!-- Right Buttons -->
-        <div class="col-md-6 d-flex justify-content-md-end gap-2 mt-3 mt-md-0">
-          <button class="btn btn-donate d-flex align-items-center">
-            <img src="./icons/partner.svg" alt="" class="me-2" /> Donate Now
-          </button>
-          <button class="btn border-black text-black px-4">
-            All Program
-          </button>
-        </div>
-      </div>
 
-      <!-- Categories -->
-      <div class="categories d-flex flex-wrap gap-2 mt-5 container mx-auto">
-        <span class="btn active-cat rounded-pill px-4">All Programs</span>
-        <span class="btn btn-outline-dark rounded-pill px-4">Health</span>
-        <span class="btn btn-outline-dark rounded-pill px-4">Humanitarian Aid</span>
-        <span class="btn btn-outline-dark rounded-pill px-4">Marastoons</span>
-        <span class="btn btn-outline-dark rounded-pill px-4">Education</span>
-        <span class="btn btn-outline-dark rounded-pill px-4">Volunteers</span>
-        <span class="btn btn-outline-dark rounded-pill px-4">Community</span>
+        <!-- Categories -->
+        <div class="categories d-flex flex-wrap gap-2 mt-5 container mx-auto">
+          <span class="btn active-cat rounded-pill fw-semibold" style="padding: 5px 15px; font-size: 16px;">All
+            Programs</span>
+          <span class="btn btn-outline-dark rounded-pill fw-semibold"
+            style="padding: 5px 15px; font-size: 16px;">Health</span>
+          <span class="btn btn-outline-dark rounded-pill fw-semibold"
+            style="padding: 5px 15px; font-size: 16px;">Humanitarian
+            Aid</span>
+          <span class="btn btn-outline-dark rounded-pill fw-semibold"
+            style="padding: 5px 15px; font-size: 16px;">Marastoons</span>
+          <span class="btn btn-outline-dark rounded-pill fw-semibold"
+            style="padding: 5px 15px; font-size: 16px;">Education</span>
+          <span class="btn btn-outline-dark rounded-pill fw-semibold"
+            style="padding: 5px 15px; font-size: 16px;">Volunteers</span>
+          <span class="btn btn-outline-dark rounded-pill fw-semibold"
+            style="padding: 5px 15px; font-size: 16px;">Community</span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Donation Programs Swiper -->
-  <div class="container-fluid px-4" style="background-color: #f7f7f7">
-    <div class="swiper donation-swiper">
-      <div class="swiper-wrapper">
+    <!-- Donation Programs Swiper -->
+    <div class="container-fluid px-4">
+      <div class="swiper donation-swiper">
+        <div class="swiper-wrapper">
+          <!-- Card 1 -->
+          <div class="swiper-slide">
+            <div class="card-1">
+              <img class="main-img rounded" src="./images/Frame 1261153463 (1).png" alt="Mobile Clinic Outreach" />
+              <span class="card-1text d-block">Mobile Clinic Outreach – Kandahar</span>
+              <div class="mt-1 ml-1 card-1-text">
+                <span class="span"><img src="./icons/add-square.svg" alt="" /> Health
+                  Services</span>
+                <span class="span"><img src="./icons/location3.svg" alt="" /> Badakhshan</span>
+              </div>
+
+              <!-- Bootstrap progress -->
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 65%"></div>
+              </div>
+
+              <!-- Loan Info -->
+              <div class="d-flex justify-content-between px-2">
+                <div>
+                  <span>$19,200 </span>
+                  <span class="text-muted">raised</span>
+                </div>
+                <div>
+                  <span>$10,800 </span>
+                  <span class="text-muted">remaining</span>
+                </div>
+              </div>
+
+              <!-- Amount Options -->
+              <div class="d-flex justify-content-between mt-3 px-2">
+                <span class="Amount">$20</span>
+                <span class="Amount">$100</span>
+                <span class="Amount">$250</span>
+                <span class="Custom-amount d-flex align-items-center">
+                  <img src="./icons/Vector.png" alt="" /> Custom Amount
+                </span>
+              </div>
+
+              <!-- Donate + Cart -->
+              <div class="d-flex justify-content-between align-items-center mt-3 px-2">
+                <button class="donate-button d-flex align-items-center justify-content-center">
+                  <img src="./icons/filled-partner.svg" height="20px" alt="" />&ensp; Donate
+                </button>
+                <button class="cart2">
+                  <img src="./images/cart2.svg" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="swiper-slide">
+            <div class="card-1">
+              <img class="main-img img-fluid rounded" src="./images/Frame 1261153463.png"
+                alt="Winter Marastoon Support" />
+              <span class="card-1text d-block">Winter Marastoon Support</span>
+              <div class="mt-1 ml-1 card-1-text">
+                <span class="span"><img src="./icons/add-square.svg" alt="" /> Health
+                  Services</span>
+                <span class="span"><img src="./icons/location3.svg" alt="" /> Badakhshan</span>
+              </div>
+
+              <!-- Bootstrap progress -->
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 65%"></div>
+              </div>
+
+              <!-- Loan Info -->
+              <div class="d-flex justify-content-between px-2">
+                <div>
+                  <span>$19,200 </span>
+                  <span class="text-muted">raised</span>
+                </div>
+                <div>
+                  <span>$10,800 </span>
+                  <span class="text-muted">remaining</span>
+                </div>
+              </div>
+
+              <!-- Amount Options -->
+              <div class="d-flex justify-content-between mt-3 px-2">
+                <span class="Amount">$20</span>
+                <span class="Amount">$100</span>
+                <span class="Amount">$250</span>
+                <span class="Custom-amount d-flex align-items-center">
+                  <img src="./icons/Vector.png" alt="" /> Custom Amount
+                </span>
+              </div>
+
+              <!-- Donate + Cart -->
+              <div class="d-flex justify-content-between align-items-center mt-3 px-2">
+                <button class="donate-button d-flex align-items-center justify-content-center">
+                  <img src="./icons/filled-partner.svg" height="20px" alt="" />&ensp; Donate
+                </button>
+                <button class="cart2">
+                  <img src="./images/cart2.svg" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="swiper-slide">
+            <div class="card-1">
+              <img class="main-img img-fluid rounded" src="./images/Frame 1261153463 (2).png"
+                alt="Volunteer First Aid Training" />
+              <span class="card-1text d-block">Volunteer First Aid Training</span>
+              <div class="mt-1 ml-1 card-1-text">
+                <span class="span"><img src="./icons/add-square.svg" alt="" /> Health
+                  Services</span>
+                <span class="span"><img src="./icons/location3.svg" alt="" /> Badakhshan</span>
+              </div>
+
+              <!-- Bootstrap progress -->
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 65%"></div>
+              </div>
+
+              <!-- Loan Info -->
+              <div class="d-flex justify-content-between px-2">
+                <div>
+                  <span>$19,200 </span>
+                  <span class="text-muted">raised</span>
+                </div>
+                <div>
+                  <span>$10,800 </span>
+                  <span class="text-muted">remaining</span>
+                </div>
+              </div>
+
+              <!-- Amount Options -->
+              <div class="d-flex justify-content-between mt-3 px-2">
+                <span class="Amount">$20</span>
+                <span class="Amount">$100</span>
+                <span class="Amount">$250</span>
+                <span class="Custom-amount d-flex align-items-center">
+                  <img src="./icons/Vector.png" alt="" /> Custom Amount
+                </span>
+              </div>
+
+              <!-- Donate + Cart -->
+              <div class="d-flex justify-content-between align-items-center mt-3 px-2">
+                <button class="donate-button d-flex align-items-center justify-content-center">
+                  <img src="./icons/filled-partner.svg" height="20px" alt="" />&ensp; Donate
+                </button>
+                <button class="cart2">
+                  <img src="./images/cart2.svg" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 - Additional card for demonstration -->
+          <div class="swiper-slide">
+            <div class="card-1">
+              <img class="main-img img-fluid rounded" src="./images/Frame 1261153463 (1).png"
+                alt="Women's Tailoring Program" />
+              <span class="card-1text d-block">Women's Tailoring Program</span>
+              <div class="mt-1 ml-1 card-1-text">
+                <span class="span"><img src="./icons/add-square.svg" alt="" /> Community
+                  Empowerment</span>
+                <span class="span"><img src="./icons/location3.svg" alt="" /> Kabul</span>
+              </div>
+
+              <!-- Bootstrap progress -->
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 45%"></div>
+              </div>
+
+              <!-- Loan Info -->
+              <div class="d-flex justify-content-between px-2">
+                <div>
+                  <span>$13,500 </span>
+                  <span class="text-muted">raised</span>
+                </div>
+                <div>
+                  <span>$16,500 </span>
+                  <span class="text-muted">remaining</span>
+                </div>
+              </div>
+
+              <!-- Amount Options -->
+              <div class="d-flex justify-content-between mt-3 px-2">
+                <span class="Amount">$20</span>
+                <span class="Amount">$100</span>
+                <span class="Amount">$250</span>
+                <span class="Custom-amount d-flex align-items-center">
+                  <img src="./icons/Vector.png" alt="" /> Custom Amount
+                </span>
+              </div>
+
+              <!-- Donate + Cart -->
+              <div class="d-flex justify-content-between align-items-center mt-3 px-2">
+                <button class="donate-button d-flex align-items-center justify-content-center">
+                  <img src="./icons/filled-partner.svg" height="20px" alt="" />&ensp; Donate
+                </button>
+                <button class="cart2">
+                  <img src="./images/cart2.svg" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 - Education Support -->
+          <div class="swiper-slide">
+            <div class="card-1">
+              <img class="main-img img-fluid rounded" src="./images/Frame 1261153463 (2).png"
+                alt="Education Support Program" />
+              <span class="card-1text d-block">Education Support Program</span>
+              <div class="mt-1 ml-1 card-1-text">
+                <span class="span"><img src="./icons/add-square.svg" alt="" /> Education</span>
+                <span class="span"><img src="./icons/location3.svg" alt="" /> Herat</span>
+              </div>
+
+              <!-- Bootstrap progress -->
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 80%"></div>
+              </div>
+
+              <!-- Loan Info -->
+              <div class="d-flex justify-content-between px-2">
+                <div>
+                  <span>$24,000 </span>
+                  <span class="text-muted">raised</span>
+                </div>
+                <div>
+                  <span>$6,000 </span>
+                  <span class="text-muted">remaining</span>
+                </div>
+              </div>
+
+              <!-- Amount Options -->
+              <div class="d-flex justify-content-between mt-3 px-2">
+                <span class="Amount">$20</span>
+                <span class="Amount">$100</span>
+                <span class="Amount">$250</span>
+                <span class="Custom-amount d-flex align-items-center">
+                  <img src="./icons/Vector.png" alt="" /> Custom Amount
+                </span>
+              </div>
+
+              <!-- Donate + Cart -->
+              <div class="d-flex justify-content-between align-items-center mt-3 px-2">
+                <button class="donate-button d-flex align-items-center justify-content-center">
+                  <img src="./icons/filled-partner.svg" height="20px" alt="" />&ensp; Donate
+                </button>
+                <button class="cart2">
+                  <img src="./images/cart2.svg" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 - Clean Water Initiative -->
+          <div class="swiper-slide">
+            <div class="card-1">
+              <img class="main-img img-fluid rounded" src="./images/Frame 1261153463.png"
+                alt="Clean Water Initiative" />
+              <span class="card-1text d-block">Clean Water Initiative</span>
+              <div class="mt-1 ml-1 card-1-text">
+                <span class="span"><img src="./icons/add-square.svg" alt="" /> Water &
+                  Sanitation</span>
+                <span class="span"><img src="./icons/location3.svg" alt="" /> Kandahar</span>
+              </div>
+
+              <!-- Bootstrap progress -->
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 30%"></div>
+              </div>
+
+              <!-- Loan Info -->
+              <div class="d-flex justify-content-between px-2">
+                <div>
+                  <span>$9,000 </span>
+                  <span class="text-muted">raised</span>
+                </div>
+                <div>
+                  <span>$21,000 </span>
+                  <span class="text-muted">remaining</span>
+                </div>
+              </div>
+
+              <!-- Amount Options -->
+              <div class="d-flex justify-content-between mt-3 px-2">
+                <span class="Amount">$20</span>
+                <span class="Amount">$100</span>
+                <span class="Amount">$250</span>
+                <span class="Custom-amount d-flex align-items-center">
+                  <img src="./icons/Vector.png" alt="" /> Custom Amount
+                </span>
+              </div>
+
+              <!-- Donate + Cart -->
+              <div class="d-flex justify-content-between align-items-center mt-3 px-2">
+                <button class="donate-button d-flex align-items-center justify-content-center">
+                  <img src="./icons/filled-partner.svg" height="20px" alt="" />&ensp; Donate
+                </button>
+                <button class="cart2">
+                  <img src="./images/cart2.svg" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7 - Emergency Relief -->
+          <div class="swiper-slide">
+            <div class="card-1">
+              <img class="main-img img-fluid rounded" src="./images/Frame 1261153463 (1).png"
+                alt="Emergency Relief Support" />
+              <span class="card-1text d-block">Emergency Relief Support</span>
+              <div class="mt-1 ml-1 card-1-text">
+                <span class="span"><img src="./icons/add-square.svg" alt="" /> Emergency
+                  Aid</span>
+                <span class="span"><img src="./icons/location3.svg" alt="" /> Nationwide</span>
+              </div>
+
+              <!-- Bootstrap progress -->
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 55%"></div>
+              </div>
+
+              <!-- Loan Info -->
+              <div class="d-flex justify-content-between px-2">
+                <div>
+                  <span>$16,500 </span>
+                  <span class="text-muted">raised</span>
+                </div>
+                <div>
+                  <span>$13,500 </span>
+                  <span class="text-muted">remaining</span>
+                </div>
+              </div>
+
+              <!-- Amount Options -->
+              <div class="d-flex justify-content-between mt-3 px-2">
+                <span class="Amount">$20</span>
+                <span class="Amount">$100</span>
+                <span class="Amount">$250</span>
+                <span class="Custom-amount d-flex align-items-center">
+                  <img src="./icons/Vector.png" alt="" /> Custom Amount
+                </span>
+              </div>
+
+              <!-- Donate + Cart -->
+              <div class="d-flex justify-content-between align-items-center mt-3 px-2">
+                <button class="donate-button d-flex align-items-center justify-content-center">
+                  <img src="./icons/filled-partner.svg" height="20px" alt="" />&ensp; Donate
+                </button>
+                <button class="cart2">
+                  <img src="./images/cart2.svg" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 8 - Food Distribution -->
+          <div class="swiper-slide">
+            <div class="card-1">
+              <img class="main-img img-fluid rounded" src="./images/Frame 1261153463 (2).png"
+                alt="Food Distribution Program" />
+              <span class="card-1text d-block">Food Distribution Program</span>
+              <div class="mt-1 ml-1 card-1-text">
+                <span class="span"><img src="./icons/add-square.svg" alt="" /> Food
+                  Security</span>
+                <span class="span"><img src="./icons/location3.svg" alt="" /> Balkh</span>
+              </div>
+
+              <!-- Bootstrap progress -->
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 70%"></div>
+              </div>
+
+              <!-- Loan Info -->
+              <div class="d-flex justify-content-between px-2">
+                <div>
+                  <span>$21,000 </span>
+                  <span class="text-muted">raised</span>
+                </div>
+                <div>
+                  <span>$9,000 </span>
+                  <span class="text-muted">remaining</span>
+                </div>
+              </div>
+
+              <!-- Amount Options -->
+              <div class="d-flex justify-content-between mt-3 px-2">
+                <span class="Amount">$20</span>
+                <span class="Amount">$100</span>
+                <span class="Amount">$250</span>
+                <span class="Custom-amount d-flex align-items-center">
+                  <img src="./icons/Vector.png" alt="" /> Custom Amount
+                </span>
+              </div>
+
+              <!-- Donate + Cart -->
+              <div class="d-flex justify-content-between align-items-center mt-3 px-2">
+                <button class="donate-button d-flex align-items-center justify-content-center">
+                  <img src="./icons/filled-partner.svg" height="20px" alt="" />&ensp; Donate
+                </button>
+                <button class="cart2">
+                  <img src="./images/cart2.svg" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 9 - Shelter Support -->
+          <div class="swiper-slide">
+            <div class="card-1">
+              <img class="main-img img-fluid rounded" src="./images/Frame 1261153463.png"
+                alt="Shelter Support Initiative" />
+              <span class="card-1text d-block">Shelter Support Initiative</span>
+              <div class="mt-1 ml-1 card-1-text">
+                <span class="span"><img src="./icons/add-square.svg" alt="" /> Housing
+                  Support</span>
+                <span class="span"><img src="./icons/location3.svg" alt="" /> Nangarhar</span>
+              </div>
+
+              <!-- Bootstrap progress -->
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 40%"></div>
+              </div>
+
+              <!-- Loan Info -->
+              <div class="d-flex justify-content-between px-2">
+                <div>
+                  <span>$12,000 </span>
+                  <span class="text-muted">raised</span>
+                </div>
+                <div>
+                  <span>$18,000 </span>
+                  <span class="text-muted">remaining</span>
+                </div>
+              </div>
+
+              <!-- Amount Options -->
+              <div class="d-flex justify-content-between mt-3 px-2">
+                <span class="Amount">$20</span>
+                <span class="Amount">$100</span>
+                <span class="Amount">$250</span>
+                <span class="Custom-amount d-flex align-items-center">
+                  <img src="./icons/Vector.png" alt="" /> Custom Amount
+                </span>
+              </div>
+
+              <!-- Donate + Cart -->
+              <div class="d-flex justify-content-between align-items-center mt-3 px-2">
+                <button class="donate-button d-flex align-items-center justify-content-center">
+                  <img src="./icons/filled-partner.svg" height="20px" alt="" />&ensp; Donate
+                </button>
+                <button class="cart2">
+                  <img src="./images/cart2.svg" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 10 - Vocational Training -->
+          <div class="swiper-slide">
+            <div class="card-1">
+              <img class="main-img img-fluid rounded" src="./images/Frame 1261153463 (1).png"
+                alt="Vocational Training Program" />
+              <span class="card-1text d-block">Vocational Training Program</span>
+              <div class="mt-1 ml-1 card-1-text">
+                <span class="span"><img src="./icons/add-square.svg" alt="" /> Skills
+                  Development</span>
+                <span class="span"><img src="./icons/location3.svg" alt="" />
+                  Mazar-i-Sharif</span>
+              </div>
+
+              <!-- Bootstrap progress -->
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 85%"></div>
+              </div>
+
+              <!-- Loan Info -->
+              <div class="d-flex justify-content-between px-2">
+                <div>
+                  <span>$25,500 </span>
+                  <span class="text-muted">raised</span>
+                </div>
+                <div>
+                  <span>$4,500 </span>
+                  <span class="text-muted">remaining</span>
+                </div>
+              </div>
+
+              <!-- Amount Options -->
+              <div class="d-flex justify-content-between mt-3 px-2">
+                <span class="Amount">$20</span>
+                <span class="Amount">$100</span>
+                <span class="Amount">$250</span>
+                <span class="Custom-amount d-flex align-items-center">
+                  <img src="./icons/Vector.png" alt="" /> Custom Amount
+                </span>
+              </div>
+
+              <!-- Donate + Cart -->
+              <div class="d-flex justify-content-between align-items-center mt-3 px-2">
+                <button class="donate-button d-flex align-items-center justify-content-center">
+                  <img src="./icons/filled-partner.svg" height="20px" alt="" />&ensp; Donate
+                </button>
+                <button class="cart2">
+                  <img src="./images/cart2.svg" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <div class="ma-he" style="height: 240px;">
+      <div class="main container-fluid progress_con position-absolute">
+        <div class="row align-items-center justify-content-between container mx-auto">
+          <!-- Left Text -->
+          <div class="col-md-6">
+            <span class="text-danger fw-bold" style="font-size: 20px;">Media Center</span>
+            <h2 class="fw-semibold mt-2">
+              We work across key sectors to restore dignity, protect health, and
+              build resilience.
+            </h2>
+          </div>
+          <!-- Right Buttons -->
+          <div class="col-md-6 d-flex justify-content-md-end gap-2 mt-3 mt-md-0">
+            <button class="btn btn-donate d-flex align-items-center fw-semibold" style="width: 190px;">
+              <img src="./icons/partner.svg" alt="" class="me-2" /> Donate Now
+            </button>
+            <button class="btn border-black text-black px-4 fw-semibold" style="width: 190px;">
+              Media Center
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid card-container-wrapper">
+      <div class="card-container">
         <!-- Card 1 -->
-        <div class="swiper-slide">
-          <div class="card-1">
-            <img class="main-img rounded" src="./images/Frame 1261153463 (1).png" alt="Mobile Clinic Outreach" />
-            <span class="card-1text d-block">Mobile Clinic Outreach – Kandahar</span>
-            <div class="mt-1">
-              <span class="span"><img src="./icons/add-square.svg" alt="" /> Health
-                Services</span>
-              <span class="span"><img src="./icons/location3.svg" alt="" /> Badakhshan</span>
-            </div>
-
-            <!-- Bootstrap progress -->
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 65%"></div>
-            </div>
-
-            <!-- Loan Info -->
-            <div class="d-flex justify-content-between px-2">
-              <div>
-                <span>$19,200 </span>
-                <span class="text-muted">raised</span>
-              </div>
-              <div>
-                <span>$10,800 </span>
-                <span class="text-muted">remaining</span>
-              </div>
-            </div>
-
-            <!-- Amount Options -->
-            <div class="d-flex justify-content-between mt-3 px-2">
-              <span class="Amount">$20</span>
-              <span class="Amount">$100</span>
-              <span class="Amount">$250</span>
-              <span class="Custom-amount d-flex align-items-center">
-                <img src="./icons/Vector.png" alt="" /> Custom Amount
-              </span>
-            </div>
-
-            <!-- Donate + Cart -->
-            <div class="d-flex justify-content-between align-items-center mt-3 px-2">
-              <button class="donate-button d-flex align-items-center justify-content-center">
-                <img src="./icons/filled-partner.svg" height="20px" alt="" />&ensp; Donate
-              </button>
-              <button class="cart2">
-                <img src="./images/cart2.svg" alt="" />
-              </button>
+        <div class="card">
+          <img src="./images/media-1.png" class="card-img-top" alt="News Image" />
+          <div class="card-body">
+            <h5 class="card-title">
+              Tents Provided to 50 Repatriated Families in Baghlan
+            </h5>
+            <p class="card-text">
+              ARCS has distributed 50 tents to 50 repatriated families in
+              Dand-e-Ghori, Markazi Baghlan districts...
+            </p>
+            <div class="d-flex gap-4 small-text mt-3">
+              <span class="d-flex align-items-center gap-2"><i class="bi bi-calendar"></i> 5th May 2025</span>
+              <a href="#" class="text-decoration-none small-text d-flex gap-2 align-items-center"><img
+                  src="./images/share.png" alt=""> Share via</a>
             </div>
           </div>
         </div>
+
+        <!-- Duplicate the card content as needed -->
 
         <!-- Card 2 -->
-        <div class="swiper-slide">
-          <div class="card-1">
-            <img class="main-img img-fluid rounded" src="./images/Frame 1261153463.png"
-              alt="Winter Marastoon Support" />
-            <span class="card-1text d-block">Winter Marastoon Support</span>
-            <div class="mt-1">
-              <span class="span"><img src="./icons/add-square.svg" alt="" /> Health
-                Services</span>
-              <span class="span"><img src="./icons/location3.svg" alt="" /> Badakhshan</span>
-            </div>
-
-            <!-- Bootstrap progress -->
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 65%"></div>
-            </div>
-
-            <!-- Loan Info -->
-            <div class="d-flex justify-content-between px-2">
-              <div>
-                <span>$19,200 </span>
-                <span class="text-muted">raised</span>
-              </div>
-              <div>
-                <span>$10,800 </span>
-                <span class="text-muted">remaining</span>
-              </div>
-            </div>
-
-            <!-- Amount Options -->
-            <div class="d-flex justify-content-between mt-3 px-2">
-              <span class="Amount">$20</span>
-              <span class="Amount">$100</span>
-              <span class="Amount">$250</span>
-              <span class="Custom-amount d-flex align-items-center">
-                <img src="./icons/Vector.png" alt="" /> Custom Amount
-              </span>
-            </div>
-
-            <!-- Donate + Cart -->
-            <div class="d-flex justify-content-between align-items-center mt-3 px-2">
-              <button class="donate-button d-flex align-items-center justify-content-center">
-                <img src="./icons/filled-partner.svg" height="20px" alt="" />&ensp; Donate
-              </button>
-              <button class="cart2">
-                <img src="./images/cart2.svg" alt="" />
-              </button>
+        <div class="card">
+          <img src="./images/Frame 60.png" class="card-img-top" alt="News Image" />
+          <div class="card-body">
+            <h5 class="card-title">Health Support for Returnees in Kandahar</h5>
+            <p class="card-text">
+              A mobile clinic was deployed in Kandahar to provide health
+              services to returnee families in the Spin Boldak...
+            </p>
+            <div class="d-flex gap-4 small-text mt-3">
+              <span class="d-flex align-items-center gap-2"><i class="bi bi-calendar"></i> 8th May 2025</span>
+              <a href="#" class="text-decoration-none small-text d-flex gap-2 align-items-center"><img
+                  src="./images/share.png" alt=""> Share via</a>
             </div>
           </div>
         </div>
 
         <!-- Card 3 -->
-        <div class="swiper-slide">
-          <div class="card-1">
-            <img class="main-img img-fluid rounded" src="./images/Frame 1261153463 (2).png"
-              alt="Volunteer First Aid Training" />
-            <span class="card-1text d-block">Volunteer First Aid Training</span>
-            <div class="mt-1">
-              <span class="span"><img src="./icons/add-square.svg" alt="" /> Health
-                Services</span>
-              <span class="span"><img src="./icons/location3.svg" alt="" /> Badakhshan</span>
-            </div>
-
-            <!-- Bootstrap progress -->
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 65%"></div>
-            </div>
-
-            <!-- Loan Info -->
-            <div class="d-flex justify-content-between px-2">
-              <div>
-                <span>$19,200 </span>
-                <span class="text-muted">raised</span>
-              </div>
-              <div>
-                <span>$10,800 </span>
-                <span class="text-muted">remaining</span>
-              </div>
-            </div>
-
-            <!-- Amount Options -->
-            <div class="d-flex justify-content-between mt-3 px-2">
-              <span class="Amount">$20</span>
-              <span class="Amount">$100</span>
-              <span class="Amount">$250</span>
-              <span class="Custom-amount d-flex align-items-center">
-                <img src="./icons/Vector.png" alt="" /> Custom Amount
-              </span>
-            </div>
-
-            <!-- Donate + Cart -->
-            <div class="d-flex justify-content-between align-items-center mt-3 px-2">
-              <button class="donate-button d-flex align-items-center justify-content-center">
-                <img src="./icons/filled-partner.svg" height="20px" alt="" />&ensp; Donate
-              </button>
-              <button class="cart2">
-                <img src="./images/cart2.svg" alt="" />
-              </button>
+        <div class="card">
+          <img src="./images/media-3.png" class="card-img-top" alt="News Image" />
+          <div class="card-body">
+            <h5 class="card-title">Food Aid Distributed to Needy Families</h5>
+            <p class="card-text">
+              Emergency food parcels were delivered to 100+ vulnerable families
+              in remote areas of northern provinces...
+            </p>
+            <div class="d-flex gap-4 small-text mt-3 text-card">
+              <span class="d-flex align-items-center gap-2"><i class="bi bi-calendar"></i> 10th May 2025</span>
+              <a href="#" class="text-decoration-none small-text d-flex gap-2 align-items-center"><img
+                  src="./images/share.png" alt=""> Share via</a>
             </div>
           </div>
         </div>
 
-        <!-- Card 4 - Additional card for demonstration -->
-        <div class="swiper-slide">
-          <div class="card-1">
-            <img class="main-img img-fluid rounded" src="./images/Frame 1261153463 (1).png"
-              alt="Women's Tailoring Program" />
-            <span class="card-1text d-block">Women's Tailoring Program</span>
-            <div class="mt-1">
-              <span class="span"><img src="./icons/add-square.svg" alt="" /> Community
-                Empowerment</span>
-              <span class="span"><img src="./icons/location3.svg" alt="" /> Kabul</span>
-            </div>
-
-            <!-- Bootstrap progress -->
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 45%"></div>
-            </div>
-
-            <!-- Loan Info -->
-            <div class="d-flex justify-content-between px-2">
-              <div>
-                <span>$13,500 </span>
-                <span class="text-muted">raised</span>
-              </div>
-              <div>
-                <span>$16,500 </span>
-                <span class="text-muted">remaining</span>
-              </div>
-            </div>
-
-            <!-- Amount Options -->
-            <div class="d-flex justify-content-between mt-3 px-2">
-              <span class="Amount">$20</span>
-              <span class="Amount">$100</span>
-              <span class="Amount">$250</span>
-              <span class="Custom-amount d-flex align-items-center">
-                <img src="./icons/Vector.png" alt="" /> Custom Amount
-              </span>
-            </div>
-
-            <!-- Donate + Cart -->
-            <div class="d-flex justify-content-between align-items-center mt-3 px-2">
-              <button class="donate-button d-flex align-items-center justify-content-center">
-                <img src="./icons/filled-partner.svg" height="20px" alt="" />&ensp; Donate
-              </button>
-              <button class="cart2">
-                <img src="./images/cart2.svg" alt="" />
-              </button>
+        <!-- Card 4 -->
+        <div class="card">
+          <img src="./images/media-4.png" class="card-img-top" alt="News Image" />
+          <div class="card-body">
+            <h5 class="card-title">Winter Kits Delivered Before Snowfall</h5>
+            <p class="card-text">
+              Winter relief kits including blankets and heaters were distributed
+              in high-risk regions prior to heavy snow...
+            </p>
+            <div class="d-flex gap-4 small-text mt-3">
+              <span class="d-flex align-items-center gap-2"><i class="bi bi-calendar"></i> 12th May 2025</span>
+              <a href="#" class="text-decoration-none small-text d-flex gap-2 align-items-center"><img
+                  src="./images/share.png" alt=""> Share via</a>
             </div>
           </div>
         </div>
 
-        <!-- Card 5 - Education Support -->
-        <div class="swiper-slide">
-          <div class="card-1">
-            <img class="main-img img-fluid rounded" src="./images/Frame 1261153463 (2).png"
-              alt="Education Support Program" />
-            <span class="card-1text d-block">Education Support Program</span>
-            <div class="mt-1">
-              <span class="span"><img src="./icons/add-square.svg" alt="" /> Education</span>
-              <span class="span"><img src="./icons/location3.svg" alt="" /> Herat</span>
-            </div>
-
-            <!-- Bootstrap progress -->
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 80%"></div>
-            </div>
-
-            <!-- Loan Info -->
-            <div class="d-flex justify-content-between px-2">
-              <div>
-                <span>$24,000 </span>
-                <span class="text-muted">raised</span>
-              </div>
-              <div>
-                <span>$6,000 </span>
-                <span class="text-muted">remaining</span>
-              </div>
-            </div>
-
-            <!-- Amount Options -->
-            <div class="d-flex justify-content-between mt-3 px-2">
-              <span class="Amount">$20</span>
-              <span class="Amount">$100</span>
-              <span class="Amount">$250</span>
-              <span class="Custom-amount d-flex align-items-center">
-                <img src="./icons/Vector.png" alt="" /> Custom Amount
-              </span>
-            </div>
-
-            <!-- Donate + Cart -->
-            <div class="d-flex justify-content-between align-items-center mt-3 px-2">
-              <button class="donate-button d-flex align-items-center justify-content-center">
-                <img src="./icons/filled-partner.svg" height="20px" alt="" />&ensp; Donate
-              </button>
-              <button class="cart2">
-                <img src="./images/cart2.svg" alt="" />
-              </button>
+        <!-- Card 5 -->
+        <div class="card">
+          <img src="./images/media-5.png" class="card-img-top" alt="News Image" />
+          <div class="card-body">
+            <h5 class="card-title">Emergency Medical Kits Sent to Nuristan</h5>
+            <p class="card-text">
+              In response to the recent landslide, emergency medical kits and
+              tents were flown to affected villages...
+            </p>
+            <div class="d-flex gap-4 small-text mt-3">
+              <span class="d-flex align-items-center gap-2"><i class="bi bi-calendar"></i> 15th May 2025</span>
+              <a href="#" class="text-decoration-none small-text d-flex gap-2 align-items-center"><img
+                  src="./images/share.png" alt=""> Share via</a>
             </div>
           </div>
         </div>
 
-        <!-- Card 6 - Clean Water Initiative -->
-        <div class="swiper-slide">
-          <div class="card-1">
-            <img class="main-img img-fluid rounded" src="./images/Frame 1261153463.png" alt="Clean Water Initiative" />
-            <span class="card-1text d-block">Clean Water Initiative</span>
-            <div class="mt-1">
-              <span class="span"><img src="./icons/add-square.svg" alt="" /> Water &
-                Sanitation</span>
-              <span class="span"><img src="./icons/location3.svg" alt="" /> Kandahar</span>
-            </div>
-
-            <!-- Bootstrap progress -->
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 30%"></div>
-            </div>
-
-            <!-- Loan Info -->
-            <div class="d-flex justify-content-between px-2">
-              <div>
-                <span>$9,000 </span>
-                <span class="text-muted">raised</span>
-              </div>
-              <div>
-                <span>$21,000 </span>
-                <span class="text-muted">remaining</span>
-              </div>
-            </div>
-
-            <!-- Amount Options -->
-            <div class="d-flex justify-content-between mt-3 px-2">
-              <span class="Amount">$20</span>
-              <span class="Amount">$100</span>
-              <span class="Amount">$250</span>
-              <span class="Custom-amount d-flex align-items-center">
-                <img src="./icons/Vector.png" alt="" /> Custom Amount
-              </span>
-            </div>
-
-            <!-- Donate + Cart -->
-            <div class="d-flex justify-content-between align-items-center mt-3 px-2">
-              <button class="donate-button d-flex align-items-center justify-content-center">
-                <img src="./icons/filled-partner.svg" height="20px" alt="" />&ensp; Donate
-              </button>
-              <button class="cart2">
-                <img src="./images/cart2.svg" alt="" />
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 7 - Emergency Relief -->
-        <div class="swiper-slide">
-          <div class="card-1">
-            <img class="main-img img-fluid rounded" src="./images/Frame 1261153463 (1).png"
-              alt="Emergency Relief Support" />
-            <span class="card-1text d-block">Emergency Relief Support</span>
-            <div class="mt-1">
-              <span class="span"><img src="./icons/add-square.svg" alt="" /> Emergency
-                Aid</span>
-              <span class="span"><img src="./icons/location3.svg" alt="" /> Nationwide</span>
-            </div>
-
-            <!-- Bootstrap progress -->
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 55%"></div>
-            </div>
-
-            <!-- Loan Info -->
-            <div class="d-flex justify-content-between px-2">
-              <div>
-                <span>$16,500 </span>
-                <span class="text-muted">raised</span>
-              </div>
-              <div>
-                <span>$13,500 </span>
-                <span class="text-muted">remaining</span>
-              </div>
-            </div>
-
-            <!-- Amount Options -->
-            <div class="d-flex justify-content-between mt-3 px-2">
-              <span class="Amount">$20</span>
-              <span class="Amount">$100</span>
-              <span class="Amount">$250</span>
-              <span class="Custom-amount d-flex align-items-center">
-                <img src="./icons/Vector.png" alt="" /> Custom Amount
-              </span>
-            </div>
-
-            <!-- Donate + Cart -->
-            <div class="d-flex justify-content-between align-items-center mt-3 px-2">
-              <button class="donate-button d-flex align-items-center justify-content-center">
-                <img src="./icons/filled-partner.svg" height="20px" alt="" />&ensp; Donate
-              </button>
-              <button class="cart2">
-                <img src="./images/cart2.svg" alt="" />
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 8 - Food Distribution -->
-        <div class="swiper-slide">
-          <div class="card-1">
-            <img class="main-img img-fluid rounded" src="./images/Frame 1261153463 (2).png"
-              alt="Food Distribution Program" />
-            <span class="card-1text d-block">Food Distribution Program</span>
-            <div class="mt-1">
-              <span class="span"><img src="./icons/add-square.svg" alt="" /> Food
-                Security</span>
-              <span class="span"><img src="./icons/location3.svg" alt="" /> Balkh</span>
-            </div>
-
-            <!-- Bootstrap progress -->
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 70%"></div>
-            </div>
-
-            <!-- Loan Info -->
-            <div class="d-flex justify-content-between px-2">
-              <div>
-                <span>$21,000 </span>
-                <span class="text-muted">raised</span>
-              </div>
-              <div>
-                <span>$9,000 </span>
-                <span class="text-muted">remaining</span>
-              </div>
-            </div>
-
-            <!-- Amount Options -->
-            <div class="d-flex justify-content-between mt-3 px-2">
-              <span class="Amount">$20</span>
-              <span class="Amount">$100</span>
-              <span class="Amount">$250</span>
-              <span class="Custom-amount d-flex align-items-center">
-                <img src="./icons/Vector.png" alt="" /> Custom Amount
-              </span>
-            </div>
-
-            <!-- Donate + Cart -->
-            <div class="d-flex justify-content-between align-items-center mt-3 px-2">
-              <button class="donate-button d-flex align-items-center justify-content-center">
-                <img src="./icons/filled-partner.svg" height="20px" alt="" />&ensp; Donate
-              </button>
-              <button class="cart2">
-                <img src="./images/cart2.svg" alt="" />
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 9 - Shelter Support -->
-        <div class="swiper-slide">
-          <div class="card-1">
-            <img class="main-img img-fluid rounded" src="./images/Frame 1261153463.png"
-              alt="Shelter Support Initiative" />
-            <span class="card-1text d-block">Shelter Support Initiative</span>
-            <div class="mt-1">
-              <span class="span"><img src="./icons/add-square.svg" alt="" /> Housing
-                Support</span>
-              <span class="span"><img src="./icons/location3.svg" alt="" /> Nangarhar</span>
-            </div>
-
-            <!-- Bootstrap progress -->
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 40%"></div>
-            </div>
-
-            <!-- Loan Info -->
-            <div class="d-flex justify-content-between px-2">
-              <div>
-                <span>$12,000 </span>
-                <span class="text-muted">raised</span>
-              </div>
-              <div>
-                <span>$18,000 </span>
-                <span class="text-muted">remaining</span>
-              </div>
-            </div>
-
-            <!-- Amount Options -->
-            <div class="d-flex justify-content-between mt-3 px-2">
-              <span class="Amount">$20</span>
-              <span class="Amount">$100</span>
-              <span class="Amount">$250</span>
-              <span class="Custom-amount d-flex align-items-center">
-                <img src="./icons/Vector.png" alt="" /> Custom Amount
-              </span>
-            </div>
-
-            <!-- Donate + Cart -->
-            <div class="d-flex justify-content-between align-items-center mt-3 px-2">
-              <button class="donate-button d-flex align-items-center justify-content-center">
-                <img src="./icons/filled-partner.svg" height="20px" alt="" />&ensp; Donate
-              </button>
-              <button class="cart2">
-                <img src="./images/cart2.svg" alt="" />
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 10 - Vocational Training -->
-        <div class="swiper-slide">
-          <div class="card-1">
-            <img class="main-img img-fluid rounded" src="./images/Frame 1261153463 (1).png"
-              alt="Vocational Training Program" />
-            <span class="card-1text d-block">Vocational Training Program</span>
-            <div class="mt-1">
-              <span class="span"><img src="./icons/add-square.svg" alt="" /> Skills
-                Development</span>
-              <span class="span"><img src="./icons/location3.svg" alt="" />
-                Mazar-i-Sharif</span>
-            </div>
-
-            <!-- Bootstrap progress -->
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 85%"></div>
-            </div>
-
-            <!-- Loan Info -->
-            <div class="d-flex justify-content-between px-2">
-              <div>
-                <span>$25,500 </span>
-                <span class="text-muted">raised</span>
-              </div>
-              <div>
-                <span>$4,500 </span>
-                <span class="text-muted">remaining</span>
-              </div>
-            </div>
-
-            <!-- Amount Options -->
-            <div class="d-flex justify-content-between mt-3 px-2">
-              <span class="Amount">$20</span>
-              <span class="Amount">$100</span>
-              <span class="Amount">$250</span>
-              <span class="Custom-amount d-flex align-items-center">
-                <img src="./icons/Vector.png" alt="" /> Custom Amount
-              </span>
-            </div>
-
-            <!-- Donate + Cart -->
-            <div class="d-flex justify-content-between align-items-center mt-3 px-2">
-              <button class="donate-button d-flex align-items-center justify-content-center">
-                <img src="./icons/filled-partner.svg" height="20px" alt="" />&ensp; Donate
-              </button>
-              <button class="cart2">
-                <img src="./images/cart2.svg" alt="" />
-              </button>
+        <!-- Card 6 -->
+        <div class="card">
+          <img src="./images/media-6.png" class="card-img-top" alt="News Image" />
+          <div class="card-body">
+            <h5 class="card-title">
+              Tents Provided to 50 Repatriated Families in Baghlan
+            </h5>
+            <p class="card-text">
+              ARCS has distributed 50 tents to 50 repatriated families in
+              Dand-e-Ghori, Markazi Baghlan districts...
+            </p>
+            <div class="d-flex gap-4 small-text mt-3">
+              <span class="d-flex align-items-center gap-2"><i class="bi bi-calendar"></i> 5th May 2025</span>
+              <a href="#" class="text-decoration-none small-text d-flex gap-2 align-items-center"><img
+                  src="./images/share.png" alt=""> Share via</a>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Pagination -->
-      <div class="swiper-pagination"></div>
     </div>
+    <!-- Video and Related Content Section -->
+    <section class="video-section py-5">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Main Video -->
+          <div class="col-lg-8 col-md-12 mb-4">
+            <div class="video-container position-relative">
+              <div class="ratio ratio-16x9">
+                <iframe style="height: 555px" src=https://www.youtube.com/embed/42ul8XGl2P4?si=TTfXEh87MPwJ25SY?t=10 "
+                  title=" YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Related Videos Sidebar -->
+          <div class="col-lg-4 col-md-12">
+            <div class="related-videos">
+
+              <!-- Video Items Container - Horizontal scroll on mobile -->
+              <div class="video-items-container">
+                <div class="d-lg-block d-flex flex-nowrap overflow-auto pb-2 video-res">
+                  <!-- Video Item 1 -->
+                  <div class="video-item d-flex mb-3 rounded flex-shrink-0 me-3 me-lg-0" style="min-width: 280px">
+                    <div class="video-thumbnail me-3 flex-shrink-0">
+                      <img src="./images/video-section.png" alt="ARCS Staff" class="rounded"
+                        style="width: 83px; height: 83px; object-fit: cover" />
+                    </div>
+                    <div class="video-info flex-grow-1">
+                      <h6 class="mb-1 fw-bold" style="font-size: 20px;">
+                        The staff and volunteers of #ARCS tirelessly serve
+                        repatriated ...
+                      </h6>
+                      <div class="d-flex align-items-center text-muted small">
+                        <span class="me-2 d-flex align-items-center gap-2"><img src="./images/calendar2.png" alt=""> Jul
+                          13
+                          2025</span>
+                        <span class="d-flex align-items-center gap-2"><img src="./images/share.png" alt=""> Share
+                          via</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Video Item 2 -->
+                  <div class="video-item d-flex mb-3 rounded flex-shrink-0 me-3 me-lg-0" style="min-width: 280px">
+                    <div class="video-thumbnail me-3 flex-shrink-0">
+                      <img src="./images/video-section.png" alt="ARCS Services" class="rounded"
+                        style="width: 83px; height: 83px; object-fit: cover" />
+                    </div>
+                    <div class="video-info flex-grow-1">
+                      <h6 class="mb-1 fw-bold" style="font-size: 20px;">
+                        ARCS Services to the Returning Refugees
+                      </h6>
+                      <div class="d-flex align-items-center text-muted small">
+                        <span class="me-2 d-flex align-items-center gap-2"><img src="./images/calendar2.png" alt=""> Jul
+                          13
+                          2025</span>
+                        <span class="d-flex align-items-center gap-2"><img src="./images/share.png" alt=""> Share
+                          via</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Video Item 3 -->
+                  <div class="video-item d-flex mb-3 rounded flex-shrink-0 me-3 me-lg-0" style="min-width: 280px">
+                    <div class="video-thumbnail me-3 flex-shrink-0">
+                      <img src="./images/video-section.png" alt="Humanitarian Services" class="rounded"
+                        style="width: 83px; height: 83px; object-fit: cover" />
+                    </div>
+                    <div class="video-info flex-grow-1">
+                      <h6 class="mb-1 fw-bold" style="font-size: 20px;">
+                        Through the provision of humanitarian services, #ARCS
+                        ...
+                      </h6>
+                      <div class="d-flex align-items-center text-muted small">
+                        <span class="me-2 d-flex align-items-center gap-2"><img src="./images/calendar2.png" alt=""> Jul
+                          13
+                          2025</span>
+                        <span class="d-flex align-items-center gap-2"><img src="./images/share.png" alt=""> Share
+                          via</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Video Item 4 -->
+                  <div class="video-item d-flex mb-3 rounded flex-shrink-0 me-3 me-lg-0" style="min-width: 280px">
+                    <div class="video-thumbnail me-3 flex-shrink-0">
+                      <img src="./images/video-section.png" alt="Medical Teams" class="rounded"
+                        style="width: 83px; height: 83px; object-fit: cover" />
+                    </div>
+                    <div class="video-info flex-grow-1">
+                      <h6 class="mb-1 fw-bold" style="font-size: 20px;">
+                        The medical teams of #ARCS are committed and dedicated
+                        to ...
+                      </h6>
+                      <div class="d-flex align-items-center text-muted small">
+                        <span class="me-2 d-flex align-items-center gap-2"><img src="./images/calendar2.png" alt=""> Jul
+                          13
+                          2025</span>
+                        <span class="d-flex align-items-center gap-2"><img src="./images/share.png" alt=""> Share
+                          via</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Video Item 5 -->
+                  <div class="video-item d-flex mb-3 rounded flex-shrink-0 me-3 me-lg-0" style="min-width: 280px">
+                    <div class="video-thumbnail me-3 flex-shrink-0">
+                      <img src="./images/video-section.png" alt="ARCS Program" class="rounded"
+                        style="width: 83px; height: 83px; object-fit: cover" />
+                    </div>
+                    <div class="video-info flex-grow-1">
+                      <h6 class="mb-1 fw-bold" style="font-size: 20px;">
+                        #ARCS Program for the Training of Community Health ...
+                      </h6>
+                      <div class="d-flex align-items-center text-muted small">
+                        <span class="me-2 d-flex align-items-center gap-2"><img src="./images/calendar2.png" alt=""> Jul
+                          13
+                          2025</span>
+                        <span class="d-flex align-items-center gap-2"><img src="./images/share.png" alt=""> Share
+                          via</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
-
-  <div class="ma-he" style="height: 240px; background-color: #f7f7f7">
-    <div class="main container-fluid progress_con position-absolute">
-      <div class="row align-items-center justify-content-between container mx-auto">
-        <!-- Left Text -->
-        <div class="col-md-6">
-          <span class="text-danger fw-bold">Media Center</span>
-          <h2 class="fw-semibold mt-2">
-            We work across key sectors to restore dignity, protect health, and
-            build resilience.
-          </h2>
-        </div>
-        <!-- Right Buttons -->
-        <div class="col-md-6 d-flex justify-content-md-end gap-2 mt-3 mt-md-0">
-          <button class="btn btn-donate d-flex align-items-center">
-            <img src="./icons/partner.svg" alt="" class="me-2" /> Donate Now
-          </button>
-          <button class="btn border-black text-black px-4">
-            Media Center
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container-fluid card-container-wrapper" style="background-color: #f7f7f7">
-    <div class="card-container">
-      <!-- Card 1 -->
-      <div class="card">
-        <img src="./images/Frame 60.png" class="card-img-top" alt="News Image" />
-        <div class="card-body">
-          <h5 class="card-title">
-            Tents Provided to 50 Repatriated Families in Baghlan
-          </h5>
-          <p class="card-text">
-            ARCS has distributed 50 tents to 50 repatriated families in
-            Dand-e-Ghori, Markazi Baghlan districts...
-          </p>
-          <div class="d-flex gap-4 small-text mt-3">
-            <span><i class="bi bi-calendar"></i> 5th May 2025</span>
-            <a href="#" class="text-decoration-none small-text">Share via</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Duplicate the card content as needed -->
-
-      <!-- Card 2 -->
-      <div class="card">
-        <img src="./images/Frame 60.png" class="card-img-top" alt="News Image" />
-        <div class="card-body">
-          <h5 class="card-title">Health Support for Returnees in Kandahar</h5>
-          <p class="card-text">
-            A mobile clinic was deployed in Kandahar to provide health
-            services to returnee families in the Spin Boldak...
-          </p>
-          <div class="d-flex gap-4 small-text mt-3">
-            <span><i class="bi bi-calendar"></i> 8th May 2025</span>
-            <a href="#" class="text-decoration-none small-text">Share via</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="card">
-        <img src="./images/Frame 60.png" class="card-img-top" alt="News Image" />
-        <div class="card-body">
-          <h5 class="card-title">Food Aid Distributed to Needy Families</h5>
-          <p class="card-text">
-            Emergency food parcels were delivered to 100+ vulnerable families
-            in remote areas of northern provinces...
-          </p>
-          <div class="d-flex gap-4 small-text mt-3 text-card">
-            <span><i class="bi bi-calendar"></i> 10th May 2025</span>
-            <a href="#" class="text-decoration-none small-text">Share via</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="card">
-        <img * src="./images/Frame 60.png" class="card-img-top" alt="News Image" />
-        <div class="card-body">
-          <h5 class="card-title">Winter Kits Delivered Before Snowfall</h5>
-          <p class="card-text">
-            Winter relief kits including blankets and heaters were distributed
-            in high-risk regions prior to heavy snow...
-          </p>
-          <div class="d-flex gap-4 small-text mt-3">
-            <span><i class="bi bi-calendar"></i> 12th May 2025</span>
-            <a href="#" class="text-decoration-none small-text">Share via</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="card">
-        <img src="./images/Frame 60.png" class="card-img-top" alt="News Image" />
-        <div class="card-body">
-          <h5 class="card-title">Emergency Medical Kits Sent to Nuristan</h5>
-          <p class="card-text">
-            In response to the recent landslide, emergency medical kits and
-            tents were flown to affected villages...
-          </p>
-          <div class="d-flex gap-4 small-text mt-3">
-            <span><i class="bi bi-calendar"></i> 15th May 2025</span>
-            <a href="#" class="text-decoration-none small-text">Share via</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 6 -->
-      <div class="card">
-        <img src="./images/Frame 60.png" class="card-img-top" alt="News Image" />
-        <div class="card-body">
-          <h5 class="card-title">
-            Tents Provided to 50 Repatriated Families in Baghlan
-          </h5>
-          <p class="card-text">
-            ARCS has distributed 50 tents to 50 repatriated families in
-            Dand-e-Ghori, Markazi Baghlan districts...
-          </p>
-          <div class="d-flex gap-4 small-text mt-3">
-            <span><i class="bi bi-calendar"></i> 5th May 2025</span>
-            <a href="#" class="text-decoration-none small-text">Share via</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Video and Related Content Section -->
-  <section class="video-section py-5">
-    <div class="container">
-      <div class="row g-4">
-        <!-- Main Video -->
-        <div class="col-lg-8 col-md-12 mb-4">
-          <div class="video-container position-relative">
-            <div class="ratio ratio-16x9">
-              <iframe style="height: 101%" src="https://www.youtube.com/embed/jUcneb6rx3M?si=TZHhUHqhT3SwWw7o"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-
-        <!-- Related Videos Sidebar -->
-        <div class="col-lg-4 col-md-12">
-          <div class="related-videos">
-            <h5 class="mb-3 d-none d-lg-block">Related Videos</h5>
-
-            <!-- Video Items Container - Horizontal scroll on mobile -->
-            <div class="video-items-container">
-              <div class="d-lg-block d-flex flex-nowrap overflow-auto pb-2 video-res">
-                <!-- Video Item 1 -->
-                <div class="video-item d-flex mb-3 rounded flex-shrink-0 me-3 me-lg-0" style="min-width: 280px">
-                  <div class="video-thumbnail me-3 flex-shrink-0">
-                    <img src="./images/video-section.png" alt="ARCS Staff" class="rounded"
-                      style="width: 60px; height: 60px; object-fit: cover" />
-                  </div>
-                  <div class="video-info flex-grow-1">
-                    <h6 class="mb-1 fw-bold small">
-                      The staff and volunteers of #ARCS tirelessly serve
-                      repatriated ...
-                    </h6>
-                    <div class="d-flex align-items-center text-muted small">
-                      <span class="me-2">Jul 13 2025</span>
-                      <span>Share via</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Video Item 2 -->
-                <div class="video-item d-flex mb-3 rounded flex-shrink-0 me-3 me-lg-0" style="min-width: 280px">
-                  <div class="video-thumbnail me-3 flex-shrink-0">
-                    <img src="./images/video-section.png" alt="ARCS Services" class="rounded"
-                      style="width: 60px; height: 60px; object-fit: cover" />
-                  </div>
-                  <div class="video-info flex-grow-1">
-                    <h6 class="mb-1 fw-bold small">
-                      ARCS Services to the Returning Refugees
-                    </h6>
-                    <div class="d-flex align-items-center text-muted small">
-                      <span class="me-2">Jul 13 2025</span>
-                      <span>Share via</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Video Item 3 -->
-                <div class="video-item d-flex mb-3 rounded flex-shrink-0 me-3 me-lg-0" style="min-width: 280px">
-                  <div class="video-thumbnail me-3 flex-shrink-0">
-                    <img src="./images/video-section.png" alt="Humanitarian Services" class="rounded"
-                      style="width: 60px; height: 60px; object-fit: cover" />
-                  </div>
-                  <div class="video-info flex-grow-1">
-                    <h6 class="mb-1 fw-bold small">
-                      Through the provision of humanitarian services, #ARCS
-                      ...
-                    </h6>
-                    <div class="d-flex align-items-center text-muted small">
-                      <span class="me-2">Jul 13 2025</span>
-                      <span>Share via</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Video Item 4 -->
-                <div class="video-item d-flex mb-3 rounded flex-shrink-0 me-3 me-lg-0" style="min-width: 280px">
-                  <div class="video-thumbnail me-3 flex-shrink-0">
-                    <img src="./images/video-section.png" alt="Medical Teams" class="rounded"
-                      style="width: 60px; height: 60px; object-fit: cover" />
-                  </div>
-                  <div class="video-info flex-grow-1">
-                    <h6 class="mb-1 fw-bold small">
-                      The medical teams of #ARCS are committed and dedicated
-                      to ...
-                    </h6>
-                    <div class="d-flex align-items-center text-muted small">
-                      <span class="me-2">Jul 13 2025</span>
-                      <span>Share via</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Video Item 5 -->
-                <div class="video-item d-flex mb-3 rounded flex-shrink-0 me-3 me-lg-0" style="min-width: 280px">
-                  <div class="video-thumbnail me-3 flex-shrink-0">
-                    <img src="./images/video-section.png" alt="ARCS Program" class="rounded"
-                      style="width: 60px; height: 60px; object-fit: cover" />
-                  </div>
-                  <div class="video-info flex-grow-1">
-                    <h6 class="mb-1 fw-bold small">
-                      #ARCS Program for the Training of Community Health ...
-                    </h6>
-                    <div class="d-flex align-items-center text-muted small">
-                      <span class="me-2">Jul 13 2025</span>
-                      <span>Share via</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Stories of Hope Section -->
   <section class="stories-section py-5 w-100" style="
@@ -1047,7 +1082,7 @@
         <div class="row align-items-center justify-content-between container mx-auto">
           <!-- Left Text -->
           <div class="col-md-6">
-            <span class="text-danger fw-bold">Stories Of Hope</span>
+            <span class="text-danger fw-bold" style="font-size: 20px;">Stories Of Hope</span>
             <h2 class="fw-semibold mt-2">
               Every contribution changes a life. Read how your support makes a
               difference.
@@ -1055,10 +1090,10 @@
           </div>
           <!-- Right Buttons -->
           <div class="col-md-6 d-flex justify-content-md-end gap-2 mt-3 mt-md-0">
-            <button class="btn btn-donate d-flex align-items-center">
+            <button class="btn btn-donate d-flex align-items-center fw-semibold" style="width: 190px;">
               <img src="./icons/partner.svg" alt="" class="me-2" /> Donate Now
             </button>
-            <button class="btn border-black text-black px-4">
+            <button class="btn border-black text-black px-4 fw-semibold" style="width: 190px;">
               Media Center
             </button>
           </div>
@@ -1173,7 +1208,7 @@
   <section class="partners-section py-5">
     <div>
       <div class="text-center mb-5" style="padding: 0 30px">
-        <h6 class="text-danger fw-bold mb-3">Our Partners</h6>
+        <h6 class="text-danger fw-bold mb-3" style="font-size: 20px;">Our Partners</h6>
         <h3 class="fw-bold text-dark">
           In collaboration with national and international organizations,<br />we
           extend our reach and impact.
@@ -1351,6 +1386,101 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- Swiper Initialization -->
   <script src="./script.js"></script>
+
+  <!-- Language Dropdown Functionality -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const languageContainer = document.querySelector('.language.dropdown-container');
+      const dropdownOptions = document.querySelector('.language-dropdown-options');
+      const selectedLanguageFull = document.querySelector('.selected-language-full');
+      const selectedLanguageShort = document.querySelector('.selected-language-short');
+      const dropdownArrow = document.querySelector('.dropdown-arrow');
+      const languageOptions = document.querySelectorAll('.language-option');
+
+      // Toggle dropdown visibility
+      languageContainer.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const isActive = languageContainer.classList.contains('active');
+
+        if (isActive) {
+          languageContainer.classList.remove('active');
+          dropdownOptions.style.display = 'none';
+        } else {
+          languageContainer.classList.add('active');
+          dropdownOptions.style.display = 'block';
+        }
+      });
+
+      // Handle language option selection
+      languageOptions.forEach(option => {
+        option.addEventListener('click', function (e) {
+          e.stopPropagation();
+
+          const lang = this.getAttribute('data-lang');
+          const flag = this.getAttribute('data-flag');
+          const fullText = this.getAttribute('data-full');
+          const shortText = this.getAttribute('data-short');
+
+          // Update the selected language display
+          if (selectedLanguageFull) {
+            selectedLanguageFull.textContent = fullText;
+          }
+          if (selectedLanguageShort) {
+            selectedLanguageShort.textContent = shortText;
+          }
+
+          // Update flag if needed
+          const flagImg = languageContainer.querySelector('img');
+          if (flagImg && flag) {
+            flagImg.src = flag;
+          }
+
+          // Close dropdown
+          languageContainer.classList.remove('active');
+          dropdownOptions.style.display = 'none';
+
+          // Store selected language for future use
+          localStorage.setItem('selectedLanguage', lang);
+
+          console.log('Language changed to:', lang, fullText);
+        });
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function (e) {
+        if (!languageContainer.contains(e.target)) {
+          languageContainer.classList.remove('active');
+          dropdownOptions.style.display = 'none';
+        }
+      });
+
+      // Prevent dropdown from closing when clicking inside options
+      dropdownOptions.addEventListener('click', function (e) {
+        e.stopPropagation();
+      });
+    });
+
+    // Donate Button Hover Image Change
+    document.addEventListener('DOMContentLoaded', function () {
+      const donateButtons = document.querySelectorAll('.donate-button');
+
+      donateButtons.forEach(button => {
+        const img = button.querySelector('img');
+        if (img) {
+          const originalSrc = img.src;
+          const hoverSrc = './icons/filled_partner-outlie.svg';
+
+          button.addEventListener('mouseenter', function () {
+            img.src = hoverSrc;
+          });
+
+          button.addEventListener('mouseleave', function () {
+            img.src = originalSrc;
+          });
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

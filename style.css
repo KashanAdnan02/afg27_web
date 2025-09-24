@@ -1,31 +1,85 @@
 body {
   overflow-x: hidden;
-}
-* {
   font-family: "Instrument Sans", sans-serif;
 }
+
 .top-bar {
+  height: 57px;
   background: #000;
   color: #fff;
-  font-size: 12px;
+  font-size: 14px;
 }
+
 .top-bar a {
   color: rgb(165, 159, 159);
   text-decoration: none;
 }
+
 .important {
   font-weight: 600;
   font-family: "Instrument Sans", sans-serif;
 }
+
 .language {
   border: 1px solid rgb(165, 159, 159);
   border-radius: 3px;
   padding: 7px;
   cursor: pointer;
   color: rgb(216, 210, 210);
+  position: relative;
 }
+
+/* Language Dropdown Styles */
+.language-dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-height: 250px;
+  overflow-y: auto;
+  margin-top: 2px;
+}
+
+.language-option {
+  padding: 10px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333;
+}
+
+.language-option:hover {
+  background-color: #f8f9fa;
+}
+
+.language-option:last-child {
+  border-bottom: none;
+}
+
+.language-option img {
+  width: 20px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.dropdown-arrow {
+  transition: transform 0.3s ease;
+}
+
+.language.active .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
 .sign-up-btn {
-  padding: 8px 16px;
+  padding: 14px 14px;
   width: 100px;
   border-radius: 5px;
   font-size: 16px;
@@ -34,13 +88,17 @@ body {
   border: 1px solid #000;
   transition: 0.3s;
 }
+
 .sign-up-btn:hover {
   background-color: #000;
   color: #fff;
 }
+.navbar-nav {
+  display: flex;
+}
 .sign-in-btn {
   width: 100px;
-  padding: 8px 16px;
+  padding: 14px 14px;
   font-size: 16px;
   border-radius: 5px;
   font-weight: 600;
@@ -75,8 +133,10 @@ body {
 }
 
 .carousel-caption {
-  bottom: 35%;
+  bottom: 38%;
   text-align: left;
+  left: 8% !important;
+  width: 100%;
 }
 .carousel-caption h2 {
   line-height: 50px;
@@ -86,18 +146,39 @@ body {
   background-color: #d0011c;
   color: white;
   border: none;
-  padding: 12px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 14px;
+  width: 190px;
   border-radius: 6px;
   position: relative;
 }
-.btn-custom-white {
-  padding: 12px 25px;
+
+.btn-custom-view {
+  padding: 14px 14px;
   border-radius: 5px;
+  width: 190px;
   position: relative;
 }
-
+.navbar-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+#mainNavbar {
+  max-width: fit-content;
+}
 .navbar {
-  height: 7.75rem !important;
+  height: 135px !important;
+  width: 100%;
+}
+
+.navbar a {
+  font-size: 18px !important;
+  color: black;
+  letter-spacing: 0px;
 }
 
 /* Wrapper for Donate button and indicators */
@@ -113,10 +194,7 @@ body {
   color: white;
 }
 .main {
-  background-color: #f7f7f7;
-  padding: 50px;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
+  padding: 90px 0 50px 0;
 }
 .btn-donate {
   background-color: #c1021b;
@@ -144,7 +222,6 @@ footer {
 .navbar-collapse {
   z-index: 1;
   background-color: white;
-  padding: 40px;
   border-radius: 20px;
 }
 footer h5 {
@@ -293,12 +370,20 @@ footer a:hover {
   color: #d0011c;
   border: 2px solid #b00017;
   padding: 3px 35px;
-  width: 80%;
+  width: 83%;
   height: 43px;
   font-size: 18px;
   border-radius: 7px;
+  transition: 0.4s;
 }
-
+.donate-button:hover {
+  background-color: #d0011c;
+  color: white;
+  border: 2px solid #b00017;
+}
+.card-1-text {
+  margin-left: 10px;
+}
 .cart2 {
   height: 43px;
   width: 55px;
@@ -307,6 +392,10 @@ footer a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.cart2:hover {
+  color: white;
+  border: 2px solid #000000;
 }
 .cart2 img {
   max-height: 22px;
@@ -359,7 +448,6 @@ footer a:hover {
 }
 
 .donation-swiper .swiper-wrapper {
-  gap: 24px;
   align-items: flex-start;
   display: flex;
   transition-timing-function: ease-out;
@@ -712,13 +800,15 @@ footer a:hover {
 .text-card span {
   color: #ababab;
 }
+.bg-main {
+  background-color: #f7f7f7;
+  border-bottom-right-radius: 80px;
+  border-bottom-left-radius: 80px;
+}
 
 /* Video Section Styles */
 .video-section {
-  background-color: #f7f7f7;
   border-top: 1px solid #f7f7f7;
-  border-bottom-left-radius: 100px;
-  border-bottom-right-radius: 100px;
   padding-top: 50px;
 }
 
@@ -738,13 +828,9 @@ footer a:hover {
 .video-item {
   transition: all 0.3s ease;
   cursor: pointer;
-  border: 1px solid transparent;
+  border-bottom: 1px solid #e2e2e2;
   align-items: center;
-}
-
-.video-item:hover {
-  background-color: #f7f7f7 !important;
-  transform: translateY(-2px);
+  padding-bottom: 21px;
 }
 
 .video-thumbnail img {
@@ -767,9 +853,17 @@ footer a:hover {
   color: #d0011c;
 }
 
+.main {
+  background-color: #f7f7f7;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+  z-index: 1 !important;
+}
+
 @media (max-width: 1920px) {
   .container {
-    max-width: 85% !important;
+    padding: 0 160px;
+    max-width: 100%;
   }
 }
 @media (max-width: 1700px) {
@@ -848,5 +942,7 @@ footer a:hover {
 
 .bg-hero {
   background-image: url("./images/mainpage.png");
-  background-size: cover;
+  background-size: contain;
+  width: 100%;
+  height: 100vh;
 }

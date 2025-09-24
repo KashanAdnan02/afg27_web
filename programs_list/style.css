@@ -219,6 +219,47 @@ footer a:hover {
   transform: translate(16%, 10%);
 }
 
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.dropdown-option {
+  padding: 12px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-option:hover {
+  background-color: #f8f9fa;
+}
+
+.dropdown-option:last-child {
+  border-bottom: none;
+}
+
+.dropdown-arrow {
+  transition: transform 0.3s ease;
+}
+
+.dropdown-container.active .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
 .p1 {
   color: white;
   margin-left: 700px;
@@ -229,6 +270,7 @@ footer a:hover {
   align-items: center;
   justify-content: space-between;
   width: 300px;
+  margin-right: 30px;
 }
 .se2ndlis {
   display: flex;
@@ -297,7 +339,7 @@ footer a:hover {
 .donation-amount,
 .custom-donation-amount {
   border: 1px solid black;
-  padding: 4px 18px;
+  padding: 4px 12px;
   border-radius: 5px;
   font-size: 14px;
 }
@@ -313,6 +355,9 @@ footer a:hover {
   height: 43px;
   font-size: 18px;
   border-radius: 7px;
+}
+.container{
+  max-width: 85% !important;
 }
 @media (max-width: 1500px) {
   .container {

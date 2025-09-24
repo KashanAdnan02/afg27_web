@@ -97,12 +97,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize Donation Swiper
     const donationSwiper = new Swiper('.donation-swiper', {
         // Basic settings
-        slidesPerView: 'auto',
+        slidesPerView: 3,
         spaceBetween: 24,
         centeredSlides: false,
         loop: true,
-        loopFillGroupWithBlank: false,
-        loopAdditionalSlides: 3,
         grabCursor: true,
         
         // Responsive breakpoints
@@ -110,98 +108,55 @@ document.addEventListener('DOMContentLoaded', function() {
             320: {
                 slidesPerView: 1,
                 spaceBetween: 16,
-                centeredSlides: true,
-                loopAdditionalSlides: 2
+                centeredSlides: true
             },
             576: {
                 slidesPerView: 1.2,
                 spaceBetween: 20,
-                centeredSlides: true,
-                loopAdditionalSlides: 2
+                centeredSlides: true
             },
             768: {
                 slidesPerView: 2,
                 spaceBetween: 24,
-                centeredSlides: false,
-                loopAdditionalSlides: 3
+                centeredSlides: false
             },
             992: {
                 slidesPerView: 2.5,
                 spaceBetween: 24,
-                centeredSlides: false,
-                loopAdditionalSlides: 4
+                centeredSlides: false
             },
             1200: {
                 slidesPerView: 3,
                 spaceBetween: 24,
-                centeredSlides: false,
-                loopAdditionalSlides: 4
+                centeredSlides: false
             }
         },
         
         // Auto-play settings
         autoplay: {
             delay: 4000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-            reverseDirection: false
+            disableOnInteraction: false
         },
         
         // Smooth transitions
-        speed: 800,
-        effect: 'slide',
+        speed: 600,
         
-        // Touch settings
-        touchRatio: 1,
-        touchAngle: 45,
-        simulateTouch: true,
-        
-        // Pagination (hidden but functional)
+        // Pagination
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
             dynamicBullets: true
         },
         
-        // Keyboard navigation
-        keyboard: {
-            enabled: true,
-            onlyInViewport: true
+        // Navigation arrows (if needed)
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
         
-        // Mouse wheel control
-        mousewheel: {
-            enabled: true,
-            sensitivity: 1,
-            releaseOnEdges: false
-        },
-        
-        // Accessibility
-        a11y: {
-            enabled: true,
-            prevSlideMessage: 'Previous donation card',
-            nextSlideMessage: 'Next donation card'
-        },
-        
-        // Additional settings for smooth infinite loop
-        watchSlidesProgress: true,
-        watchSlidesVisibility: true,
-        
-        // Prevent issues with loop
-        on: {
-            init: function () {
-                // Ensure smooth infinite scrolling
-                this.loopCreate();
-                this.loopFix();
-            },
-            slideChange: function () {
-                // Maintain smooth transitions
-                if (this.realIndex === 0 && this.previousIndex === this.slides.length - 1) {
-                    // Smooth transition from last to first
-                    this.allowSlideNext = true;
-                }
-            }
-        }
+        // Touch settings
+        touchRatio: 1,
+        simulateTouch: true
     });
     
     // Add smooth hover effects

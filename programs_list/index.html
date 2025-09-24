@@ -162,24 +162,44 @@
           <div class="dropdown">
             <div class="list">
               <div class="left4">
-                <div class="fi1stlis">
+                <div class="fi1stlis dropdown-container">
                   <div class="left">
-                    <span>City</span><br /><span style="color: #797778"
+                    <span>City</span><br /><span style="color: #797778" class="selected-city"
                       >Select City</span
                     >
                   </div>
                   <div class="right">
-                    <img src="../icons/angle-down.svg" alt="" />
+                    <img src="../icons/angle-down.svg" alt="" class="dropdown-arrow" />
+                  </div>
+                  <div class="dropdown-options city-options" style="display: none;">
+                    <div class="dropdown-option" data-value="">All Cities</div>
+                    <div class="dropdown-option" data-value="kabul">Kabul</div>
+                    <div class="dropdown-option" data-value="herat">Herat</div>
+                    <div class="dropdown-option" data-value="kandahar">Kandahar</div>
+                    <div class="dropdown-option" data-value="mazar">Mazar-i-Sharif</div>
+                    <div class="dropdown-option" data-value="jalalabad">Jalalabad</div>
+                    <div class="dropdown-option" data-value="kunduz">Kunduz</div>
+                    <div class="dropdown-option" data-value="ghazni">Ghazni</div>
+                    <div class="dropdown-option" data-value="bamyan">Bamyan</div>
                   </div>
                 </div>
-                <div class="se2ndlis">
+                <div class="se2ndlis dropdown-container">
                   <div class="left">
-                    <span>Sort By</span><br /><span style="color: #797778"
+                    <span>Sort By</span><br /><span style="color: #797778" class="selected-sort"
                       >All Project</span
                     >
                   </div>
                   <div class="right">
-                    <img src="../icons/angle-down.svg" alt="" />
+                    <img src="../icons/angle-down.svg" alt="" class="dropdown-arrow" />
+                  </div>
+                  <div class="dropdown-options sort-options" style="display: none;">
+                    <div class="dropdown-option" data-value="all">All Projects</div>
+                    <div class="dropdown-option" data-value="newest">Newest First</div>
+                    <div class="dropdown-option" data-value="oldest">Oldest First</div>
+                    <div class="dropdown-option" data-value="funding-high">Highest Funding</div>
+                    <div class="dropdown-option" data-value="funding-low">Lowest Funding</div>
+                    <div class="dropdown-option" data-value="impact">Largest Impact</div>
+                    <div class="dropdown-option" data-value="urgent">Most Urgent</div>
                   </div>
                 </div>
               </div>
@@ -1688,5 +1708,66 @@
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Dropdown functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const dropdownContainers = document.querySelectorAll('.dropdown-container');
+        
+        dropdownContainers.forEach(container => {
+          const dropdownOptions = container.querySelector('.dropdown-options');
+          const selectedText = container.querySelector('.selected-city, .selected-sort');
+          const arrow = container.querySelector('.dropdown-arrow');
+          
+          // Toggle dropdown on click
+          container.addEventListener('click', function(e) {
+            e.stopPropagation();
+            
+            // Close other dropdowns
+            dropdownContainers.forEach(otherContainer => {
+              if (otherContainer !== container) {
+                otherContainer.classList.remove('active');
+                otherContainer.querySelector('.dropdown-options').style.display = 'none';
+              }
+            });
+            
+            // Toggle current dropdown
+            const isActive = container.classList.contains('active');
+            if (isActive) {
+              container.classList.remove('active');
+              dropdownOptions.style.display = 'none';
+            } else {
+              container.classList.add('active');
+              dropdownOptions.style.display = 'block';
+            }
+          });
+          
+          // Handle option selection
+          const options = container.querySelectorAll('.dropdown-option');
+          options.forEach(option => {
+            option.addEventListener('click', function(e) {
+              e.stopPropagation();
+              
+              // Update selected text
+              selectedText.textContent = option.textContent;
+              
+              // Close dropdown
+              container.classList.remove('active');
+              dropdownOptions.style.display = 'none';
+              
+              // Store selected value for filtering (can be used later)
+              container.setAttribute('data-selected', option.getAttribute('data-value'));
+            });
+          });
+        });
+        
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function() {
+          dropdownContainers.forEach(container => {
+            container.classList.remove('active');
+            container.querySelector('.dropdown-options').style.display = 'none';
+          });
+        });
+      });
+    </script>
   </body>
 </html>

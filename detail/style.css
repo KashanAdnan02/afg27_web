@@ -4,28 +4,84 @@ body {
   overflow-x: hidden;
   font-family: "Instrument Sans", sans-serif;
 }
+
+/* navbar and top bar styling starts */
+
 .top-bar {
+  height: 57px;
   background: #000;
-  color: #fff;
-  font-size: 12px;
+  font-size: 14px;
 }
+
 .top-bar a {
   color: rgb(165, 159, 159);
   text-decoration: none;
 }
+
 .important {
   font-weight: 600;
   font-family: "Instrument Sans", sans-serif;
 }
+
 .language {
   border: 1px solid rgb(165, 159, 159);
   border-radius: 3px;
   padding: 7px;
   cursor: pointer;
   color: rgb(216, 210, 210);
+  position: relative;
 }
+
+.language-dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-height: 250px;
+  overflow-y: auto;
+  margin-top: 2px;
+}
+
+.language-option {
+  padding: 10px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333;
+}
+
+.language-option:hover {
+  background-color: #f8f9fa;
+}
+
+.language-option:last-child {
+  border-bottom: none;
+}
+
+.language-option img {
+  width: 20px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.dropdown-arrow {
+  transition: transform 0.3s ease;
+}
+
+.language.active .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
 .sign-up-btn {
-  padding: 8px 16px;
+  padding: 14px 14px;
   width: 100px;
   border-radius: 5px;
   font-size: 16px;
@@ -34,13 +90,19 @@ body {
   border: 1px solid #000;
   transition: 0.3s;
 }
+
 .sign-up-btn:hover {
   background-color: #000;
   color: #fff;
 }
+
+.navbar-nav {
+  display: flex;
+}
+
 .sign-in-btn {
   width: 100px;
-  padding: 8px 16px;
+  padding: 14px 14px;
   font-size: 16px;
   border-radius: 5px;
   font-weight: 600;
@@ -50,55 +112,33 @@ body {
   color: #fff;
   transition: 0.3s;
 }
+
 .sign-in-btn:hover {
   background-color: #b0031a;
 }
-.carousel-indicators-custom {
+
+.navbar-container {
   display: flex;
-  gap: 6px;
-  margin-top: 60px;
-  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
 }
 
-.carousel-indicators-custom button {
-  width: 30px;
-  height: 3px;
-  background-color: #ffffff7a;
-  opacity: 0.5;
-  border: none;
-  transition: all 0.3s ease;
+#mainNavbar {
+  max-width: fit-content;
 }
-
-.carousel-indicators-custom .active {
-  opacity: 1;
-  background-color: #ffffff;
-}
-
-.carousel-caption {
-  bottom: 35%;
-  text-align: left;
-}
-.carousel-caption h2 {
-  line-height: 50px;
-}
-
-.btn-custom-red {
-  background-color: #d0011c;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 6px;
-  position: relative;
-}
-.btn-custom-white {
-  padding: 12px 25px;
-  border-radius: 5px;
-  position: relative;
-}
-
 .navbar {
-  height: 7.75rem !important;
+  height: 135px !important;
+  width: 100%;
 }
+
+.navbar a {
+  font-size: 18px !important;
+  color: black;
+  letter-spacing: 0px;
+}
+
+/* navbar and top bar styling ends */
 
 .button-container {
   background-color: black;
@@ -180,7 +220,7 @@ body {
   gap: 25px;
 }
 .container-row {
-  width: 75%;
+  width: 85%;
   gap: 30px;
   margin: 30px auto;
   display: flex;
@@ -221,7 +261,7 @@ body {
   margin-top: 5px;
 }
 .large {
-  width: 75%;
+  width: 85%;
   height: 220px;
   background-color: white;
   border-radius: 20px;
@@ -237,11 +277,17 @@ body {
 .Description {
   display: flex;
   gap: 100px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
 }
 .Budget {
   font-size: 20px;
   font-weight: bold;
   font-family: "Instrument Sans";
+}
+.Staff span{
+  margin-bottom: 10px !important;
 }
 .Box4 {
   display: flex;
@@ -263,9 +309,9 @@ body {
 .main-details {
   border: 1px solid white;
   position: absolute;
-  width: 75%;
+  width: 85%;
   padding: 50px;
-  transform: translate(17%, 100%);
+  transform: translate(8%, 100%);
 
   margin: 0 auto;
   border-radius: 20px;
@@ -387,6 +433,7 @@ hr {
   font-size: 27px;
 }
 .cart1 {
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -395,7 +442,7 @@ hr {
   font-size: 17px;
   border-radius: 6px;
   width: 50%;
-  gap: 20px;
+  gap: 5px;
 }
 .button1 {
   display: flex;
@@ -403,6 +450,7 @@ hr {
   gap: 20px;
 }
 .svg {
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -410,7 +458,7 @@ hr {
   padding: 20px 10px;
   background-color: #d0011c;
   font-size: 17px;
-  gap: 20px;
+  gap: 5px;
   border-radius: 6px;
   color: white;
 }
@@ -516,79 +564,10 @@ footer a:hover {
   color: black;
 }
 
-.health-card-title {
-  font-size: 17px;
-  font-weight: bold;
-  margin-left: 10px;
-}
-.health-card {
-  padding: 10px;
-  width: 33.33%;
-  margin-top: 40px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 0 #e0e0e0;
-  height: 100%;
-}
-.progress {
-  background-color: #f1f1f1;
-  height: 4px;
-  border-radius: 50px;
-  margin: 15px 10px 30px;
-}
-.progress-bar {
-  background-color: #40db9b;
-  border-radius: 50px;
-}
-.main-img {
-  margin-top: 5px;
-  margin-left: 5px;
-  margin-bottom: 20px;
-  width: 97%;
-}
-.donation-amount,
-.custom-donation-amount {
-  border: 1px solid black;
-  padding: 4px 18px;
-  border-radius: 5px;
-  font-size: 14px;
-}
-.custom-donation-amount img {
-  margin-right: 6px;
-}
-.primary-donate-btn {
-  background-color: transparent;
-  color: #d0011c;
-  border: 2px solid #b00017;
-  padding: 3px 35px;
-  width: 80%;
-  height: 43px;
-  font-size: 18px;
-  border-radius: 7px;
-}
-
-.shopping-cart-btn {
-  height: 43px;
-  width: 55px;
-  background-color: transparent;
-  border-radius: 7px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.shopping-cart-btn img {
-  max-height: 22px;
-}
-.health-cards-container {
-  width: 75%;
-  margin: 0 auto;
-  display: flex;
-  gap: 20px;
-}
 .bg-container {
   width: 100%;
   background-color: #f7f7f7;
-  padding: 250px 0 0 0;
+  padding: 250px 0 40px 0;
   border-top-left-radius: 80px;
   border-top-right-radius: 80px;
 }
@@ -597,4 +576,101 @@ footer a:hover {
   position: relative;
   height: 475px;
   background-image: url("../images/program-details.png");
+}
+.container {
+  max-width: 85%;
+}
+
+.card-1 {
+  width: 484px;
+  padding: 10px;
+  margin-top: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 0 #e0e0e0;
+  border: 1px solid #e0e0e0;
+}
+
+.card-1text {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.progress {
+  background-color: #f1f1f1;
+  height: 4px;
+  border-radius: 50px;
+  margin: 15px 10px 30px;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #979797;
+}
+
+.card-text img {
+  width: 14px;
+}
+
+.progress-bar {
+  background-color: #40db9b;
+  border-radius: 50px;
+}
+
+.main-img {
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 20px;
+  width: 98%;
+}
+
+.Amount,
+.Custom-amount {
+  border: 2px solid black;
+  padding: 14px 14px;
+  border-radius: 5px;
+  font-size: 16px;
+  width: fit-content;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.Custom-amount img {
+  margin-right: 6px;
+}
+
+.donate-button {
+  background-color: transparent;
+  color: #d0011c;
+  border: 2px solid #b00017;
+  padding: 6px 35px;
+  width: 86%;
+  height: 43px;
+  font-size: 18px;
+  border-radius: 7px;
+  transition: 0.4s;
+}
+
+.card-1-text {
+  margin-left: 10px;
+}
+
+.cart2 {
+  height: 43px;
+  width: 55px;
+  background-color: transparent;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart2:hover {
+  color: white;
+  border: 2px solid #000000;
+}
+
+.cart2 img {
+  max-height: 22px;
 }

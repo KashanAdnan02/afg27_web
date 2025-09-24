@@ -190,6 +190,9 @@ body {
   width: 190px;
   position: relative;
 }
+.btn-custom-view:hover a {
+  color: black !important;
+}
 
 /* Wrapper for Donate button and indicators */
 .donate-wrapper {
@@ -211,10 +214,10 @@ body {
   color: white;
   padding: 13px 30px;
 }
-.btn-donate:hover {
-  background-color: #8e0114;
-  color: white;
+.donate-button:hover a {
+  color: white !important;
 }
+
 .categories .active-cat {
   background-color: black;
   color: white;
@@ -869,7 +872,7 @@ footer a:hover {
   border-top-right-radius: 80px;
   z-index: 1 !important;
 }
-.container{
+.container {
   max-width: 85%;
 }
 @media (max-width: 1920px) {

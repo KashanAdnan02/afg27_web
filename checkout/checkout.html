@@ -18,92 +18,144 @@
 
 <body>
 
-  <!-- Topbar -->
-  <div class="topbar container-fluid">
+  <!-- Navbar Starts Here -->
+  <!-- Top Black Bar -->
+  <div class="top-bar py-2 d-flex align-items-center justify-content-between text-white">
     <div class="container">
-      <div class="row align-items-center gx-1">
-        <!-- LEFT: announcement / links -->
-        <div class="col-12 col-md-7 d-flex align-items-center">
-          <!-- <span class="announcement-icon" aria-hidden="true"></span> -->
-
-          <div class="announcement-links text-truncate" style="white-space:nowrap; overflow:hidden;">
-            <!-- Announcement text + links (separated visually via CSS) -->
-            <a href="#" class="me-1"><strong class="text-white" style="text-decoration: none;"><img
-                  src="./assets/Vector.svg" alt=""> Announcement:</strong> Emergency Appeal Launched for Flood Victims
-              in Jowzjan</a>
-            |
-            <a href="#" class="ms-1">Winter Aid Distribution Begins in Bamyan</a>
+      <div class="row align-items-center">
+        <!-- Left - Announcements -->
+        <div class="col-12 col-lg-7 mb-2 mb-lg-0">
+          <div class="d-flex align-items-center flex-wrap gap-2">
+            <img src="../icons/news.svg" alt="News" class="flex-shrink-0" />
+            <span class="important flex-shrink-0">Announcement:</span>
+            <div class="d-flex align-items-center flex-wrap gap-2">
+              <a class="text-decoration-underline text-nowrap" style="color: #A2A2A2;" href="#">Emergency Appeal
+                Launched for Flood Victims in
+                Jowzjan</a>
+              <img src="../icons/Line 1.svg" class="mx-2 d-none d-md-inline" alt="" />
+              <a class="text-decoration-underline text-nowrap d-none d-md-inline" style="color: #A2A2A2;"
+                href="#">Winter Aid Distribution
+                Begins in Bamyan</a>
+            </div>
           </div>
         </div>
 
-        <!-- RIGHT: language / helpline / email -->
-        <div class="col-12 col-md-5">
-          <div class="d-flex align-items-center justify-content-md-end right-items flex-wrap">
-            <!-- Language pill -->
-            <div class="lang-pill me-0">
-              <select id="language" class="form-select form-select-sm lang-select">
-                <option selected>Language: 🇬🇧 English (UK)</option>
-                <option>🇺🇸 English (US)</option>
-                <option>🇫🇷 Français</option>
-              </select>
+        <!-- Right - Contact & Language -->
+        <div class="col-12 col-lg-5">
+          <div
+            class="d-flex flex-column flex-md-row justify-content-lg-end align-items-start align-items-md-center gap-2 gap-md-3">
+            <!-- Language Selector -->
+            <div class="language dropdown-container d-flex align-items-center gap-1 order-1 order-md-1">
+              <span class="important">Language:</span>
+              <img src="../images/Flags.svg" alt="Flag" class="current-flag" />
+              <span class="d-none d-sm-inline selected-language">English (UK)</span>
+              <span class="d-sm-none selected-language-short">EN</span>
+              <img src="../icons/angle-down.svg" alt="Dropdown" class="dropdown-arrow" />
+
+              <!-- Language Dropdown Options -->
+              <div class="language-dropdown-options" style="display: none;">
+                <div class="language-option" data-lang="en" data-flag="./images/Flags.svg" data-full="English (UK)"
+                  data-short="EN">
+                  <img src="./images/Flags.svg" alt="UK Flag" />
+                  <span>English (UK)</span>
+                </div>
+                <div class="language-option" data-lang="en-us" data-flag="./images/Flags.svg" data-full="English (US)"
+                  data-short="EN">
+                  <img src="./images/Flags.svg" alt="US Flag" />
+                  <span>English (US)</span>
+                </div>
+                <div class="language-option" data-lang="ps" data-flag="./images/Flags.svg" data-full="پښتو (Pashto)"
+                  data-short="PS">
+                  <img src="../images/Flags.svg" alt="Afghanistan Flag" />
+                  <span>پښتو (Pashto)</span>
+                </div>
+                <div class="language-option" data-lang="fa" data-flag="./images/Flags.svg" data-full="فارسی (Dari)"
+                  data-short="FA">
+                  <img src="../images/Flags.svg" alt="Afghanistan Flag" />
+                  <span>فارسی (Dari)</span>
+                </div>
+                <div class="language-option" data-lang="ar" data-flag="./images/Flags.svg" data-full="العربية (Arabic)"
+                  data-short="AR">
+                  <img src="../images/Flags.svg" alt="Arabic Flag" />
+                  <span>العربية (Arabic)</span>
+                </div>
+                <div class="language-option" data-lang="ur" data-flag="./images/Flags.svg" data-full="اردو (Urdu)"
+                  data-short="UR">
+                  <img src="../images/Flags.svg" alt="Pakistan Flag" />
+                  <span>اردو (Urdu)</span>
+                </div>
+              </div>
             </div>
 
-            <!-- Helpline -->
-            <div class="d-flex align-items-center me-1">
-              <i class="bi bi-telephone-fill" aria-hidden="true" style="font-size:14px"></i>
-              <a href="tel:+9301078555896" class="ms-1" style="text-decoration: none;"><strong class="text-white"><img
-                    src="./assets/Vector.svg" alt=""> Helpline:</strong> +93(0)1078555896</a>
-            </div>
+            <!-- Contact Info -->
+            <div class="d-flex flex-column flex-sm-row gap-2 order-2 order-md-2">
+              <div class="d-flex align-items-center gap-2">
+                <img src="../icons/phone.svg" alt="Phone" class="flex-shrink-0" />
+                <span class="important">
+                  <span class="d-none d-sm-inline">Helpline:</span>
+                  <span class="d-sm-none">Tel:</span>
+                  <span style="color: #A2A2A2">+93(0)078555896</span>
+                </span>
+              </div>
 
-            |
-
-            <!-- Email -->
-            <div class="d-flex align-items-center me-0">
-              <i class="bi bi-envelope-fill" aria-hidden="true" style="font-size:14px"></i>
-              <a href="mailto:ir@arcs.af" class="ms-1" style="text-decoration: none;"><strong class="text-white"><img
-                    src="./assets/Vector.svg" alt=""> Email:</strong> ir@arcs.af</a>
+              <div class="d-flex align-items-center gap-2">
+                <img src="../icons/email.svg" alt="Email" class="flex-shrink-0" />
+                <span class="important">
+                  Email:
+                  <span style="color: #A2A2A2">ir@arcs.af</span>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <!-- Main Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+    <div class="container ">
+      <!-- Left Logo -->
+      <div class="navbar-container">
+        <a class="navbar-brand" href="#">
+          <img src="../logos/main-logo.png" alt="Logo" height="65" />
+        </a>
 
+        <!-- Toggler (Mobile) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-
-  <nav class="navbar navbar-expand-lg bg-white border-bottom">
-    <div class="container">
-      <!-- Logo + Text -->
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="./assets/image 11.svg" alt="Logo" class="me-2">
-        <div>
-          <div class="fw-bold">افغان سرې میاشتې ټولنه</div>
-          <small>Afghan Red Crescent Society</small>
-        </div>
-      </a>
-
-      <!-- Mobile toggle -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Links -->
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav me-3">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Programs</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Media</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-        </ul>
-        <div class="d-flex flex-wrap gap-2 mt-3 mt-lg-0">
-          <button class="btn btn-signout">Sign Out</button>
-          <button class="btn btn-dashboard">Dashboard</button>
+        <!-- Right Menu -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav" style="gap: 22px;">
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hv-fw" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hv-fw" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hv-fw" href="../programs_list/index.html">Programs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hv-fw" href="#">Media</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hv-fw" href="#">Contact</a>
+            </li>
+          </ul>
+          <div class="d-flex" style="gap: 10px; margin-left: 20px;">
+            <button class="sign-up-btn">Signout</button>
+            <button class="sign-in-btn" style="width: 120px;">Dashboard</button>
+          </div>
         </div>
       </div>
     </div>
   </nav>
+  <!-- Navbar Ends Here -->
 
   <!-- Hero Section -->
   <section class="hero-section">
@@ -435,6 +487,80 @@
       </p>
     </div>
   </footer>
+
+  <!-- Language Dropdown Functionality -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const languageContainer = document.querySelector('.language.dropdown-container');
+      const dropdownOptions = document.querySelector('.language-dropdown-options');
+      const selectedLanguageFull = document.querySelector('.selected-language');
+      const selectedLanguageShort = document.querySelector('.selected-language-short');
+      const dropdownArrow = document.querySelector('.dropdown-arrow');
+      const languageOptions = document.querySelectorAll('.language-option');
+
+      // Toggle dropdown visibility
+      languageContainer.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const isActive = languageContainer.classList.contains('active');
+        
+        if (isActive) {
+          languageContainer.classList.remove('active');
+          dropdownOptions.style.display = 'none';
+        } else {
+          languageContainer.classList.add('active');
+          dropdownOptions.style.display = 'block';
+        }
+      });
+
+      // Handle language option selection
+      languageOptions.forEach(option => {
+        option.addEventListener('click', function(e) {
+          e.stopPropagation();
+          
+          const lang = this.getAttribute('data-lang');
+          const flag = this.getAttribute('data-flag');
+          const fullText = this.getAttribute('data-full');
+          const shortText = this.getAttribute('data-short');
+          
+          // Update the selected language display
+          if (selectedLanguageFull) {
+            selectedLanguageFull.textContent = fullText;
+          }
+          if (selectedLanguageShort) {
+            selectedLanguageShort.textContent = shortText;
+          }
+          
+          // Update flag if needed
+          const flagImg = languageContainer.querySelector('img');
+          if (flagImg && flag) {
+            flagImg.src = flag;
+          }
+          
+          // Close dropdown
+          languageContainer.classList.remove('active');
+          dropdownOptions.style.display = 'none';
+          
+          // Store selected language for future use
+          localStorage.setItem('selectedLanguage', lang);
+          
+          console.log('Language changed to:', lang, fullText);
+        });
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!languageContainer.contains(e.target)) {
+          languageContainer.classList.remove('active');
+          dropdownOptions.style.display = 'none';
+        }
+      });
+
+      // Prevent dropdown from closing when clicking inside options
+      dropdownOptions.addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+    });
+  </script>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

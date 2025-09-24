@@ -1,39 +1,5 @@
-// Navbar responsive functionality
+// Let Bootstrap handle navbar responsiveness automatically
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const navbarCollapse = document.querySelector('.navbar-collapse');
-    
-    if (navbarToggler && navbarCollapse) {
-        navbarToggler.addEventListener('click', function() {
-            navbarCollapse.classList.toggle('show');
-            
-            // Toggle aria-expanded attribute
-            const isExpanded = navbarToggler.getAttribute('aria-expanded') === 'true';
-            navbarToggler.setAttribute('aria-expanded', !isExpanded);
-        });
-        
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const isClickInsideNav = navbarCollapse.contains(event.target) || navbarToggler.contains(event.target);
-            
-            if (!isClickInsideNav && navbarCollapse.classList.contains('show')) {
-                navbarCollapse.classList.remove('show');
-                navbarToggler.setAttribute('aria-expanded', 'false');
-            }
-        });
-        
-        // Close mobile menu when clicking on nav links
-        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                if (navbarCollapse.classList.contains('show')) {
-                    navbarCollapse.classList.remove('show');
-                    navbarToggler.setAttribute('aria-expanded', 'false');
-                }
-            });
-        });
-    }
     
     // Smooth scrolling for anchor links
     const anchorLinks = document.querySelectorAll('a[href^="#"]');

@@ -141,6 +141,12 @@ footer {
   padding: 290px 0 60px;
   margin-top: 140px;
 }
+.navbar-collapse {
+  z-index: 1;
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+}
 footer h5 {
   font-size: 16px;
   font-weight: 600;
@@ -763,7 +769,7 @@ footer a:hover {
 
 @media (max-width: 1920px) {
   .container {
-    max-width: 75% !important;
+    max-width: 85% !important;
   }
 }
 @media (max-width: 1700px) {

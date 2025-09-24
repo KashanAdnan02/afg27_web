@@ -126,7 +126,7 @@
         <div class="collapse navbar-collapse" id="mainNavbar">
           <ul class="navbar-nav" style="gap: 22px;">
             <li class="nav-item">
-              <a class="nav-link fw-semibold" href="../index.html">Home</a>
+              <a class="nav-link" href="../index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link hv-fw" href="#">About</a>
@@ -135,7 +135,7 @@
               <a class="nav-link hv-fw" href="#">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link hv-fw" href="./index.html">Programs</a>
+              <a class="nav-link hv-fw fw-semibold" href="./index.html">Programs</a>
             </li>
             <li class="nav-item">
               <a class="nav-link hv-fw" href="#">Media</a>
@@ -169,7 +169,7 @@
             <div class="left">
               <div class="fi1stlis dropdown-container">
                 <div class="left">
-                  <span>City</span><br /><span style="color: #797778" class="selected-city">Select City</span>
+                  <span class="me-2">City</span><br /><span style="color: #797778" class="selected-city">Select City</span>
                 </div>
                 <div class="right">
                   <img src="../icons/angle-down.svg" alt="" class="dropdown-arrow" />
@@ -188,7 +188,7 @@
               </div>
               <div class="se2ndlis dropdown-container">
                 <div class="left">
-                  <span>Sort By</span><br /><span style="color: #797778" class="selected-sort">All Project</span>
+                  <span class="me-2">Sort By</span><br /><span style="color: #797778" class="selected-sort">All Project</span>
                 </div>
                 <div class="right">
                   <img src="../icons/angle-down.svg" alt="" class="dropdown-arrow" />
@@ -1150,8 +1150,13 @@
 
       dropdownContainers.forEach(container => {
         const dropdownOptions = container.querySelector('.dropdown-options');
-        const selectedText = container.querySelector('.selected-city, .selected-sort');
+        const selectedText = container.querySelector('.selected-city') || container.querySelector('.selected-sort');
         const arrow = container.querySelector('.dropdown-arrow');
+
+        // Skip if this is the language dropdown (handled separately)
+        if (container.classList.contains('language')) {
+          return;
+        }
 
         // Toggle dropdown on click
         container.addEventListener('click', function (e) {
@@ -1159,9 +1164,12 @@
 
           // Close other dropdowns
           dropdownContainers.forEach(otherContainer => {
-            if (otherContainer !== container) {
+            if (otherContainer !== container && !otherContainer.classList.contains('language')) {
               otherContainer.classList.remove('active');
-              otherContainer.querySelector('.dropdown-options').style.display = 'none';
+              const otherOptions = otherContainer.querySelector('.dropdown-options');
+              if (otherOptions) {
+                otherOptions.style.display = 'none';
+              }
             }
           });
 
@@ -1169,10 +1177,14 @@
           const isActive = container.classList.contains('active');
           if (isActive) {
             container.classList.remove('active');
-            dropdownOptions.style.display = 'none';
+            if (dropdownOptions) {
+              dropdownOptions.style.display = 'none';
+            }
           } else {
             container.classList.add('active');
-            dropdownOptions.style.display = 'block';
+            if (dropdownOptions) {
+              dropdownOptions.style.display = 'block';
+            }
           }
         });
 
@@ -1183,11 +1195,15 @@
             e.stopPropagation();
 
             // Update selected text
-            selectedText.textContent = option.textContent;
+            if (selectedText) {
+              selectedText.textContent = option.textContent;
+            }
 
             // Close dropdown
             container.classList.remove('active');
-            dropdownOptions.style.display = 'none';
+            if (dropdownOptions) {
+              dropdownOptions.style.display = 'none';
+            }
 
             // Store selected value for filtering (can be used later)
             container.setAttribute('data-selected', option.getAttribute('data-value'));
@@ -1198,8 +1214,13 @@
       // Close dropdowns when clicking outside
       document.addEventListener('click', function () {
         dropdownContainers.forEach(container => {
-          container.classList.remove('active');
-          container.querySelector('.dropdown-options').style.display = 'none';
+          if (!container.classList.contains('language')) {
+            container.classList.remove('active');
+            const dropdownOptions = container.querySelector('.dropdown-options');
+            if (dropdownOptions) {
+              dropdownOptions.style.display = 'none';
+            }
+          }
         });
       });
     });

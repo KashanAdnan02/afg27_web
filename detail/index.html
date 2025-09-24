@@ -292,7 +292,7 @@
             </div>
             <div class="svg">
               <img src="../icons/filled_partner-outlie.svg" alt="" />
-              <span><a class="text-decoration-none text-white" href="../detail/index.html">Donate Now</a></span>
+              <span><a class="text-decoration-none text-white" href="../checkout/checkout.html">Donate Now</a></span>
             </div>
           </div>
         </div>
@@ -671,7 +671,7 @@
 
   <!-- Language Dropdown Functionality -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const languageContainer = document.querySelector('.language.dropdown-container');
       const dropdownOptions = document.querySelector('.language-dropdown-options');
       const selectedLanguageFull = document.querySelector('.selected-language');
@@ -680,10 +680,10 @@
       const languageOptions = document.querySelectorAll('.language-option');
 
       // Toggle dropdown visibility
-      languageContainer.addEventListener('click', function(e) {
+      languageContainer.addEventListener('click', function (e) {
         e.stopPropagation();
         const isActive = languageContainer.classList.contains('active');
-        
+
         if (isActive) {
           languageContainer.classList.remove('active');
           dropdownOptions.style.display = 'none';
@@ -695,14 +695,14 @@
 
       // Handle language option selection
       languageOptions.forEach(option => {
-        option.addEventListener('click', function(e) {
+        option.addEventListener('click', function (e) {
           e.stopPropagation();
-          
+
           const lang = this.getAttribute('data-lang');
           const flag = this.getAttribute('data-flag');
           const fullText = this.getAttribute('data-full');
           const shortText = this.getAttribute('data-short');
-          
+
           // Update the selected language display
           if (selectedLanguageFull) {
             selectedLanguageFull.textContent = fullText;
@@ -710,26 +710,26 @@
           if (selectedLanguageShort) {
             selectedLanguageShort.textContent = shortText;
           }
-          
+
           // Update flag if needed
           const flagImg = languageContainer.querySelector('img');
           if (flagImg && flag) {
             flagImg.src = flag;
           }
-          
+
           // Close dropdown
           languageContainer.classList.remove('active');
           dropdownOptions.style.display = 'none';
-          
+
           // Store selected language for future use
           localStorage.setItem('selectedLanguage', lang);
-          
+
           console.log('Language changed to:', lang, fullText);
         });
       });
 
       // Close dropdown when clicking outside
-      document.addEventListener('click', function(e) {
+      document.addEventListener('click', function (e) {
         if (!languageContainer.contains(e.target)) {
           languageContainer.classList.remove('active');
           dropdownOptions.style.display = 'none';
@@ -737,7 +737,7 @@
       });
 
       // Prevent dropdown from closing when clicking inside options
-      dropdownOptions.addEventListener('click', function(e) {
+      dropdownOptions.addEventListener('click', function (e) {
         e.stopPropagation();
       });
     });

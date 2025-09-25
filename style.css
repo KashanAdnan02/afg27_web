@@ -340,50 +340,75 @@ footer a:hover {
 .carousel-indicators-custom {
   margin-top: 4rem;
 }
-.card-1text {
-  font-size: 17px;
-  font-weight: bold;
-  margin-left: 10px;
-}
+/* cards styling start here */
+
 .card-1 {
+  width: 484px;
   padding: 10px;
   margin-top: 40px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 0 #e0e0e0;
 }
+
+.card-1text {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
 .progress {
   background-color: #f1f1f1;
   height: 4px;
   border-radius: 50px;
   margin: 15px 10px 30px;
 }
+
+.card-text {
+  font-size: 14px;
+  color: #979797;
+}
+
+.card-text img {
+  width: 14px;
+}
+
 .progress-bar {
   background-color: #40db9b;
   border-radius: 50px;
 }
+
 .main-img {
   margin-top: 5px;
   margin-left: 5px;
   margin-bottom: 20px;
-  width: 97%;
+  width: 98%;
 }
+
 .Amount,
 .Custom-amount {
-  border: 1px solid black;
-  padding: 4px 16px;
+  border: 2px solid black;
+  padding: 8px 12px;
   border-radius: 5px;
   font-size: 14px;
+  width: fit-content;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-align: center;
 }
+
 .Custom-amount img {
   margin-right: 6px;
 }
+
 .donate-button {
   background-color: transparent;
   color: #d0011c;
   border: 2px solid #b00017;
-  padding: 3px 35px;
-  width: 83%;
+  padding: 6px 35px;
+  width: 82%;
   height: 43px;
   font-size: 18px;
   border-radius: 7px;
@@ -391,12 +416,11 @@ footer a:hover {
 }
 .donate-button:hover {
   background-color: #d0011c;
-  color: white;
-  border: 2px solid #b00017;
 }
 .card-1-text {
   margin-left: 10px;
 }
+
 .cart2 {
   height: 43px;
   width: 55px;
@@ -406,13 +430,17 @@ footer a:hover {
   align-items: center;
   justify-content: center;
 }
+
 .cart2:hover {
   color: white;
   border: 2px solid #000000;
 }
+
 .cart2 img {
   max-height: 22px;
 }
+
+/* cards styling end here */
 .swiper-slide {
   width: auto !important;
 }
@@ -458,6 +486,16 @@ footer a:hover {
     rgba(247, 247, 247, 0.8) 50%,
     rgba(247, 247, 247, 0) 100%
   );
+}
+.amount-donate {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 4px;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .donation-swiper .swiper-wrapper {

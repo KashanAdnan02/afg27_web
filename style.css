@@ -4,7 +4,9 @@ body {
 }
 
 /* navbar and top bar styling starts */
-
+.btn-donate:hover {
+  background-color: #b0031a;
+}
 .top-bar {
   height: 57px;
   background: #000;

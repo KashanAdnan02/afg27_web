@@ -203,6 +203,11 @@ html {
   border-bottom: 1px solid #f0f0f0;
   transition: background-color 0.2s ease;
 }
+@media (max-width: 991.98px) {
+  .navbar img {
+    height: 40px;
+  }
+}
 
 .dropdown-option:hover {
   background-color: #f8f9fa;
@@ -527,8 +532,7 @@ footer a:hover {
 @media (max-width: 991.98px) {
   /* Navbar improvements */
   .navbar-container {
-    flex-direction: column;
-    align-items: flex-start;
+   
   }
 
   .navbar {
@@ -737,7 +741,7 @@ footer a:hover {
   }
 
   .d-flex.justify-content-between.align-items-center.mt-3.px-2 {
-    flex-direction: column;
+   
     gap: 10px;
     align-items: stretch !important;
   }
@@ -831,7 +835,7 @@ footer a:hover {
   }
 
   .health-heading {
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 15px;
     align-items: flex-start;
   }
@@ -1042,7 +1046,7 @@ footer a:hover {
   .right {
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    gap: 10px;
   }
 
   .right span {
@@ -1286,7 +1290,14 @@ footer a:hover {
   font-size: 14px;
   color: #979797;
 }
-
+@media (max-width: 991.98px) {
+    .right {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        align-items: flex-start;
+    }
+  }
 .card-text img {
   width: 14px;
 }
@@ -1479,8 +1490,7 @@ footer a:hover {
 @media (max-width: 991.98px) {
   /* Navbar improvements */
   .navbar-container {
-    flex-direction: column;
-    align-items: flex-start;
+   
   }
 
   .navbar {
@@ -1676,7 +1686,7 @@ footer a:hover {
   }
 
   .d-flex.justify-content-between.align-items-center.mt-3.px-2 {
-    flex-direction: column;
+   
     gap: 10px;
     align-items: stretch !important;
   }
@@ -1770,7 +1780,7 @@ footer a:hover {
   }
 
   .health-heading {
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 15px;
     align-items: flex-start;
   }
@@ -1919,6 +1929,7 @@ footer a:hover {
   }
 
   .navbar .container {
+    padding: 0 25px !important;
     width: 100% !important;
     max-width: 100% !important;
   }
@@ -2023,7 +2034,7 @@ input[type="checkbox"]:checked::after {
 /* Checkbox container styling */
 .right {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   gap: 15px;
 }
@@ -2338,8 +2349,7 @@ footer a:hover {
 @media (max-width: 991.98px) {
   /* Navbar improvements */
   .navbar-container {
-    flex-direction: column;
-    align-items: flex-start;
+  
   }
 
   .navbar {
@@ -2424,8 +2434,10 @@ footer a:hover {
 
   .right {
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 7px;
     justify-content: center;
+    margin-top: -74px;
+    font-size: 16px;
   }
 
   .right span {
@@ -2440,11 +2452,13 @@ footer a:hover {
 
   .health-heading {
     width: 95%;
-    margin-top: 80px;
+    margin-top: 218px;
+    display: flex;
+    align-items: center ;
   }
 
   .donate-button {
-    width: 100%;
+    width: 82%;
     padding: 8px 20px;
     font-size: 16px;
   }
@@ -2535,14 +2549,14 @@ footer a:hover {
   }
 
   .d-flex.justify-content-between.align-items-center.mt-3.px-2 {
-    flex-direction: column;
+    
     gap: 10px;
     align-items: stretch !important;
   }
 
   .cart2 {
     align-self: center;
-    width: 40px;
+    width: 47px;
     height: 40px;
   }
 }

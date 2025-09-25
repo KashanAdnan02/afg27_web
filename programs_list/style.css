@@ -310,13 +310,12 @@ html {
 /* cards styling start here */
 
 .card-1 {
-  width: 32% !important;
+  width: 440px;
   padding: 10px;
   margin-top: 40px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 0 #e0e0e0;
-  border: 1px solid #e0e0e0;
 }
 
 .card-1text {
@@ -356,7 +355,7 @@ html {
 .Amount,
 .Custom-amount {
   border: 2px solid black;
-  padding: 8px 16px;
+  padding: 8px 12px;
   border-radius: 5px;
   font-size: 14px;
   width: fit-content;
@@ -376,13 +375,15 @@ html {
   color: #d0011c;
   border: 2px solid #b00017;
   padding: 6px 35px;
-  width: 86%;
+  width: 82%;
   height: 43px;
   font-size: 18px;
   border-radius: 7px;
   transition: 0.4s;
 }
-
+.donate-button:hover {
+  background-color: #d0011c !important;
+}
 .card-1-text {
   margin-left: 10px;
 }
@@ -532,7 +533,6 @@ footer a:hover {
 @media (max-width: 991.98px) {
   /* Navbar improvements */
   .navbar-container {
-   
   }
 
   .navbar {
@@ -642,12 +642,6 @@ footer a:hover {
     font-size: 16px;
   }
 
-  .Amount,
-  .Custom-amount {
-    padding: 10px 12px;
-    font-size: 14px;
-  }
-
   /* Amount buttons responsive layout */
   .amount-donate {
     gap: 4px;
@@ -741,7 +735,6 @@ footer a:hover {
   }
 
   .d-flex.justify-content-between.align-items-center.mt-3.px-2 {
-   
     gap: 10px;
     align-items: stretch !important;
   }
@@ -869,12 +862,6 @@ footer a:hover {
   .donate-button {
     padding: 6px 15px;
     font-size: 14px;
-  }
-
-  .Amount,
-  .Custom-amount {
-    padding: 8px 10px;
-    font-size: 12px;
   }
 
   /* Amount buttons mobile layout */
@@ -1261,110 +1248,6 @@ footer a:hover {
 
 /* header section ends here */
 
-/* cards styling start here */
-
-.card-1 {
-  width: 484px;
-  padding: 10px;
-  margin-top: 40px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 0 #e0e0e0;
-  border: 1px solid #e0e0e0;
-}
-
-.card-1text {
-  font-size: 20px;
-  font-weight: bold;
-  margin-left: 10px;
-}
-
-.progress {
-  background-color: #f1f1f1;
-  height: 4px;
-  border-radius: 50px;
-  margin: 15px 10px 30px;
-}
-
-.card-text {
-  font-size: 14px;
-  color: #979797;
-}
-@media (max-width: 991.98px) {
-    .right {
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-        align-items: flex-start;
-    }
-  }
-.card-text img {
-  width: 14px;
-}
-
-.progress-bar {
-  background-color: #40db9b;
-  border-radius: 50px;
-}
-
-.main-img {
-  margin-top: 5px;
-  margin-left: 5px;
-  margin-bottom: 20px;
-  width: 98%;
-}
-
-.Amount,
-.Custom-amount {
-  border: 2px solid black;
-  padding: 14px 14px;
-  border-radius: 5px;
-  font-size: 16px;
-  width: fit-content;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.Custom-amount img {
-  margin-right: 6px;
-}
-
-.donate-button {
-  background-color: transparent;
-  color: #d0011c;
-  border: 2px solid #b00017;
-  padding: 6px 35px;
-  width: 86%;
-  height: 43px;
-  font-size: 18px;
-  border-radius: 7px;
-  transition: 0.4s;
-}
-
-.card-1-text {
-  margin-left: 10px;
-}
-
-.cart2 {
-  height: 43px;
-  width: 55px;
-  background-color: transparent;
-  border-radius: 7px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cart2:hover {
-  color: white;
-  border: 2px solid #000000;
-}
-
-.cart2 img {
-  max-height: 22px;
-}
-
-/* cards styling end here */
 
 /* footer starts here */
 
@@ -1490,7 +1373,6 @@ footer a:hover {
 @media (max-width: 991.98px) {
   /* Navbar improvements */
   .navbar-container {
-   
   }
 
   .navbar {
@@ -1686,7 +1568,6 @@ footer a:hover {
   }
 
   .d-flex.justify-content-between.align-items-center.mt-3.px-2 {
-   
     gap: 10px;
     align-items: stretch !important;
   }
@@ -2130,7 +2011,7 @@ input[type="checkbox"]:checked::after {
 /* cards styling start here */
 
 .card-1 {
-  width: 484px;
+  width: 32%;
   padding: 10px;
   margin-top: 40px;
   background-color: #fff;
@@ -2176,9 +2057,9 @@ input[type="checkbox"]:checked::after {
 .Amount,
 .Custom-amount {
   border: 2px solid black;
-  padding: 14px 14px;
+  padding: 8px 12px;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 14px;
   width: fit-content;
   font-weight: 600;
   cursor: pointer;
@@ -2193,11 +2074,14 @@ input[type="checkbox"]:checked::after {
   color: #d0011c;
   border: 2px solid #b00017;
   padding: 6px 35px;
-  width: 86%;
+  width: 83%;
   height: 43px;
   font-size: 18px;
   border-radius: 7px;
   transition: 0.4s;
+}
+.donate-button:hover {
+  color: white !important;
 }
 
 .card-1-text {
@@ -2349,7 +2233,6 @@ footer a:hover {
 @media (max-width: 991.98px) {
   /* Navbar improvements */
   .navbar-container {
-  
   }
 
   .navbar {
@@ -2454,7 +2337,7 @@ footer a:hover {
     width: 95%;
     margin-top: 218px;
     display: flex;
-    align-items: center ;
+    align-items: center;
   }
 
   .donate-button {
@@ -2549,7 +2432,6 @@ footer a:hover {
   }
 
   .d-flex.justify-content-between.align-items-center.mt-3.px-2 {
-    
     gap: 10px;
     align-items: stretch !important;
   }
@@ -2630,5 +2512,83 @@ footer a:hover {
 
   .list {
     padding: 15px;
+  }
+}
+
+@media (max-width: 1550px) {
+  .card-1 {
+    width: 420px !important;
+  }
+  .story-card p {
+    font-size: 16px !important;
+  }
+  .story-card h6 {
+    font-size: 14px !important;
+  }
+  .story-card small {
+    font-size: 12px !important;
+  }
+  .container {
+    max-width: 85%;
+  }
+  .top-bar {
+    font-size: 12px;
+  }
+  .card-container-wrapper {
+    margin-top: 60px;
+  }
+  .card {
+    width: 280px;
+  }
+  .card-img-top {
+    height: 280px;
+  }
+  .video-item {
+    margin-bottom: 1.5rem !important;
+  }
+  .col-md-8 h2 {
+    font-size: 30px !important;
+  }
+  .video-info h6 {
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    margin-bottom: 10px !important;
+  }
+  .main h2 {
+    font-size: 26px !important;
+  }
+  .media-container {
+    justify-content: space-between;
+  }
+  .hero-section h1 {
+    font-size: 32px !important;
+  }
+  .video-thumbnail img {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  .video-container iframe {
+    height: 490px !important;
+  }
+  .related-videos {
+    height: 590px;
+  }
+  .card-text {
+    font-size: 14px;
+  }
+  .card-title {
+    font-size: 20px;
+  }
+  .progress_con h2 {
+    font-size: 35px !important;
+  }
+  .btn-donate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 8px;
+  }
+  .btn-donate a {
+    font-size: 14px;
   }
 }

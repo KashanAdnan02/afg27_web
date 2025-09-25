@@ -415,7 +415,7 @@ footer a:hover {
   transition: 0.4s;
 }
 .donate-button:hover {
-  background-color: #d0011c;
+  background-color: #d0011c !important;
 }
 .card-1-text {
   margin-left: 10px;
@@ -543,6 +543,7 @@ footer a:hover {
   width: 420px !important;
   height: 100%;
   margin: 0 auto;
+  margin-right: 20px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
@@ -676,7 +677,6 @@ footer a:hover {
 }
 
 .partner-logo:hover {
-  background-color: #f8f9fa;
   transform: translateY(-3px);
 }
 
@@ -719,7 +719,6 @@ footer a:hover {
   border-color: #6c757d;
   transform: translateY(-2px);
 }
-
 /* Responsive adjustments */
 @media (max-width: 991px) {
   .stories-section h2 {
@@ -900,6 +899,9 @@ footer a:hover {
 }
 
 @media (max-width: 1550px) {
+  .carousel-caption h2 {
+    line-height: 52px !important;
+  }
   .container {
     max-width: 85%;
   }
@@ -1011,13 +1013,13 @@ footer a:hover {
   .donation-swiper::after {
     display: none;
   }
-  .main{
+  .main {
     padding: 60px 0 0px 0;
   }
-  .ma-he-2{
+  .ma-he-2 {
     height: 275px;
   }
-  .video-items-container .video-res{
+  .video-items-container .video-res {
     flex-direction: column;
     align-items: flex-start;
   }

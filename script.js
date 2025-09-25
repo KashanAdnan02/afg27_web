@@ -1,45 +1,5 @@
 // Let Bootstrap handle navbar responsiveness automatically
 document.addEventListener("DOMContentLoaded", function () {
-  // Smooth scrolling for anchor links
-  const anchorLinks = document.querySelectorAll('a[href^="#"]');
-  anchorLinks.forEach((link) => {
-    link.addEventListener("click", function (e) {
-      const href = this.getAttribute("href");
-      if (href !== "#" && href.length > 1) {
-        const target = document.querySelector(href);
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }
-      }
-    });
-  });
-
-  // Responsive carousel text sizing
-  function adjustCarouselText() {
-    const carouselCaptions = document.querySelectorAll(".carousel-caption h2");
-    const windowWidth = window.innerWidth;
-
-    carouselCaptions.forEach((caption) => {
-      if (windowWidth <= 576) {
-        caption.style.fontSize = "1.8rem";
-        caption.style.lineHeight = "2.2rem";
-      } else if (windowWidth <= 768) {
-        caption.style.fontSize = "2.2rem";
-        caption.style.lineHeight = "2.6rem";
-      } else if (windowWidth <= 992) {
-        caption.style.fontSize = "2.5rem";
-        caption.style.lineHeight = "3rem";
-      } else {
-        caption.style.fontSize = "3rem";
-        caption.style.lineHeight = "3.5rem";
-      }
-    });
-  }
-
   // Call on load and resize
   adjustCarouselText();
   window.addEventListener("resize", adjustCarouselText);
@@ -95,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   images.forEach((img) => imageObserver.observe(img));
 
+  // Initialize Donation Swiper
   // Initialize Donation Swiper
   const donationSwiper = new Swiper(".donation-swiper", {
     // Basic settings

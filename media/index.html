@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Navbar Starts Here -->
+    <!-- Top Black Bar -->
+    <div class="top-bar py-2 d-flex align-items-center justify-content-between text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left - Announcements -->
+                <div class="col-12 col-lg-7 mb-2 mb-lg-0">
+                    <div class="d-flex align-items-center flex-wrap gap-2">
+                        <img src="../icons/news.svg" alt="News" class="flex-shrink-0" />
+                        <span class="important flex-shrink-0">Announcement:</span>
+                        <div class="d-flex align-items-center flex-wrap gap-2">
+                            <a class="text-decoration-underline text-nowrap" style="color: #A2A2A2;" href="#">Emergency
+                                Appeal
+                                Launched for Flood Victims in
+                                Jowzjan</a>
+                            <img src="../icons/Line 1.svg" class="mx-2 d-none d-md-inline" alt="" />
+                            <a class="text-decoration-underline text-nowrap d-none d-md-inline" style="color: #A2A2A2;"
+                                href="#">Winter Aid Distribution
+                                Begins in Bamyan</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right - Contact & Language -->
+                <div class="col-12 col-lg-5">
+                    <div
+                        class="d-flex flex-column flex-md-row justify-content-lg-end align-items-start align-items-md-center gap-2 gap-md-3">
+                        <!-- Language Selector -->
+                        <div class="language dropdown-container d-flex align-items-center gap-1 order-1 order-md-1">
+                            <span class="important">Language:</span>
+                            <img src="../images/Flags.svg" alt="Flag" class="current-flag" />
+                            <span class="d-none d-sm-inline selected-language">English (UK)</span>
+                            <span class="d-sm-none selected-language-short">EN</span>
+                            <img src="../icons/angle-down.svg" alt="Dropdown" class="dropdown-arrow" />
+
+                            <!-- Language Dropdown Options -->
+                            <div class="language-dropdown-options" style="display: none;">
+                                <div class="language-option" data-lang="en" data-flag="./images/Flags.svg"
+                                    data-full="English (UK)" data-short="EN">
+                                    <img src="../images/Flags.svg" alt="UK Flag" />
+                                    <span>English (UK)</span>
+                                </div>
+                                <div class="language-option" data-lang="en-us" data-flag="./images/Flags.svg"
+                                    data-full="English (US)" data-short="EN">
+                                    <img src="../images/Flags.svg" alt="US Flag" />
+                                    <span>English (US)</span>
+                                </div>
+                                <div class="language-option" data-lang="ps" data-flag="./images/Flags.svg"
+                                    data-full="پښتو (Pashto)" data-short="PS">
+                                    <img src="../images/Flags.svg" alt="Afghanistan Flag" />
+                                    <span>پښتو (Pashto)</span>
+                                </div>
+                                <div class="language-option" data-lang="fa" data-flag="./images/Flags.svg"
+                                    data-full="فارسی (Dari)" data-short="FA">
+                                    <img src="../images/Flags.svg" alt="Afghanistan Flag" />
+                                    <span>فارسی (Dari)</span>
+                                </div>
+                                <div class="language-option" data-lang="ar" data-flag="./images/Flags.svg"
+                                    data-full="العربية (Arabic)" data-short="AR">
+                                    <img src="../images/Flags.svg" alt="Arabic Flag" />
+                                    <span>العربية (Arabic)</span>
+                                </div>
+                                <div class="language-option" data-lang="ur" data-flag="./images/Flags.svg"
+                                    data-full="اردو (Urdu)" data-short="UR">
+                                    <img src="../images/Flags.svg" alt="Pakistan Flag" />
+                                    <span>اردو (Urdu)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <div class="d-flex flex-column flex-sm-row gap-2 order-2 order-md-2">
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="../icons/phone.svg" alt="Phone" class="flex-shrink-0" />
+                                <span class="important">
+                                    <span class="d-none d-sm-inline">Helpline:</span>
+                                    <span class="d-sm-none">Tel:</span>
+                                    <span style="color: #A2A2A2">+93(0)078555896</span>
+                                </span>
+                            </div>
+
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="../icons/email.svg" alt="Email" class="flex-shrink-0" />
+                                <span class="important">
+                                    Email:
+                                    <span style="color: #A2A2A2">ir@arcs.af</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+        <div class="container ">
+            <!-- Left Logo -->
+            <div class="navbar-container">
+                <a class="navbar-brand" href="#">
+                    <img src="../logos/main-logo.png" alt="Logo" height="65" />
+                </a>
+
+                <!-- Toggler (Mobile) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Right Menu -->
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav" style="gap: 22px;">
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hv-fw" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hv-fw" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hv-fw" href="../programs_list/index.html">Programs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hv-fw" href="#">Media</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hv-fw" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex" style="gap: 10px; margin-left: 20px;">
+                        <button class="sign-up-btn">Sign Up</button>
+                        <button class="sign-in-btn">Sign In</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar Ends Here -->
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h2>Media & Resources</h2>
+        <h1>
+            Stay updated with the latest news, announcements, stories, and <br> publications from the Afghan Red
+            Crescent Society.
+        </h1>
+        <div class="news-container">
+            <div class="ma-he" style="height: 240px;">
+                <div class="main container-fluid">
+                    <div class="row align-items-center justify-content-between container mx-auto">
+                        <!-- Left Text -->
+                        <div class="col-md-6 " style="text-align: left;">
+                            <span class="text-danger fw-bold" style="font-size: 20px;">News & Events</span>
+                            <h2 class="fw-semibold mt-2 text-black" style="font-size: 32px;">
+                                Our news highlights ARCS activities nationwide — <br> from relief operations to new
+                                partnerships.
+                            </h2>
+                        </div>
+                        <!-- Right Buttons -->
+                        <div class="col-md-6 d-flex justify-content-md-end gap-2 mt-3 mt-md-0">
+                            <button class="btn text-white-50 fw-semibold"
+                                style="width: 190px; padding: 14px; background-color: #d0011c;">
+                                <a href="../detail/index.html" class="text-decoration-none text-white">View All News
+                                    <img src="../icons/arrow-right-down.svg" alt=""> </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container media-container">
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="../images/media-1.png" class="card-img-top" alt="News Image" />
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Tents Provided to 50 Repatriated Families in Baghlan
+                        </h5>
+                        <p class="card-text">
+                            ARCS has distributed 50 tents to 50 repatriated families in
+                            Dand-e-Ghori, Markazi Baghlan districts...
+                        </p>
+                        <div class="d-flex gap-4 small-text mt-3">
+                            <span class="d-flex align-items-center gap-2"><i class="bi bi-calendar"></i> 5th May
+                                2025</span>
+                            <a href="#" class="text-decoration-none small-text d-flex gap-2 align-items-center"><img
+                                    src="../images/share.png" alt=""> Share via</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Duplicate the card content as needed -->
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="../images/Frame 60.png" class="card-img-top" alt="News Image" />
+                    <div class="card-body">
+                        <h5 class="card-title">Health Support for Returnees in Kandahar</h5>
+                        <p class="card-text">
+                            A mobile clinic was deployed in Kandahar to provide health
+                            services to returnee families in the Spin Boldak...
+                        </p>
+                        <div class="d-flex gap-4 small-text mt-3">
+                            <span class="d-flex align-items-center gap-2"><i class="bi bi-calendar"></i> 8th May
+                                2025</span>
+                            <a href="#" class="text-decoration-none small-text d-flex gap-2 align-items-center"><img
+                                    src="../images/share.png" alt=""> Share via</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <img src="../images/media-3.png" class="card-img-top" alt="News Image" />
+                    <div class="card-body">
+                        <h5 class="card-title">Food Aid Distributed to Needy Families</h5>
+                        <p class="card-text">
+                            Emergency food parcels were delivered to 100+ vulnerable families
+                            in remote areas of northern provinces...
+                        </p>
+                        <div class="d-flex gap-4 small-text mt-3 text-card">
+                            <span class="d-flex align-items-center gap-2"><i class="bi bi-calendar"></i> 10th May
+                                2025</span>
+                            <a href="#" class="text-decoration-none small-text d-flex gap-2 align-items-center"><img
+                                    src="../images/share.png" alt=""> Share via</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card">
+                    <img src="../images/media-4.png" class="card-img-top" alt="News Image" />
+                    <div class="card-body">
+                        <h5 class="card-title">Winter Kits Delivered Before Snowfall</h5>
+                        <p class="card-text">
+                            Winter relief kits including blankets and heaters were distributed
+                            in high-risk regions prior to heavy snow...
+                        </p>
+                        <div class="d-flex gap-4 small-text mt-3">
+                            <span class="d-flex align-items-center gap-2"><i class="bi bi-calendar"></i> 12th May
+                                2025</span>
+                            <a href="#" class="text-decoration-none small-text d-flex gap-2 align-items-center"><img
+                                    src="../images/share.png" alt=""> Share via</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row align-items-center justify-content-between container mx-auto mt-5">
+                <!-- Left Text -->
+                <div class="col-md-8" style="text-align: left;">
+                    <span class="text-danger fw-bold" style="font-size: 20px;">Gallery (Photos & Videos)</span>
+                    <h2 class="fw-semibold mt-2 text-black" style="font-size: 32px;">
+                        See ARCS in action — relief operations, volunteer work, <br> health services, and community
+                        empowerment.
+                    </h2>
+                </div>
+                <!-- Right Buttons -->
+                <div class="col-md-4 d-flex justify-content-md-end gap-2 mt-3 mt-md-0">
+                    <button class="btn text-white-50 fw-semibold"
+                        style="width: 190px; padding: 14px; background-color: #d0011c;">
+                        <a href="../detail/index.html" class="text-decoration-none text-white">View Gallery
+                            <img src="../icons/arrow-right-down.svg" alt=""> </a>
+                    </button>
+                </div>
+            </div>
+            <div class="container mt-5">
+                <div class="row g-4">
+                    <!-- Main Video -->
+                    <div class="col-lg-8 col-md-12 mb-4">
+                        <div class="video-container position-relative">
+                            <div class="ratio ratio-16x9">
+                                <iframe style="height: 520px; border-radius: 20px;"
+                                    src=https://www.youtube.com/embed/42ul8XGl2P4?si=TTfXEh87MPwJ25SY?t=10 "
+                  title=" YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Related Videos Sidebar -->
+                    <div class="col-lg-4 col-md-12">
+                        <div class="related-videos">
+
+                            <!-- Video Items Container - Horizontal scroll on mobile -->
+                            <div class="video-items-container">
+                                <div class="d-lg-block d-flex flex-nowrap overflow-auto pb-2 video-res">
+                                    <!-- Video Item 1 -->
+                                    <div class="video-item d-flex mb-3 rounded flex-shrink-0 me-3 me-lg-0"
+                                        style="min-width: 280px">
+                                        <div class="video-thumbnail me-3 flex-shrink-0">
+                                            <img src="../images/video-section.png" alt="ARCS Staff" class="rounded"
+                                                style="width: 83px; height: 83px; object-fit: cover" />
+                                        </div>
+                                        <div class="video-info flex-grow-1">
+                                            <h6 class="mb-1 fw-bold"
+                                                style="font-size: 20px;text-align: left; margin-bottom: 10px;">
+                                                The staff and volunteers of #ARCS tirelessly serve
+                                                repatriated ...
+                                            </h6>
+                                            <div class="d-flex align-items-center text-muted small">
+                                                <span class="me-2 d-flex align-items-center gap-2"><img
+                                                        src="../images/calendar2.png" alt="">
+                                                    Jul
+                                                    13
+                                                    2025</span>
+                                                <span class="d-flex align-items-center gap-2"><img
+                                                        src="../images/share.png" alt=""> Share
+                                                    via</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Video Item 2 -->
+                                    <div class="video-item d-flex mb-3 rounded flex-shrink-0 me-3 me-lg-0"
+                                        style="min-width: 280px">
+                                        <div class="video-thumbnail me-3 flex-shrink-0">
+                                            <img src="../images/video-section.png" alt="ARCS Services" class="rounded"
+                                                style="width: 83px; height: 83px; object-fit: cover" />
+                                        </div>
+                                        <div class="video-info flex-grow-1">
+                                            <h6 class="mb-1 fw-bold"
+                                                style="font-size: 20px;text-align: left; margin-bottom: 10px;">
+                                                ARCS Services to the Returning Refugees
+                                            </h6>
+                                            <div class="d-flex align-items-center text-muted small">
+                                                <span class="me-2 d-flex align-items-center gap-2"><img
+                                                        src="../images/calendar2.png" alt="">
+                                                    Jul
+                                                    13
+                                                    2025</span>
+                                                <span class="d-flex align-items-center gap-2"><img
+                                                        src="../images/share.png" alt=""> Share
+                                                    via</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Video Item 3 -->
+                                    <div class="video-item d-flex mb-3 rounded flex-shrink-0 me-3 me-lg-0"
+                                        style="min-width: 280px">
+                                        <div class="video-thumbnail me-3 flex-shrink-0">
+                                            <img src="../images/video-section.png" alt="Humanitarian Services"
+                                                class="rounded" style="width: 83px; height: 83px; object-fit: cover" />
+                                        </div>
+                                        <div class="video-info flex-grow-1">
+                                            <h6 class="mb-1 fw-bold"
+                                                style="font-size: 20px;text-align: left; margin-bottom: 10px;">
+                                                Through the provision of humanitarian services, #ARCS
+                                                ...
+                                            </h6>
+                                            <div class="d-flex align-items-center text-muted small">
+                                                <span class="me-2 d-flex align-items-center gap-2"><img
+                                                        src="../images/calendar2.png" alt="">
+                                                    Jul
+                                                    13
+                                                    2025</span>
+                                                <span class="d-flex align-items-center gap-2"><img
+                                                        src="../images/share.png" alt=""> Share
+                                                    via</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Video Item 4 -->
+                                    <div class="video-item d-flex mb-3 rounded flex-shrink-0 me-3 me-lg-0"
+                                        style="min-width: 280px">
+                                        <div class="video-thumbnail me-3 flex-shrink-0">
+                                            <img src="../images/video-section.png" alt="Medical Teams" class="rounded"
+                                                style="width: 83px; height: 83px; object-fit: cover" />
+                                        </div>
+                                        <div class="video-info flex-grow-1">
+                                            <h6 class="mb-1 fw-bold"
+                                                style="font-size: 20px;text-align: left; margin-bottom: 10px;">
+                                                The medical teams of #ARCS are committed and dedicated
+                                                to ...
+                                            </h6>
+                                            <div class="d-flex align-items-center text-muted small">
+                                                <span class="me-2 d-flex align-items-center gap-2"><img
+                                                        src="../images/calendar2.png" alt="">
+                                                    Jul
+                                                    13
+                                                    2025</span>
+                                                <span class="d-flex align-items-center gap-2"><img
+                                                        src="../images/share.png" alt=""> Share
+                                                    via</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Video Item 5 -->
+                                    <div class="video-item d-flex mb-3 rounded flex-shrink-0 me-3 me-lg-0"
+                                        style="min-width: 280px">
+                                        <div class="video-thumbnail me-3 flex-shrink-0">
+                                            <img src="../images/video-section.png" alt="ARCS Program" class="rounded"
+                                                style="width: 83px; height: 83px; object-fit: cover" />
+                                        </div>
+                                        <div class="video-info flex-grow-1">
+                                            <h6 class="mb-1 fw-bold"
+                                                style="font-size: 20px;text-align: left; margin-bottom: 10px;">
+                                                #ARCS Program for the Training of Community Health ...
+                                            </h6>
+                                            <div class="d-flex align-items-center text-muted small">
+                                                <span class="me-2 d-flex align-items-center gap-2"><img
+                                                        src="../images/calendar2.png" alt="">
+                                                    Jul
+                                                    13
+                                                    2025</span>
+                                                <span class="d-flex align-items-center gap-2"><img
+                                                        src="../images/share.png" alt=""> Share
+                                                    via</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-between container mx-auto mt-5">
+                <!-- Left Text -->
+                <div class="col-md-8" style="text-align: left;">
+                    <span class="text-danger fw-bold" style="font-size: 20px;">Success Stories</span>
+                    <h2 class="fw-semibold mt-2 text-black" style="font-size: 32px;">
+                        Real stories from people whose lives have changed <br> through ARCS support.
+                    </h2>
+                </div>
+                <!-- Right Buttons -->
+                <div class="col-md-4 d-flex justify-content-md-end gap-2">
+                    <button class="btn text-white-50 fw-semibold"
+                        style="width: 190px; padding: 14px; background-color: #d0011c;">
+                        <a href="../detail/index.html" class="text-decoration-none text-white">View Stories
+                            <img src="../icons/arrow-right-down.svg" alt=""> </a>
+                    </button>
+                </div>
+            </div>
+            <div class="stories-container-wrapper mt-5">
+                <div class="stories-container">
+                    <!-- Story 3 -->
+                    <div
+                        class="story-card h-100 p-4 bg-white rounded d-flex align-items-start justify-content-between flex-column">
+                        <div class="quote-icon mb-3">
+                            <i class="bi bi-quote" style="font-size: 2rem"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">From Patient to Volunteer</h5>
+                        <p class="text-muted mb-4 fs-5">
+                            With a new water well in her community, Sara no longer walks miles
+                            for clean water. Her family's health has improved, and she can
+                            focus on her children's education every day.
+                        </p>
+                        <div class="d-flex align-items-center">
+                            <div class="profile-img me-3">
+                                <img src="../images/review.png" alt="Sara" class="rounded-circle"
+                                    style="width: 50px; height: 50px; object-fit: cover" />
+                            </div>
+                            <div>
+                                <h6 class="mb-0 fw-bold fs-5">Sara</h6>
+                                <small class="text-muted">Community Member</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Story 4 -->
+                    <div
+                        class="story-card active-story h-100 p-4 bg-white rounded d-flex align-items-start justify-content-between flex-column">
+                        <div>
+                            <div class="quote-icon mb-3">
+                                <i class="bi bi-quote" style="font-size: 2rem; color: #d0011c"></i>
+                            </div>
+                            <h5 class="fw-bold mb-3" style="color: #d0011c">
+                                From Patient to Volunteer
+                            </h5>
+                            <p class="text-muted mb-4 fs-5">
+                                Through ARCS education programs, young Mariam received school
+                                supplies and support. She now dreams of becoming a doctor to
+                                help her community.
+                            </p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="profile-img me-3">
+                                <img src="../images/review.png" alt="Mariam" class="rounded-circle"
+                                    style="width: 50px; height: 50px; object-fit: cover" />
+                            </div>
+                            <div>
+                                <h6 class="mb-0 fw-bold fs-5">Fatimah Khan</h6>
+                                <small class="text-muted">Student, Education Program</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Story 5 -->
+                    <div
+                        class="story-card h-100 p-4 bg-white rounded d-flex align-items-start justify-content-between flex-column">
+                        <div class="quote-icon mb-3">
+                            <i class="bi bi-quote" style="font-size: 2rem"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">From Patient to Volunteer</h5>
+                        <p class="text-muted mb-4">
+                            When earthquakes struck his village, ARCS emergency teams provided
+                            immediate shelter and medical aid. Hassan's family survived thanks
+                            to quick response.
+                        </p>
+                        <div class="d-flex align-items-center">
+                            <div class="profile-img me-3">
+                                <img src="../images/review.png" alt="Hassan" class="rounded-circle"
+                                    style="width: 50px; height: 50px; object-fit: cover" />
+                            </div>
+                            <div>
+                                <h6 class="mb-0 fw-bold fs-5">Hassan</h6>
+                                <small class="text-muted">Earthquake Survivor</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Story 6 -->
+                    <div
+                        class="story-card h-100 p-4 bg-white rounded d-flex align-items-start justify-content-between flex-column">
+                        <div class="quote-icon mb-3">
+                            <i class="bi bi-quote" style="font-size: 2rem"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">From Patient to Volunteer</h5>
+                        <p class="text-muted mb-4">
+                            Living in a remote area, Zahra had no access to healthcare until
+                            ARCS mobile clinics started visiting. Her children now receive
+                            regular checkups and vaccinations.
+                        </p>
+                        <div class="d-flex align-items-center">
+                            <div class="profile-img me-3">
+                                <img src="../images/review.png" alt="Zahra" class="rounded-circle"
+                                    style="width: 50px; height: 50px; object-fit: cover" />
+                            </div>
+                            <div>
+                                <h6 class="mb-0 fw-bold fs-5">Zahra</h6>
+                                <small class="text-muted">Mother, Rural Community</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-between container mx-auto mt-5">
+                <!-- Left Text -->
+                <div class="col-md-8" style="text-align: left;">
+                    <span class="text-danger fw-bold" style="font-size: 20px;">Downloads / Publications</span>
+                    <h2 class="fw-semibold mt-2 text-black" style="font-size: 32px;">
+                        Access key ARCS documents and publications.
+                    </h2>
+                </div>
+                <!-- Right Buttons -->
+                <div class="col-md-4 d-flex justify-content-md-end gap-2 ">
+                    <button class="btn text-white-50 fw-semibold"
+                        style="width: 190px; padding: 14px; background-color: #d0011c;">
+                        <a href="../detail/index.html" class="text-decoration-none text-white">View Docs
+                            <img src="../icons/arrow-right-down.svg" alt=""> </a>
+                    </button>
+                </div>
+            </div>
+            <div class="downloads-container container d-flex justify-content-between mt-5" style="text-align: left;">
+                <div class="downloads-card">
+                    <img src="../images/downloads-1.png" alt="">
+                    <p class="fw-semibold mt-4" style="font-size: 20px;color: #5C5C5C;">Flip Chart</p>
+                    <p style="font-size: 18px;color: #5C5C5C;">Welcome to the introductory session of the Afghan Red
+                        <br> Crescent
+                        Society
+                    </p>
+                    <div class="d-flex gap-3">
+                        <button class="bg-transparent border-0 d-flex align-items-center gap-2"
+                            style="color: #d0011c;"><img src="../icons/eye.svg" alt=""> View Document</button>
+                        <button class="bg-transparent border-0 d-flex align-items-center gap-2"
+                            style="color: #d0011c;"><img src="../icons/download2.svg" alt=""> Download</button>
+                    </div>
+                </div>
+                <div class="downloads-card">
+                    <img src="../images/downloads-1.png" alt="">
+                    <p class="fw-semibold mt-4" style="font-size: 20px;color: #5C5C5C;">Flip Chart</p>
+                    <p style="font-size: 18px;color: #5C5C5C;">Welcome to the introductory session of the Afghan Red
+                        <br> Crescent
+                        Society
+                    </p>
+                    <div class="d-flex gap-3">
+                        <button class="bg-transparent border-0 d-flex align-items-center gap-2"
+                            style="color: #d0011c;"><img src="../icons/eye.svg" alt=""> View Document</button>
+                        <button class="bg-transparent border-0 d-flex align-items-center gap-2"
+                            style="color: #d0011c;"><img src="../icons/download2.svg" alt=""> Download</button>
+                    </div>
+                </div>
+                <div class="downloads-card">
+                    <img src="../images/downloads-1.png" alt="">
+                    <p class="fw-semibold mt-4" style="font-size: 20px;color: #5C5C5C;">Flip Chart</p>
+                    <p style="font-size: 18px;color: #5C5C5C;">Welcome to the introductory session of the Afghan Red
+                        <br> Crescent
+                        Society
+                    </p>
+                    <div class="d-flex gap-3">
+                        <button class="bg-transparent border-0 d-flex align-items-center gap-2"
+                            style="color: #d0011c;"><img src="../icons/eye.svg" alt=""> View Document</button>
+                        <button class="bg-transparent border-0 d-flex align-items-center gap-2"
+                            style="color: #d0011c;"><img src="../icons/download2.svg" alt=""> Download</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="black">
+            <p class="fw-bolder">
+                Save lives • Deliver hope • Fund clean water • Support
+            </p>
+        </div>
+        <div class="red">
+            <p class="fw-bolder">
+                • Save lives • Deliver hope • Fund clean water • Support
+            </p>
+        </div>
+        <div class="container">
+            <div class="row gap-4 mb-5">
+                <!-- Left Text -->
+                <div class="col-lg-5 mb-4 h-100">
+                    <h3 class="fw-normal fs-48">
+                        Real Change <br />
+                        Starts with you
+                    </h3>
+                    <p class="fs-5 mb-1" style="color: #a0a0a0">
+                        Your donation powers healthcare, clean water, and <br />
+                        relief—so families can live with dignity<br />
+                        across Afghanistan.
+                    </p>
+                    <div class="mt-5">
+                        <p style="color: #a0a0a0">
+                            <strong>Address:</strong> ARCS, HQ, Afshar-Sillo, Fifth
+                            District, Kabul Afghanistan
+                        </p>
+                        <p><strong style="color: #a0a0a0">Email:</strong> ir@arcs.af</p>
+                        <p>
+                            <strong style="color: #a0a0a0">Helpline:</strong>
+                            +93(0)0785555896
+                        </p>
+                    </div>
+                    <form class="d-flex mt-3 border p-2 rounded w-75">
+                        <input type="email" class="form-control border-0 bg-transparent text-light subscribe-input f-in"
+                            placeholder="Enter email address .." />
+                        <button class="btn btn-light ms-2 fw-semibold">Subscribe</button>
+                    </form>
+                </div>
+
+                <!-- Links -->
+                <div class="col-lg-2 col-md-6">
+                    <div class="mb-8">
+                        <h5>What We Do</h5>
+                        <ul class="list-unstyled">
+                            <li class="mt-2"><a href="#">Health Services</a></li>
+                            <li class="mt-2"><a href="#">Humanitarian Aid</a></li>
+                            <li class="mt-2"><a href="#">Marastoons</a></li>
+                            <li class="mt-2"><a href="#">Educational Services</a></li>
+                            <li class="mt-2"><a href="#">Volunteers</a></li>
+                            <li class="mt-2"><a href="#">Community Empowerment</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-4">
+                        <h5>About ARCS</h5>
+                        <ul class="list-unstyled">
+                            <li class="mt-2"><a href="#">About ARCS</a></li>
+                            <li class="mt-2"><a href="#">Message from the President</a></li>
+                            <li class="mt-2"><a href="#">Organizational Structure</a></li>
+                            <li class="mt-2"><a href="#">Regional Offices</a></li>
+                            <li class="mt-2"><a href="#">Partnership</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Programs</h5>
+                    <ul class="list-unstyled">
+                        <li class="mt-2"><a href="#">Emergency Aid</a></li>
+                        <li class="mt-2"><a href="#">Health Programs</a></li>
+                        <li class="mt-2"><a href="#">Humanitarian Aid</a></li>
+                        <li class="mt-2"><a href="#">Water & Sanitation</a></li>
+                        <li class="mt-2"><a href="#">Shelter</a></li>
+                        <li class="mt-2"><a href="#">Education Support</a></li>
+                        <li class="mt-2"><a href="#">Community Projects</a></li>
+                        <li class="mt-2"><a href="#">Support for Vulnerables</a></li>
+                        <li class="mt-2"><a href="#">Zakat</a></li>
+                        <li class="mt-2"><a href="#">Sadaqah</a></li>
+                        <li class="mt-2"><a href="#">Fitr Sadaqah</a></li>
+                        <li class="mt-2"><a href="#">Qurbani</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Media & Resources</h5>
+                    <ul class="list-unstyled mb-8">
+                        <li class="mt-2"><a href="#">News & Events</a></li>
+                        <li class="mt-2"><a href="#">Gallery</a></li>
+                        <li class="mt-2"><a href="#">Announcements</a></li>
+                        <li class="mt-2"><a href="#">Success Stories</a></li>
+                        <li class="mt-2"><a href="#">Downloads</a></li>
+                    </ul>
+                    <h5 class="mb-4">Legal & Policies</h5>
+                    <ul class="list-unstyled">
+                        <li class="mt-2"><a href="#">Privacy Policy</a></li>
+                        <li class="mt-2"><a href="#">Terms of Use</a></li>
+                        <li class="mt-2"><a href="#">Transparency</a></li>
+                        <li class="mt-2"><a href="#">Financial Reports</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom -->
+            <div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap mt-">
+                <div class="d-flex w-100 align-items-center justify-content-between flex-wrap gap-5">
+                    <p class="mb-0" style="color: #a0a0a0">
+                        All Copy Rights Reserved © 2025 ARCS
+                    </p>
+                    <div class="footer-bottom-line"></div>
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p style="color: #a0a0a0" class="mt-5 small text-center">
+                A Afghan charitable organization registered under the name of Afghan
+                Red Crescent Society (ARCS), registration No.1 with the Ministry of
+                Labor and Social Affairs on 27/8/1981, establishment No. 01005700
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

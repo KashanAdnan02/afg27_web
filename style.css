@@ -568,27 +568,11 @@ footer a:hover {
 /* Responsive adjustments */
 @media (max-width: 1199px) {
   .donation-swiper .card-1 {
-    width: 320px !important;
-    max-width: 320px;
-    min-width: 320px;
-  }
-}
-
-@media (max-width: 991px) {
-  .donation-swiper .card-1 {
-    width: 300px !important;
-    max-width: 300px;
-    min-width: 300px;
+    width: 400px !important;
   }
 }
 
 @media (max-width: 767px) {
-  .donation-swiper .card-1 {
-    width: 280px !important;
-    max-width: 280px;
-    min-width: 280px;
-  }
-
   .donation-swiper::before,
   .donation-swiper::after {
     width: 40px;
@@ -596,6 +580,10 @@ footer a:hover {
 
   .donation-swiper {
     padding: 20px 0;
+  }
+  .donation-swiper::after,
+  .donation-swiper::before{
+    display: none;
   }
 }
 
@@ -765,21 +753,7 @@ footer a:hover {
   }
 }
 
-@media (max-width: 991px) {
-  .donation-swiper .card-1 {
-    width: 240px;
-    max-width: 240px;
-    min-width: 240px;
-  }
-}
-
 @media (max-width: 767px) {
-  .donation-swiper .card-1 {
-    width: 280px;
-    max-width: 280px;
-    min-width: 280px;
-  }
-
   .donation-swiper::before,
   .donation-swiper::after {
     width: 40px;
@@ -939,6 +913,15 @@ footer a:hover {
   .hero-ress {
     height: 272px !important;
   }
+  .container {
+    padding: 0 20px !important;
+  }
+  .top-bar {
+    height: auto !important;
+  }
+  .bg-hero {
+    background-size: cover !important;
+  }
 }
 @media (max-width: 460px) {
   .ma-he {
@@ -949,6 +932,9 @@ footer a:hover {
   }
   .btn-donate {
     font-size: 10px;
+  }
+  .container {
+    padding: 0 20px !important;
   }
 }
 /* Responsive adjustments for video section */
@@ -961,7 +947,19 @@ footer a:hover {
   }
 
   .related-videos {
-    margin-top: 20px;
+    margin-top: 283px;
+  }
+  .video-info h6 {
+    font-size: 16px !important;
+  }
+  .btn-donate {
+    padding: 13px 20px;
+  }
+  .story-card {
+    width: 400px;
+  }
+  .story-card p {
+    font-size: 0.95rem !important;
   }
 }
 

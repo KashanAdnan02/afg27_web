@@ -564,12 +564,6 @@ footer a:hover {
   .container {
     max-width: 85%;
   }
-  .top-bar {
-    font-size: 12px;
-  }
-  .card-container-wrapper {
-    margin-top: 60px;
-  }
   .card {
     width: 280px;
   }
@@ -580,7 +574,7 @@ footer a:hover {
     margin-bottom: 1.5rem !important;
   }
   .col-md-8 h2 {
-    font-size: 30px !important;
+    font-size: 22px !important;
   }
   .video-info h6 {
     font-weight: 600 !important;
@@ -588,7 +582,7 @@ footer a:hover {
     margin-bottom: 10px !important;
   }
   .main h2 {
-    font-size: 26px !important;
+    font-size: 22px !important;
   }
   .media-container {
     justify-content: space-between;
@@ -604,7 +598,7 @@ footer a:hover {
     height: 490px !important;
   }
   .related-videos {
-    height: 590px;
+    height: 497px;
   }
   .card-text {
     font-size: 14px;
@@ -624,6 +618,9 @@ footer a:hover {
   .btn-donate a {
     font-size: 14px;
   }
+  .top-bar {
+    display: none !important;
+  }
 }
 
 /* Desktop Screens (1200px to 1399px) */
@@ -633,7 +630,7 @@ footer a:hover {
   }
 
   .card {
-    width: 340px;
+    width: 270px;
   }
 
   .story-card {
@@ -750,10 +747,6 @@ footer a:hover {
     padding: 0 15px;
   }
 
-  .top-bar {
-    font-size: 12px;
-  }
-
   .hero-section {
     padding: 25px 0 0 0;
   }
@@ -864,11 +857,6 @@ footer a:hover {
   .container {
     max-width: 100%;
     padding: 0 10px;
-  }
-
-  .top-bar {
-    font-size: 11px;
-    padding: 8px 0;
   }
 
   .hero-section {

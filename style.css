@@ -859,7 +859,7 @@ footer a:hover {
 /* laptop responsive starts here  */
 @media (max-width: 1670px) {
   .top-bar {
-    font-size: 13px !important;
+    display: none !important;
   }
   .btn-donate {
     padding: 13px 16px !important;
@@ -907,12 +907,8 @@ footer a:hover {
     max-width: 85%;
   }
 
-  .top-bar {
-    font-size: 11.5px !important;
-  }
-
   .navbar-nav .nav-link {
-    font-size: 14px !important;
+    font-size: 16px !important;
   }
 
   .navbar-container img:first-child {
@@ -1024,9 +1020,6 @@ footer a:hover {
 }
 
 @media (max-width: 1510px) {
-  .top-bar {
-    font-size: 12px !important;
-  }
   .container {
     width: 95% !important;
   }
@@ -1042,9 +1035,6 @@ footer a:hover {
 }
 
 @media (max-width: 1410px) {
-  .top-bar {
-    font-size: 10.5px !important;
-  }
   .donation-container .main .row,
   .media-center-container .main .row,
   .story-header .container-fluid .row {
@@ -1084,12 +1074,6 @@ footer a:hover {
 
   .main {
     padding: 60px 0 0px 0;
-  }
-
-  .top-bar {
-    height: auto;
-    font-size: 12px !important;
-    padding: 20px 0 !important;
   }
 
   .bg-hero {
@@ -1171,6 +1155,9 @@ footer a:hover {
   .main {
     border-top-left-radius: 40px !important;
     border-top-right-radius: 40px !important;
+  }
+  .story-header {
+    height: 270px !important;
   }
   .carousel-caption h2 {
     font-size: 2rem !important;

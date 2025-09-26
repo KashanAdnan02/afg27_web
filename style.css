@@ -1185,8 +1185,28 @@ footer a:hover {
 
 /* mobile responsive starts here */
 @media (max-width: 460px) {
+  .card-1 {
+    width: 340px !important;
+  }
+
+  .card-1 .Amount,
+  .card-1 .Custom-amount {
+    padding: 5px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    border: 1px solid black;
+  }
+
+  .Custom-amount img {
+    width: 14px;
+  }
+  .donate-button {
+    width: 78% !important;
+  }
   .navbar-container img:first-child {
-    height: 40px !important;
+    height: 50px !important;
   }
   .btn-custom-red {
     width: fit-content !important;
@@ -1239,6 +1259,34 @@ footer a:hover {
   }
   .story-header {
     height: 254px !important;
+  }
+
+  #mainNavbar {
+    max-width: none !important;
+  }
+
+  .navbar-collapse {
+    background-color: white;
+    position: fixed;
+    left: 0%;
+    width: 100%;
+    top: 135px;
+    z-index: 1;
+    padding: 40px 60px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+  .navbar-nav {
+    gap: 10px !important;
+  }
+
+  .navbar-collapse div:last-child {
+    margin-left: 0 !important;
+    margin-top: 40px;
+  }
+
+  .related-videos h6{
+    font-size: 14px;
   }
 }
 /* mobile responsive starts here */

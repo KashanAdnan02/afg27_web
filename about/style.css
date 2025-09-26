@@ -531,7 +531,17 @@ footer a:hover {
 }
 
 /* footer section style ends here */
-
+@media (max-width: 1670px) {
+  .container {
+    max-width: 90% !important;
+  }
+  .hero-section h2 {
+    font-size: 29px !important;
+  }
+  .top-bar {
+    display: none !important;
+  }
+}
 /* Large Desktop Screens (1400px and up) */
 @media (min-width: 1400px) {
   .hero-section h1 {
@@ -543,7 +553,7 @@ footer a:hover {
   }
 
   .card {
-    width: 360px;
+    width: 300px;
   }
 
   .story-card {

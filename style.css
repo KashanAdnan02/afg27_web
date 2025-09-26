@@ -574,6 +574,10 @@ body {
 
 /* partners section style starts here */
 
+.partners-section .col-md-3 {
+  width: 25% !important;
+}
+
 .partners-section {
   background-color: #ffffff;
 }
@@ -856,10 +860,6 @@ footer a:hover {
 
 /* footer section style ends here */
 
-.partners-section .col-md-3 {
-  width: 25% !important;
-}
-
 /* laptop responsive starts here  */
 @media (max-width: 1670px) {
   .top-bar {
@@ -882,21 +882,24 @@ footer a:hover {
 }
 
 @media (max-width: 1610px) {
+  .bg-hero {
+    background-size: cover;
+  }
   .container {
     max-width: 90% !important;
   }
   .carousel-caption {
     left: 6% !important;
-    bottom: 20%;
+    bottom: 40%;
   }
   .bg-hero {
-    height: 71vh !important;
+    height: 110vh !important;
   }
   .donation-container {
-    height: 150px !important;
+    height: 205px !important;
   }
   .donation-container .progress_con {
-    top: -145% !important;
+    top: -38% !important;
   }
   .story-header .container-fluid {
     padding: 0 !important;
@@ -1073,7 +1076,7 @@ footer a:hover {
 }
 /* laptop responsive ends here  */
 
-/* Responsive tab */
+/* tab responsive starts here */
 @media (max-width: 991px) {
   .container {
     max-width: 90% !important;
@@ -1181,17 +1184,28 @@ footer a:hover {
   .container {
     padding: 0 20px !important;
   }
+  .donation-container .progress_con {
+    top: -40% !important;
+  }
   .bg-hero {
     background-size: cover !important;
   }
 }
+/* tab responsive ends here */
 
+/* mobile responsive starts here */
 @media (max-width: 460px) {
   .media-center-container {
     height: 320px !important;
   }
   .donation-container {
-    height: 480px !important;
+    height: 320px !important;
+  }
+  .donation-container .progress_con {
+    top: -70% !important;
+  }
+  .video-item .video-info h6 {
+    font-size: 14px !important;
   }
   .btn-donate {
     font-size: 10px;
@@ -1199,5 +1213,8 @@ footer a:hover {
   .container {
     padding: 0 20px !important;
   }
+  .video-thumbnail img {
+    height: 63px !important;
+  }
 }
-/* Responsive adjustments for video section */
+/* mobile responsive starts here */

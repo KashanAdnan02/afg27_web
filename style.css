@@ -274,7 +274,6 @@ body {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 0 #e0e0e0;
-  margin-right: 30px;
 }
 
 .card-1text {
@@ -342,6 +341,9 @@ body {
 }
 .donate-button:hover {
   background-color: #d0011c !important;
+}
+.donate-button:hover a {
+  color: white !important;
 }
 .card-1-text {
   margin-left: 10px;
@@ -433,7 +435,7 @@ body {
   transition: transform 0.3s ease, opacity 0.3s ease;
   opacity: 1;
   flex-shrink: 0;
-  width: auto;
+  width: fit-content !important;
   height: auto;
   margin-right: 0;
 }
@@ -575,7 +577,7 @@ body {
 /* partners section style starts here */
 
 .partners-section .col-md-3 {
-  width: 25% !important;
+  width: fit-content !important;
 }
 
 .partners-section {
@@ -749,12 +751,6 @@ footer {
   margin-top: 140px;
 }
 
-.navbar-collapse {
-  z-index: 1;
-  background-color: white;
-  border-radius: 20px;
-}
-
 footer h5 {
   font-size: 16px;
   font-weight: 600;
@@ -899,7 +895,7 @@ footer a:hover {
     height: 205px !important;
   }
   .donation-container .progress_con {
-    top: -38% !important;
+    top: -64% !important;
   }
   .story-header .container-fluid {
     padding: 0 !important;
@@ -934,7 +930,7 @@ footer a:hover {
   }
 
   .carousel-caption h2 {
-    line-height: 52px !important;
+    line-height: 62px !important;
   }
 
   .categories {
@@ -1083,7 +1079,7 @@ footer a:hover {
   }
 
   .carousel-caption h2 {
-    line-height: 40px !important;
+    line-height: 62px !important;
   }
 
   .main {
@@ -1172,6 +1168,13 @@ footer a:hover {
 }
 
 @media (max-width: 760px) {
+  .main {
+    border-top-left-radius: 40px !important;
+    border-top-right-radius: 40px !important;
+  }
+  .carousel-caption h2 {
+    font-size: 2rem !important;
+  }
   .media-center-container {
     height: 340px !important;
   }
@@ -1195,6 +1198,34 @@ footer a:hover {
 
 /* mobile responsive starts here */
 @media (max-width: 460px) {
+  .navbar-container img:first-child {
+    height: 40px !important;
+  }
+  .btn-custom-red {
+    width: fit-content !important;
+    padding: 14px 18px;
+  }
+  .btn-custom-view {
+    width: fit-content !important;
+    padding: 14px 18px;
+  }
+  .btn-donate {
+    padding: 13px 12px !important;
+  }
+  .btn-donate a {
+    font-size: 14px !important;
+  }
+  .btn-normal {
+    font-size: 14px !important;
+    padding: 13px 12px !important;
+  }
+  .carousel-caption h2 {
+    font-size: 1.5rem !important;
+    line-height: 42px !important;
+  }
+  .carousel-caption {
+    bottom: 50% !important;
+  }
   .media-center-container {
     height: 320px !important;
   }
@@ -1215,6 +1246,12 @@ footer a:hover {
   }
   .video-thumbnail img {
     height: 63px !important;
+  }
+  .partner-logo {
+    padding: 0 !important;
+  }
+  .story-header {
+    height: 254px !important;
   }
 }
 /* mobile responsive starts here */

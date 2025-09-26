@@ -286,7 +286,7 @@ body {
   font-weight: bold;
   font-family: "Instrument Sans";
 }
-.Staff span{
+.Staff span {
   margin-bottom: 10px !important;
 }
 .Box4 {
@@ -673,4 +673,68 @@ footer a:hover {
 
 .cart2 img {
   max-height: 22px;
+}
+
+@media (max-width: 1670px) {
+  .top-bar {
+    font-size: 13px !important;
+  }
+}
+
+@media (max-width: 1545px) {
+  .top-bar {
+    font-size: 11.5px !important;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 14px !important;
+  }
+
+  .navbar-container img:first-child {
+    height: 50px !important;
+  }
+
+  .sign-up-btn {
+    font-size: 14px;
+    padding: 12px 12px;
+  }
+
+  .sign-in-btn {
+    font-size: 14px;
+    padding: 12px 12px;
+  }
+}
+
+@media (max-width: 1510px) {
+  .top-bar {
+    font-size: 12px !important;
+  }
+  .container {
+    width: 95% !important;
+  }
+  .navbar-nav .nav-link {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 1445px) {
+  .top-bar {
+    font-size: 11.5px !important;
+  }
+}
+
+@media (max-width: 1410px) {
+  .top-bar {
+    font-size: 10.5px !important;
+  }
+}
+/* laptop responsive ends here  */
+
+/* tab responsive starts here */
+@media (max-width: 991px) {
+  .top-bar {
+    height: auto;
+    font-size: 12px !important;
+    padding: 20px 0 !important;
+  }
 }

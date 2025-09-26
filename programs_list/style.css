@@ -303,6 +303,7 @@ html {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  gap: 10px !important;
 }
 
 /* header section ends here */
@@ -310,7 +311,7 @@ html {
 /* cards styling start here */
 
 .card-1 {
-  width: 440px;
+  width: 484px !important;
   padding: 10px;
   margin-top: 40px;
   background-color: #fff;
@@ -355,9 +356,9 @@ html {
 .Amount,
 .Custom-amount {
   border: 2px solid black;
-  padding: 8px 12px;
+  padding: 8px 15px;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 16px !important;
   width: fit-content;
   font-weight: 600;
   cursor: pointer;
@@ -380,9 +381,6 @@ html {
   font-size: 18px;
   border-radius: 7px;
   transition: 0.4s;
-}
-.donate-button:hover {
-  background-color: #d0011c !important;
 }
 .card-1-text {
   margin-left: 10px;
@@ -1248,7 +1246,6 @@ footer a:hover {
 
 /* header section ends here */
 
-
 /* footer starts here */
 
 .f-in::placeholder {
@@ -2080,9 +2077,6 @@ input[type="checkbox"]:checked::after {
   border-radius: 7px;
   transition: 0.4s;
 }
-.donate-button:hover {
-  color: white !important;
-}
 
 .card-1-text {
   margin-left: 10px;
@@ -2590,5 +2584,69 @@ footer a:hover {
   }
   .btn-donate a {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 1670px) {
+  .top-bar {
+    font-size: 13px !important;
+  }
+}
+
+@media (max-width: 1545px) {
+  .top-bar {
+    font-size: 11.5px !important;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 14px !important;
+  }
+
+  .navbar-container img:first-child {
+    height: 50px !important;
+  }
+
+  .sign-up-btn {
+    font-size: 14px;
+    padding: 12px 12px;
+  }
+
+  .sign-in-btn {
+    font-size: 14px;
+    padding: 12px 12px;
+  }
+}
+
+@media (max-width: 1510px) {
+  .top-bar {
+    font-size: 12px !important;
+  }
+  .container {
+    width: 95% !important;
+  }
+  .navbar-nav .nav-link {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 1445px) {
+  .top-bar {
+    font-size: 11.5px !important;
+  }
+}
+
+@media (max-width: 1410px) {
+  .top-bar {
+    font-size: 10.5px !important;
+  }
+}
+/* laptop responsive ends here  */
+
+/* tab responsive starts here */
+@media (max-width: 991px) {
+  .top-bar {
+    height: auto;
+    font-size: 12px !important;
+    padding: 20px 0 !important;
   }
 }

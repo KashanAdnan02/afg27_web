@@ -1,568 +1,725 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>checkout page</title>
+    <link rel="stylesheet" href="./styles/checkout.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>checkout page</title>
-  <link rel="stylesheet" href="./styles/checkout.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&family=Roboto:wght@100&display=swap"
-    rel="stylesheet">
-
-</head>
-
-<body>
-
-  <!-- Navbar Starts Here -->
-  <!-- Top Black Bar -->
-  <div class="top-bar py-2 d-flex align-items-center justify-content-between text-white">
-    <div class="container">
-      <div class="row align-items-center">
-        <!-- Left - Announcements -->
-        <div class="col-12 col-lg-7 mb-2 mb-lg-0">
-          <div class="d-flex align-items-center flex-wrap gap-2">
-            <img src="../icons/news.svg" alt="News" class="flex-shrink-0" />
-            <span class="important flex-shrink-0">Announcement:</span>
+  <body>
+    <!-- Navbar Starts Here -->
+    <!-- Top Black Bar -->
+    <div
+      class="top-bar py-2 d-flex align-items-center justify-content-between text-white"
+    >
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left - Announcements -->
+          <div class="col-12 col-lg-7 mb-2 mb-lg-0">
             <div class="d-flex align-items-center flex-wrap gap-2">
-              <a class="text-decoration-underline text-nowrap" style="color: #A2A2A2;" href="#">Emergency Appeal
-                Launched for Flood Victims in
-                Jowzjan</a>
-              <img src="../icons/Line 1.svg" class="mx-2 d-none d-md-inline" alt="" />
-              <a class="text-decoration-underline text-nowrap d-none d-md-inline" style="color: #A2A2A2;"
-                href="#">Winter Aid Distribution
-                Begins in Bamyan</a>
+              <img src="../icons/news.svg" alt="News" class="flex-shrink-0" />
+              <span class="important flex-shrink-0">Announcement:</span>
+              <div class="d-flex align-items-center flex-wrap gap-2">
+                <a
+                  class="text-decoration-underline text-nowrap"
+                  style="color: #a2a2a2"
+                  href="#"
+                  >Emergency Appeal Launched for Flood Victims in Jowzjan</a
+                >
+                <img
+                  src="../icons/Line 1.svg"
+                  class="mx-2 d-none d-md-inline"
+                  alt=""
+                />
+                <a
+                  class="text-decoration-underline text-nowrap d-none d-md-inline"
+                  style="color: #a2a2a2"
+                  href="#"
+                  >Winter Aid Distribution Begins in Bamyan</a
+                >
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Right - Contact & Language -->
-        <div class="col-12 col-lg-5">
-          <div
-            class="d-flex flex-column flex-md-row justify-content-lg-end align-items-start align-items-md-center gap-2 gap-md-3">
-            <!-- Language Selector -->
-            <div class="language dropdown-container d-flex align-items-center gap-1 order-1 order-md-1">
-              <span class="important">Language:</span>
-              <img src="../images/Flags.svg" alt="Flag" class="current-flag" />
-              <span class="d-none d-sm-inline selected-language">English (UK)</span>
-              <span class="d-sm-none selected-language-short">EN</span>
-              <img src="../icons/angle-down.svg" alt="Dropdown" class="dropdown-arrow" />
+          <!-- Right - Contact & Language -->
+          <div class="col-12 col-lg-5">
+            <div
+              class="d-flex flex-column flex-md-row justify-content-lg-end align-items-start align-items-md-center gap-2 gap-md-3"
+            >
+              <!-- Language Selector -->
+              <div
+                class="language dropdown-container d-flex align-items-center gap-1 order-1 order-md-1"
+              >
+                <span class="important">Language:</span>
+                <img
+                  src="../images/Flags.svg"
+                  alt="Flag"
+                  class="current-flag"
+                />
+                <span class="d-none d-sm-inline selected-language"
+                  >English (UK)</span
+                >
+                <span class="d-sm-none selected-language-short">EN</span>
+                <img
+                  src="../icons/angle-down.svg"
+                  alt="Dropdown"
+                  class="dropdown-arrow"
+                />
 
-              <!-- Language Dropdown Options -->
-              <div class="language-dropdown-options" style="display: none;">
-                <div class="language-option" data-lang="en" data-flag="./images/Flags.svg" data-full="English (UK)"
-                  data-short="EN">
-                  <img src="./images/Flags.svg" alt="UK Flag" />
-                  <span>English (UK)</span>
-                </div>
-                <div class="language-option" data-lang="en-us" data-flag="./images/Flags.svg" data-full="English (US)"
-                  data-short="EN">
-                  <img src="./images/Flags.svg" alt="US Flag" />
-                  <span>English (US)</span>
-                </div>
-                <div class="language-option" data-lang="ps" data-flag="./images/Flags.svg" data-full="پښتو (Pashto)"
-                  data-short="PS">
-                  <img src="../images/Flags.svg" alt="Afghanistan Flag" />
-                  <span>پښتو (Pashto)</span>
-                </div>
-                <div class="language-option" data-lang="fa" data-flag="./images/Flags.svg" data-full="فارسی (Dari)"
-                  data-short="FA">
-                  <img src="../images/Flags.svg" alt="Afghanistan Flag" />
-                  <span>فارسی (Dari)</span>
-                </div>
-                <div class="language-option" data-lang="ar" data-flag="./images/Flags.svg" data-full="العربية (Arabic)"
-                  data-short="AR">
-                  <img src="../images/Flags.svg" alt="Arabic Flag" />
-                  <span>العربية (Arabic)</span>
-                </div>
-                <div class="language-option" data-lang="ur" data-flag="./images/Flags.svg" data-full="اردو (Urdu)"
-                  data-short="UR">
-                  <img src="../images/Flags.svg" alt="Pakistan Flag" />
-                  <span>اردو (Urdu)</span>
+                <!-- Language Dropdown Options -->
+                <div class="language-dropdown-options" style="display: none">
+                  <div
+                    class="language-option"
+                    data-lang="en"
+                    data-flag="./images/Flags.svg"
+                    data-full="English (UK)"
+                    data-short="EN"
+                  >
+                    <img src="./images/Flags.svg" alt="UK Flag" />
+                    <span>English (UK)</span>
+                  </div>
+                  <div
+                    class="language-option"
+                    data-lang="en-us"
+                    data-flag="./images/Flags.svg"
+                    data-full="English (US)"
+                    data-short="EN"
+                  >
+                    <img src="./images/Flags.svg" alt="US Flag" />
+                    <span>English (US)</span>
+                  </div>
+                  <div
+                    class="language-option"
+                    data-lang="ps"
+                    data-flag="./images/Flags.svg"
+                    data-full="پښتو (Pashto)"
+                    data-short="PS"
+                  >
+                    <img src="../images/Flags.svg" alt="Afghanistan Flag" />
+                    <span>پښتو (Pashto)</span>
+                  </div>
+                  <div
+                    class="language-option"
+                    data-lang="fa"
+                    data-flag="./images/Flags.svg"
+                    data-full="فارسی (Dari)"
+                    data-short="FA"
+                  >
+                    <img src="../images/Flags.svg" alt="Afghanistan Flag" />
+                    <span>فارسی (Dari)</span>
+                  </div>
+                  <div
+                    class="language-option"
+                    data-lang="ar"
+                    data-flag="./images/Flags.svg"
+                    data-full="العربية (Arabic)"
+                    data-short="AR"
+                  >
+                    <img src="../images/Flags.svg" alt="Arabic Flag" />
+                    <span>العربية (Arabic)</span>
+                  </div>
+                  <div
+                    class="language-option"
+                    data-lang="ur"
+                    data-flag="./images/Flags.svg"
+                    data-full="اردو (Urdu)"
+                    data-short="UR"
+                  >
+                    <img src="../images/Flags.svg" alt="Pakistan Flag" />
+                    <span>اردو (Urdu)</span>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Contact Info -->
-            <div class="d-flex flex-column flex-sm-row gap-2 order-2 order-md-2">
-              <div class="d-flex align-items-center gap-2">
-                <img src="../icons/phone.svg" alt="Phone" class="flex-shrink-0" />
-                <span class="important">
-                  <span class="d-none d-sm-inline">Helpline:</span>
-                  <span class="d-sm-none">Tel:</span>
-                  <span style="color: #A2A2A2">+93(0)078555896</span>
-                </span>
-              </div>
+              <!-- Contact Info -->
+              <div
+                class="d-flex flex-column flex-sm-row gap-2 order-2 order-md-2"
+              >
+                <div class="d-flex align-items-center gap-2">
+                  <img
+                    src="../icons/phone.svg"
+                    alt="Phone"
+                    class="flex-shrink-0"
+                  />
+                  <span class="important">
+                    <span class="d-none d-sm-inline">Helpline:</span>
+                    <span class="d-sm-none">Tel:</span>
+                    <span style="color: #a2a2a2">+93(0)078555896</span>
+                  </span>
+                </div>
 
-              <div class="d-flex align-items-center gap-2">
-                <img src="../icons/email.svg" alt="Email" class="flex-shrink-0" />
-                <span class="important">
-                  Email:
-                  <span style="color: #A2A2A2">ir@arcs.af</span>
-                </span>
+                <div class="d-flex align-items-center gap-2">
+                  <img
+                    src="../icons/email.svg"
+                    alt="Email"
+                    class="flex-shrink-0"
+                  />
+                  <span class="important">
+                    Email:
+                    <span style="color: #a2a2a2">ir@arcs.af</span>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Main Navbar -->
-  <nav class="navbar navbar-expand-lg bg-white shadow-sm">
-    <div class="container ">
-      <!-- Left Logo -->
-      <div class="navbar-container">
-        <a class="navbar-brand" href="#">
-          <img src="../logos/main-logo.png" alt="Logo" height="65" />
-        </a>
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+      <div class="container">
+        <!-- Left Logo -->
+        <div class="navbar-container">
+          <a class="navbar-brand" href="../index.html">
+            <img src="../logos/main-logo.png" alt="Logo" height="65" />
+          </a>
 
-        <!-- Toggler (Mobile) -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+          <!-- Toggler (Mobile) -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <!-- Right Menu -->
-        <div class="collapse navbar-collapse" id="mainNavbar">
-          <ul class="navbar-nav" style="gap: 22px;">
-            <li class="nav-item">
-              <a class="nav-link fw-semibold" href="../index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link hv-fw" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link hv-fw" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link hv-fw" href="../programs_list/index.html">Programs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link hv-fw" href="../media/index.html">Media</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link hv-fw" href="#">Contact</a>
-            </li>
-          </ul>
-          <div class="d-flex" style="gap: 10px; margin-left: 20px;">
-            <button class="sign-up-btn">Signout</button>
-            <button class="sign-in-btn" style="width: 120px;">Dashboard</button>
+          <!-- Right Menu -->
+          <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav" style="gap: 22px">
+              <li class="nav-item">
+                <a class="nav-link fw-semibold" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hv-fw" href="../about/index.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hv-fw" href="../services/index.html"
+                  >Services</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hv-fw" href="../programs_list/index.html"
+                  >Programs</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hv-fw" href="../media/index.html">Media</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hv-fw" href="#">Contact</a>
+              </li>
+            </ul>
+            <div class="d-flex" style="gap: 10px; margin-left: 20px">
+              <button class="sign-up-btn">Signout</button>
+              <button class="sign-in-btn" style="width: 120px">
+                Dashboard
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar Ends Here -->
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <h2>Donation Cart</h2>
+      <h1>
+        Delivering life-saving healthcare through clinics, hospitals,<br
+          class="d-none d-md-block"
+        />
+        and outreach initiatives across Afghanistan.
+      </h1>
+    </section>
+
+    <div class="container-fluid order-section">
+      <div class="container my-5">
+        <div class="row g-4 pt-5">
+          <!-- Left Column -->
+          <div class="col-lg-8">
+            <h4 class="mb-4">Order Summary</h4>
+
+            <!-- Order Item -->
+            <div class="all-orders">
+              <div
+                class="card-custom p-3 d-flex flex-md-row flex-column align-items-start order-item"
+              >
+                <img src="./assets/image 164.svg" alt="" />
+                <div class="ms-md-3 mt-3 mt-md-0 flex-grow-1">
+                  <h6 class="mb-1">Mobile Clinic Outreach — Kandahar</h6>
+                  <small
+                    >Health Services · Badakhshan · 1200 Beneficiaries</small
+                  >
+                  <div class="d-flex align-items-center gap-2">
+                    <p class="mt-3">Amount</p>
+
+                    <div class="d-flex gap-2 align-items-center">
+                      <select
+                        class="form-select form-select-sm me-2"
+                        style="width: 100px"
+                        type
+                      >
+                        <option>$10</option>
+                        <option>$20</option>
+                        <option>$50</option>
+                      </select>
+                      <label class="" for="">Frequency</label>
+                      <select
+                        class="form-select form-select-sm"
+                        style="width: 120px"
+                      >
+                        <option>Monthly</option>
+                        <option>One-Time</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-end mt-3 mt-md-0">
+                  <div class="remove-text mb-5 d-flex align-items-center">
+                    <img src="./assets/trash6.svg" alt="" /> Remove this item
+                  </div>
+                  <div class="fw-bold">$10.00</div>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div
+                class="card-custom p-3 d-flex flex-md-row flex-column align-items-start order-item"
+              >
+                <img src="./assets/image 164.svg" alt="" />
+                <div class="ms-md-3 mt-3 mt-md-0 flex-grow-1">
+                  <h6 class="mb-1">Solar-Powered Deep Well</h6>
+                  <small
+                    >Health Services · Badakhshan · 1200 Beneficiaries</small
+                  >
+                  <div class="d-flex align-items-center gap-2">
+                    <p class="mt-3">Amount</p>
+                    <div class="d-flex gap-2 align-items-center">
+                      <select
+                        class="form-select form-select-sm me-2"
+                        style="width: 100px"
+                      >
+                        <option>$100</option>
+                        <option>$200</option>
+                        <option>$500</option>
+                      </select>
+                      <label class="" for="">Frequency</label>
+                      <select
+                        class="form-select form-select-sm"
+                        style="width: 120px"
+                      >
+                        <option>One-Time</option>
+                        <option>Monthly</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-end mt-3 mt-md-0">
+                  <div class="remove-text mb-5 d-flex align-items-center">
+                    <img src="./assets/trash6.svg" alt="" /> Remove this item
+                  </div>
+                  <div class="fw-bold">$100.00</div>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div
+                class="card-custom p-3 d-flex flex-md-row flex-column align-items-start order-item"
+              >
+                <img src="./assets/image 164.svg" alt="" />
+                <div class="ms-md-3 mt-3 mt-md-0 flex-grow-1">
+                  <h6 class="mb-1">Winterization Kits</h6>
+                  <small
+                    >Health Services · Badakhshan · 1200 Beneficiaries</small
+                  >
+                  <div class="d-flex align-items-center gap-2">
+                    <p class="mt-3">Amount</p>
+
+                    <div class="d-flex gap-2 align-items-center">
+                      <select
+                        class="form-select form-select-sm me-2"
+                        style="width: 100px"
+                      >
+                        <option>$100</option>
+                        <option>$200</option>
+                        <option>$500</option>
+                      </select>
+                      <label class="" for="">Frequency</label>
+                      <select
+                        class="form-select form-select-sm"
+                        style="width: 120px"
+                      >
+                        <option>One-Time</option>
+                        <option>Monthly</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-end mt-3 mt-md-0">
+                  <div class="remove-text mb-5 d-flex align-items-center">
+                    <img src="./assets/trash6.svg" alt="" /> Remove this item
+                  </div>
+                  <div class="fw-bold">$100.00</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Summary -->
+            <div class="summary-box mt-4">
+              <h6 class="mb-4 pt-1">Summary</h6>
+              <div class="d-flex justify-content-between mb-3">
+                <span class="summary-desc">One-Time Donation</span>
+                <span class="summary-price">$200.00</span>
+              </div>
+              <hr />
+              <div class="d-flex justify-content-between mb-3">
+                <span class="summary-desc">Monthly Donation</span>
+                <span class="summary-price">$10.00</span>
+              </div>
+              <hr />
+              <div class="d-flex justify-content-between mb-3">
+                <span class="summary-desc">Processing Fees</span>
+                <span class="summary-price">$6.75</span>
+              </div>
+              <hr />
+              <div class="d-flex justify-content-between total-box mt-2">
+                <span class="summary-price">Total</span>
+                <span class="summary-price">$216.75</span>
+              </div>
+              <hr />
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="col-lg-4 position-relative">
+            <!-- Items Count Button -->
+            <div class="text-end mb-3">
+              <button class="three-item">3 Items</button>
+            </div>
+
+            <div class="payment-box">
+              <h6 class="fw-bold mb-2">Complete your donation</h6>
+              <p class="payment-text">
+                You can use Apple Pay, Google Pay, or enter your card. All
+                transactions are secured.
+              </p>
+
+              <button class="pay-btn btn-apple m-1">
+                Pay with <img src="./assets/Pay.svg" alt="" />
+              </button>
+              <button class="pay-btn btn-google m-2">
+                Pay with <img src="./assets/G Mark 1.svg" alt="" /> Pay
+              </button>
+
+              <p class="text-center text-muted-small">or pay with card</p>
+
+              <div class="mb-3">
+                <label class="form-label mb-2" for="cardholder"
+                  >Cardholder Name</label
+                >
+
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Jhon Smith"
+                  id="cardholder"
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label mb-2" for="cardholder"
+                  >Card Number</label
+                >
+
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="... ... ..."
+                  id="cardholder"
+                />
+              </div>
+              <div class="row">
+                <div class="col-6 mb-3">
+                  <label class="form-label mb-2" for="cardholder"
+                    >Expiry (MM/YY)</label
+                  >
+
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder=""
+                    id="cardholder"
+                  />
+                </div>
+                <div class="col-6 mb-3">
+                  <label class="form-label mb-2" for="cardholder">CVC</label>
+
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder=""
+                    id="cardholder"
+                  />
+                </div>
+              </div>
+
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="updates" />
+                <label class="form-check-label" for="updates">
+                  Email me updates about the projects I support.
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="coverfees"
+                />
+                <label class="form-check-label" for="coverfees">
+                  I'd like to cover processing fees so 100% of my gift goes to
+                  the projects.
+                </label>
+              </div>
+
+              <button class="donate-btn">
+                <img src="./assets/partner.svg" alt="" /> Donate $216.75
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </nav>
-  <!-- Navbar Ends Here -->
 
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <h2>Donation Cart</h2>
-    <h1>
-      Delivering life-saving healthcare through clinics, hospitals,<br class="d-none d-md-block">
-      and outreach initiatives across Afghanistan.
-    </h1>
-  </section>
-
-
-  <div class="container-fluid order-section">
-    <div class="container my-5">
-      <div class="row g-4 pt-5">
-
-        <!-- Left Column -->
-        <div class="col-lg-8">
-          <h4 class="mb-4">Order Summary</h4>
-
-          <!-- Order Item -->
-          <div class="all-orders">
-            <div class="card-custom p-3 d-flex flex-md-row flex-column align-items-start order-item">
-              <img src="./assets/image 164.svg" alt="">
-              <div class="ms-md-3 mt-3 mt-md-0 flex-grow-1">
-                <h6 class="mb-1">Mobile Clinic Outreach — Kandahar</h6>
-                <small>Health Services · Badakhshan · 1200 Beneficiaries</small>
-                <div class="d-flex align-items-center gap-2">
-
-
-                  <p class="mt-3">Amount</p>
-
-                  <div class="d-flex gap-2 align-items-center">
-
-                    <select class="form-select form-select-sm me-2" style="width: 100px;" type>
-                      <option>$10</option>
-                      <option>$20</option>
-                      <option>$50</option>
-                    </select>
-                    <label class="" for="">Frequency</label>
-                    <select class="form-select form-select-sm" style="width: 120px;">
-                      <option>Monthly</option>
-                      <option>One-Time</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div class="text-end mt-3 mt-md-0">
-                <div class="remove-text mb-5 d-flex align-items-center"><img src="./assets/trash6.svg" alt=""> Remove
-                  this item</div>
-                <div class="fw-bold">$10.00</div>
-              </div>
-            </div>
-
-            <!-- Item 2 -->
-            <div class="card-custom p-3 d-flex flex-md-row flex-column align-items-start order-item">
-              <img src="./assets/image 164.svg" alt="">
-              <div class="ms-md-3 mt-3 mt-md-0 flex-grow-1">
-                <h6 class="mb-1">Solar-Powered Deep Well</h6>
-                <small>Health Services · Badakhshan · 1200 Beneficiaries</small>
-                <div class="d-flex align-items-center gap-2">
-                  <p class="mt-3">Amount</p>
-                  <div class="d-flex gap-2 align-items-center">
-
-                    <select class="form-select form-select-sm me-2" style="width: 100px;">
-                      <option>$100</option>
-                      <option>$200</option>
-                      <option>$500</option>
-                    </select>
-                    <label class="" for="">Frequency</label>
-                    <select class="form-select form-select-sm" style="width: 120px;">
-                      <option>One-Time</option>
-                      <option>Monthly</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div class="text-end mt-3 mt-md-0">
-                <div class="remove-text mb-5 d-flex align-items-center"><img src="./assets/trash6.svg" alt=""> Remove
-                  this item</div>
-                <div class="fw-bold">$100.00</div>
-              </div>
-            </div>
-
-            <!-- Item 3 -->
-            <div class="card-custom p-3 d-flex flex-md-row flex-column align-items-start order-item">
-              <img src="./assets/image 164.svg" alt="">
-              <div class="ms-md-3 mt-3 mt-md-0 flex-grow-1">
-                <h6 class="mb-1">Winterization Kits</h6>
-                <small>Health Services · Badakhshan · 1200 Beneficiaries</small>
-                <div class="d-flex align-items-center gap-2">
-                  <p class="mt-3">Amount</p>
-
-                  <div class="d-flex gap-2 align-items-center">
-                    <select class="form-select form-select-sm me-2" style="width: 100px;">
-                      <option>$100</option>
-                      <option>$200</option>
-                      <option>$500</option>
-                    </select>
-                    <label class="" for="">Frequency</label>
-                    <select class="form-select form-select-sm" style="width: 120px;">
-                      <option>One-Time</option>
-                      <option>Monthly</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div class="text-end mt-3 mt-md-0">
-                <div class="remove-text mb-5 d-flex align-items-center"><img src="./assets/trash6.svg" alt=""> Remove
-                  this item</div>
-                <div class="fw-bold">$100.00</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Summary -->
-          <div class="summary-box mt-4">
-            <h6 class="mb-4 pt-1">Summary</h6>
-            <div class="d-flex justify-content-between mb-3">
-              <span class="summary-desc">One-Time Donation</span>
-              <span class="summary-price">$200.00</span>
-            </div>
-            <hr />
-            <div class="d-flex justify-content-between mb-3">
-              <span class="summary-desc">Monthly Donation</span>
-              <span class="summary-price">$10.00</span>
-            </div>
-            <hr />
-            <div class="d-flex justify-content-between mb-3">
-              <span class="summary-desc">Processing Fees</span>
-              <span class="summary-price">$6.75</span>
-            </div>
-            <hr />
-            <div class="d-flex justify-content-between total-box mt-2">
-              <span class="summary-price">Total</span>
-              <span class="summary-price ">$216.75</span>
-            </div>
-            <hr />
-          </div>
-        </div>
-
-        <!-- Right Column -->
-        <div class="col-lg-4 position-relative">
-
-          <!-- Items Count Button -->
-          <div class="text-end mb-3">
-            <button class="three-item">
-              3 Items
-            </button>
-          </div>
-
-          <div class="payment-box">
-            <h6 class="fw-bold mb-2">Complete your donation</h6>
-            <p class="payment-text">You can use Apple Pay, Google Pay, or enter your card. All transactions are secured.
-            </p>
-
-            <button class="pay-btn btn-apple m-1">Pay with <img src="./assets/Pay.svg" alt=""></button>
-            <button class="pay-btn btn-google m-2">Pay with <img src="./assets/G Mark 1.svg" alt=""> Pay</button>
-
-            <p class="text-center text-muted-small">or pay with card</p>
-
-            <div class="mb-3">
-              <label class="form-label mb-2" for="cardholder">Cardholder Name</label>
-
-              <input type="text" class="form-control" placeholder="Jhon Smith" id="cardholder">
-            </div>
-            <div class="mb-3">
-              <label class="form-label mb-2" for="cardholder">Card Number</label>
-
-              <input type="text" class="form-control" placeholder="... ... ..." id="cardholder">
-            </div>
-            <div class="row">
-              <div class="col-6 mb-3">
-                <label class="form-label mb-2" for="cardholder">Expiry (MM/YY)</label>
-
-                <input type="text" class="form-control" placeholder="" id="cardholder">
-              </div>
-              <div class="col-6 mb-3">
-                <label class="form-label mb-2" for="cardholder">CVC</label>
-
-                <input type="text" class="form-control" placeholder="" id="cardholder">
-              </div>
-            </div>
-
-            <div class="form-check mb-2">
-              <input class="form-check-input" type="checkbox" id="updates">
-              <label class="form-check-label" for="updates">
-                Email me updates about the projects I support.
-              </label>
-            </div>
-            <div class="form-check mb-3">
-              <input class="form-check-input" type="checkbox" id="coverfees">
-              <label class="form-check-label" for="coverfees">
-                I'd like to cover processing fees so 100% of my gift goes to the projects.
-              </label>
-            </div>
-
-            <button class="donate-btn"><img src="./assets/partner.svg" alt=""> Donate $216.75</button>
-          </div>
-        </div>
-
+    <footer>
+      <div class="black">
+        <p class="fw-bolder">
+          Save lives • Deliver hope • Fund clean water • Support
+        </p>
       </div>
-    </div>
-  </div>
-
-  <footer>
-    <div class="black">
-      <p class="fw-bolder">
-        Save lives • Deliver hope • Fund clean water • Support
-      </p>
-    </div>
-    <div class="red">
-      <p class="fw-bolder">
-        • Save lives • Deliver hope • Fund clean water • Support
-      </p>
-    </div>
-    <div class="container">
-      <div class="row gap-4 mb-5">
-        <!-- Left Text -->
-        <div class="col-lg-5 mb-4 h-100">
-          <h3 class="fw-normal fs-48">
-            Real Change <br />
-            Starts with you
-          </h3>
-          <p class="fs-5 mb-1" style="color: #a0a0a0">
-            Your donation powers healthcare, clean water, and <br />
-            relief—so families can live with dignity<br />
-            across Afghanistan.
-          </p>
-          <div class="mt-5">
-            <p style="color: #a0a0a0">
-              <strong>Address:</strong> ARCS, HQ, Afshar-Sillo, Fifth
-              District, Kabul Afghanistan
+      <div class="red">
+        <p class="fw-bolder">
+          • Save lives • Deliver hope • Fund clean water • Support
+        </p>
+      </div>
+      <div class="container">
+        <div class="row gap-4 mb-5">
+          <!-- Left Text -->
+          <div class="col-lg-5 mb-4 h-100">
+            <h3 class="fw-normal fs-48">
+              Real Change <br />
+              Starts with you
+            </h3>
+            <p class="fs-5 mb-1" style="color: #a0a0a0">
+              Your donation powers healthcare, clean water, and <br />
+              relief—so families can live with dignity<br />
+              across Afghanistan.
             </p>
-            <p><strong style="color: #a0a0a0">Email:</strong> ir@arcs.af</p>
-            <p>
-              <strong style="color: #a0a0a0">Helpline:</strong>
-              +93(0)0785555896
-            </p>
+            <div class="mt-5">
+              <p style="color: #a0a0a0">
+                <strong>Address:</strong> ARCS, HQ, Afshar-Sillo, Fifth
+                District, Kabul Afghanistan
+              </p>
+              <p><strong style="color: #a0a0a0">Email:</strong> ir@arcs.af</p>
+              <p>
+                <strong style="color: #a0a0a0">Helpline:</strong>
+                +93(0)0785555896
+              </p>
+            </div>
+            <form class="d-flex mt-3 border p-2 rounded w-75">
+              <input
+                type="email"
+                class="form-control border-0 bg-transparent text-light subscribe-input f-in"
+                placeholder="Enter email address .."
+              />
+              <button class="btn btn-light ms-2 fw-semibold">Subscribe</button>
+            </form>
           </div>
-          <form class="d-flex mt-3 border p-2 rounded w-75">
-            <input type="email" class="form-control border-0 bg-transparent text-light subscribe-input f-in"
-              placeholder="Enter email address .." />
-            <button class="btn btn-light ms-2 fw-semibold">Subscribe</button>
-          </form>
-        </div>
 
-        <!-- Links -->
-        <div class="col-lg-2 col-md-6">
-          <div class="mb-8">
-            <h5>What We Do</h5>
+          <!-- Links -->
+          <div class="col-lg-2 col-md-6">
+            <div class="mb-8">
+              <h5>What We Do</h5>
+              <ul class="list-unstyled">
+                <li class="mt-2"><a href="#">Health Services</a></li>
+                <li class="mt-2"><a href="#">Humanitarian Aid</a></li>
+                <li class="mt-2"><a href="#">Marastoons</a></li>
+                <li class="mt-2"><a href="#">Educational Services</a></li>
+                <li class="mt-2"><a href="#">Volunteers</a></li>
+                <li class="mt-2"><a href="#">Community Empowerment</a></li>
+              </ul>
+            </div>
+
+            <div class="mb-4">
+              <h5>About ARCS</h5>
+              <ul class="list-unstyled">
+                <li class="mt-2"><a href="#">About ARCS</a></li>
+                <li class="mt-2"><a href="#">Message from the President</a></li>
+                <li class="mt-2"><a href="#">Organizational Structure</a></li>
+                <li class="mt-2"><a href="#">Regional Offices</a></li>
+                <li class="mt-2"><a href="#">Partnership</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5>Programs</h5>
             <ul class="list-unstyled">
-              <li class="mt-2"><a href="#">Health Services</a></li>
+              <li class="mt-2"><a href="#">Emergency Aid</a></li>
+              <li class="mt-2"><a href="#">Health Programs</a></li>
               <li class="mt-2"><a href="#">Humanitarian Aid</a></li>
-              <li class="mt-2"><a href="#">Marastoons</a></li>
-              <li class="mt-2"><a href="#">Educational Services</a></li>
-              <li class="mt-2"><a href="#">Volunteers</a></li>
-              <li class="mt-2"><a href="#">Community Empowerment</a></li>
+              <li class="mt-2"><a href="#">Water & Sanitation</a></li>
+              <li class="mt-2"><a href="#">Shelter</a></li>
+              <li class="mt-2"><a href="#">Education Support</a></li>
+              <li class="mt-2"><a href="#">Community Projects</a></li>
+              <li class="mt-2"><a href="#">Support for Vulnerables</a></li>
+              <li class="mt-2"><a href="#">Zakat</a></li>
+              <li class="mt-2"><a href="#">Sadaqah</a></li>
+              <li class="mt-2"><a href="#">Fitr Sadaqah</a></li>
+              <li class="mt-2"><a href="#">Qurbani</a></li>
             </ul>
           </div>
 
-          <div class="mb-4">
-            <h5>About ARCS</h5>
+          <div class="col-lg-2 col-md-6">
+            <h5 class="mb-4">Media & Resources</h5>
+            <ul class="list-unstyled mb-8">
+              <li class="mt-2"><a href="#">News & Events</a></li>
+              <li class="mt-2"><a href="#">Gallery</a></li>
+              <li class="mt-2"><a href="#">Announcements</a></li>
+              <li class="mt-2"><a href="#">Success Stories</a></li>
+              <li class="mt-2"><a href="#">Downloads</a></li>
+            </ul>
+            <h5 class="mb-4">Legal & Policies</h5>
             <ul class="list-unstyled">
-              <li class="mt-2"><a href="#">About ARCS</a></li>
-              <li class="mt-2"><a href="#">Message from the President</a></li>
-              <li class="mt-2"><a href="#">Organizational Structure</a></li>
-              <li class="mt-2"><a href="#">Regional Offices</a></li>
-              <li class="mt-2"><a href="#">Partnership</a></li>
+              <li class="mt-2"><a href="#">Privacy Policy</a></li>
+              <li class="mt-2"><a href="#">Terms of Use</a></li>
+              <li class="mt-2"><a href="#">Transparency</a></li>
+              <li class="mt-2"><a href="#">Financial Reports</a></li>
             </ul>
           </div>
         </div>
 
-        <div class="col-lg-2 col-md-6 mb-4">
-          <h5>Programs</h5>
-          <ul class="list-unstyled">
-            <li class="mt-2"><a href="#">Emergency Aid</a></li>
-            <li class="mt-2"><a href="#">Health Programs</a></li>
-            <li class="mt-2"><a href="#">Humanitarian Aid</a></li>
-            <li class="mt-2"><a href="#">Water & Sanitation</a></li>
-            <li class="mt-2"><a href="#">Shelter</a></li>
-            <li class="mt-2"><a href="#">Education Support</a></li>
-            <li class="mt-2"><a href="#">Community Projects</a></li>
-            <li class="mt-2"><a href="#">Support for Vulnerables</a></li>
-            <li class="mt-2"><a href="#">Zakat</a></li>
-            <li class="mt-2"><a href="#">Sadaqah</a></li>
-            <li class="mt-2"><a href="#">Fitr Sadaqah</a></li>
-            <li class="mt-2"><a href="#">Qurbani</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-6">
-          <h5 class="mb-4">Media & Resources</h5>
-          <ul class="list-unstyled mb-8">
-            <li class="mt-2"><a href="#">News & Events</a></li>
-            <li class="mt-2"><a href="#">Gallery</a></li>
-            <li class="mt-2"><a href="#">Announcements</a></li>
-            <li class="mt-2"><a href="#">Success Stories</a></li>
-            <li class="mt-2"><a href="#">Downloads</a></li>
-          </ul>
-          <h5 class="mb-4">Legal & Policies</h5>
-          <ul class="list-unstyled">
-            <li class="mt-2"><a href="#">Privacy Policy</a></li>
-            <li class="mt-2"><a href="#">Terms of Use</a></li>
-            <li class="mt-2"><a href="#">Transparency</a></li>
-            <li class="mt-2"><a href="#">Financial Reports</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Bottom -->
-      <div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap mt-">
-        <div class="d-flex w-100 align-items-center justify-content-between flex-wrap gap-5">
-          <p class="mb-0" style="color: #a0a0a0">
-            All Copy Rights Reserved © 2025 ARCS
-          </p>
-          <div class="footer-bottom-line"></div>
-          <div class="social-icons">
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-linkedin"></i></a>
-            <a href="#"><i class="bi bi-twitter"></i></a>
+        <!-- Bottom -->
+        <div
+          class="footer-bottom d-flex justify-content-between align-items-center flex-wrap mt-"
+        >
+          <div
+            class="d-flex w-100 align-items-center justify-content-between flex-wrap gap-5"
+          >
+            <p class="mb-0" style="color: #a0a0a0">
+              All Copy Rights Reserved © 2025 ARCS
+            </p>
+            <div class="footer-bottom-line"></div>
+            <div class="social-icons">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+              <a href="#"><i class="bi bi-twitter"></i></a>
+            </div>
           </div>
         </div>
+        <p style="color: #a0a0a0" class="mt-5 small text-center">
+          A Afghan charitable organization registered under the name of Afghan
+          Red Crescent Society (ARCS), registration No.1 with the Ministry of
+          Labor and Social Affairs on 27/8/1981, establishment No. 01005700
+        </p>
       </div>
-      <p style="color: #a0a0a0" class="mt-5 small text-center">
-        A Afghan charitable organization registered under the name of Afghan
-        Red Crescent Society (ARCS), registration No.1 with the Ministry of
-        Labor and Social Affairs on 27/8/1981, establishment No. 01005700
-      </p>
-    </div>
-  </footer>
+    </footer>
 
-  <!-- Language Dropdown Functionality -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const languageContainer = document.querySelector('.language.dropdown-container');
-      const dropdownOptions = document.querySelector('.language-dropdown-options');
-      const selectedLanguageFull = document.querySelector('.selected-language');
-      const selectedLanguageShort = document.querySelector('.selected-language-short');
-      const dropdownArrow = document.querySelector('.dropdown-arrow');
-      const languageOptions = document.querySelectorAll('.language-option');
+    <!-- Language Dropdown Functionality -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const languageContainer = document.querySelector(
+          ".language.dropdown-container"
+        );
+        const dropdownOptions = document.querySelector(
+          ".language-dropdown-options"
+        );
+        const selectedLanguageFull =
+          document.querySelector(".selected-language");
+        const selectedLanguageShort = document.querySelector(
+          ".selected-language-short"
+        );
+        const dropdownArrow = document.querySelector(".dropdown-arrow");
+        const languageOptions = document.querySelectorAll(".language-option");
 
-      // Toggle dropdown visibility
-      languageContainer.addEventListener('click', function(e) {
-        e.stopPropagation();
-        const isActive = languageContainer.classList.contains('active');
-        
-        if (isActive) {
-          languageContainer.classList.remove('active');
-          dropdownOptions.style.display = 'none';
-        } else {
-          languageContainer.classList.add('active');
-          dropdownOptions.style.display = 'block';
-        }
-      });
-
-      // Handle language option selection
-      languageOptions.forEach(option => {
-        option.addEventListener('click', function(e) {
+        // Toggle dropdown visibility
+        languageContainer.addEventListener("click", function (e) {
           e.stopPropagation();
-          
-          const lang = this.getAttribute('data-lang');
-          const flag = this.getAttribute('data-flag');
-          const fullText = this.getAttribute('data-full');
-          const shortText = this.getAttribute('data-short');
-          
-          // Update the selected language display
-          if (selectedLanguageFull) {
-            selectedLanguageFull.textContent = fullText;
+          const isActive = languageContainer.classList.contains("active");
+
+          if (isActive) {
+            languageContainer.classList.remove("active");
+            dropdownOptions.style.display = "none";
+          } else {
+            languageContainer.classList.add("active");
+            dropdownOptions.style.display = "block";
           }
-          if (selectedLanguageShort) {
-            selectedLanguageShort.textContent = shortText;
+        });
+
+        // Handle language option selection
+        languageOptions.forEach((option) => {
+          option.addEventListener("click", function (e) {
+            e.stopPropagation();
+
+            const lang = this.getAttribute("data-lang");
+            const flag = this.getAttribute("data-flag");
+            const fullText = this.getAttribute("data-full");
+            const shortText = this.getAttribute("data-short");
+
+            // Update the selected language display
+            if (selectedLanguageFull) {
+              selectedLanguageFull.textContent = fullText;
+            }
+            if (selectedLanguageShort) {
+              selectedLanguageShort.textContent = shortText;
+            }
+
+            // Update flag if needed
+            const flagImg = languageContainer.querySelector("img");
+            if (flagImg && flag) {
+              flagImg.src = flag;
+            }
+
+            // Close dropdown
+            languageContainer.classList.remove("active");
+            dropdownOptions.style.display = "none";
+
+            // Store selected language for future use
+            localStorage.setItem("selectedLanguage", lang);
+
+            console.log("Language changed to:", lang, fullText);
+          });
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener("click", function (e) {
+          if (!languageContainer.contains(e.target)) {
+            languageContainer.classList.remove("active");
+            dropdownOptions.style.display = "none";
           }
-          
-          // Update flag if needed
-          const flagImg = languageContainer.querySelector('img');
-          if (flagImg && flag) {
-            flagImg.src = flag;
-          }
-          
-          // Close dropdown
-          languageContainer.classList.remove('active');
-          dropdownOptions.style.display = 'none';
-          
-          // Store selected language for future use
-          localStorage.setItem('selectedLanguage', lang);
-          
-          console.log('Language changed to:', lang, fullText);
+        });
+
+        // Prevent dropdown from closing when clicking inside options
+        dropdownOptions.addEventListener("click", function (e) {
+          e.stopPropagation();
         });
       });
-
-      // Close dropdown when clicking outside
-      document.addEventListener('click', function(e) {
-        if (!languageContainer.contains(e.target)) {
-          languageContainer.classList.remove('active');
-          dropdownOptions.style.display = 'none';
-        }
-      });
-
-      // Prevent dropdown from closing when clicking inside options
-      dropdownOptions.addEventListener('click', function(e) {
-        e.stopPropagation();
-      });
-    });
-  </script>
-
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+    </script>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </html>

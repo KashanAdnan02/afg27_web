@@ -1173,9 +1173,35 @@ footer a:hover {
 }
 
 @media (max-width: 760px) {
+  .red,
+  .black {
+    display: none !important;
+  }
+  footer {
+    padding: 40px 0 !important;
+    margin-top: 0 !important;
+  }
+
   .main {
     border-top-left-radius: 40px !important;
     border-top-right-radius: 40px !important;
+  }
+  .carousel-indicators-custom {
+    display: none !important;
+  }
+  footer form.w-75 {
+    flex-direction: column;
+    width: 100% !important;
+    gap: 10px;
+    padding: 10px !important;
+    margin-top: 20px !important;
+  }
+
+  footer form button.ms-2 {
+    margin: 0 !important;
+  }
+  .footer-bottom-line {
+    width: 100% !important;
   }
   .story-header {
     height: 270px !important;
@@ -1207,12 +1233,12 @@ footer a:hover {
   .black {
     display: none !important;
   }
+  footer {
+    padding: 40px 0 !important;
+    margin-top: 0 !important;
+  }
   .card-1 {
     width: 340px !important;
-  }
-  footer {
-    padding: 40px 20px !important;
-    margin-top: 0 !important;
   }
 
   footer .fs-48 {
@@ -1249,11 +1275,11 @@ footer a:hover {
   footer form button.ms-2 {
     margin: 0 !important;
   }
-  .related-videos {
-    display: none;
-  }
   .footer-bottom-line {
     width: 100% !important;
+  }
+  .related-videos {
+    display: none;
   }
   .social-icons {
     width: 100% !important;

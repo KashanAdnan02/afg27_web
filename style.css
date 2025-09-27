@@ -876,6 +876,17 @@ footer a:hover {
     height: 70px !important;
   }
 }
+@media (max-width: 1893px) {
+  .btn-donate {
+    padding: 13px 13px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-normal {
+    padding: 13px 16px !important;
+  }
+}
 
 @media (max-width: 1610px) {
   .bg-hero {

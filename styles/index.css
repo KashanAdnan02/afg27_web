@@ -1393,7 +1393,7 @@ footer a:hover {
     font-size: 12px !important;
   }
 }
-/* @media (max-width: 1652px) {
+@media (max-width: 1652px) {
   .card-1 {
     width: 450px !important;
   }
@@ -1402,11 +1402,11 @@ footer a:hover {
   .card-1 {
     width: 400px !important;
   }
-} */
+}
 @media (max-width: 1372px) {
-  /* .card-1 {
+  .card-1 {
     width: 360px !important;
-  } */
+  }
   .Amount,
   .Custom-amount {
     padding: 12px 10px !important;

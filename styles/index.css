@@ -156,15 +156,19 @@ body {
   padding: 30px 0 0 0;
 }
 
-.hero-section h2 {
+.hero-section h2,
+.header-section p {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 700 !important;
   color: #ffffff99;
   margin-bottom: 15px;
 }
 
-.hero-section h1 {
-  font-size: 28px;
+.hero-section h1,
+.header-section h1 {
+  font-size: 42px;
+  width: 70%;
+  margin: 0 auto !important;
   font-weight: 700;
   color: #ffffff;
   line-height: 1.3;
@@ -733,6 +737,7 @@ footer a:hover {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 0 #e0e0e0;
+  border: 1px solid #e0e0e0;
 }
 
 .card-1text {
@@ -831,6 +836,10 @@ footer a:hover {
 }
 /* cards styling end here */
 /* problem solving responsive */
+.header-section h1 {
+  width: 90%;
+  text-align: center !important;
+}
 
 @media (max-width: 1280px) {
   .navbar a {
@@ -905,8 +914,8 @@ footer a:hover {
     position: fixed;
     left: 0%;
     width: 100%;
-    top: 135px;
-    z-index: 1;
+    top: 124px;
+    z-index: 99999 !important;
     padding: 40px 60px;
   }
   footer form.w-75 {
@@ -950,50 +959,28 @@ footer a:hover {
   .story-card {
     width: 450px !important;
   }
-  .Amount,
-  .Custom-amount {
-    padding: 8px 11px !important;
-    font-size: 13px !important;
-  }
+
   .header-section {
     height: 390px !important;
   }
-  .dropdown {
-    top: -570px !important;
-  }
-  .health-heading{
-    margin: 400px auto 0 auto;
-  }
-  .list,
-  .list .right,
-  .left {
-    flex-direction: column !important;
-  }
-  .fi1stlis .left,
-  .se2ndlis {
-    width: 100% !important;
-    margin-top: 5px;
-  }
-  .header-section h1 {
-    text-align: center;
-    font-size: 28px !important;
-  }
-  .fi1stlis {
-    margin-right: 0px !important;
-    margin-top: 0 !important;
-  }
-  .se2ndlis {
-    margin-top: 10px !important ;
-  }
 
-  .left {
-    margin-bottom: 20px !important;
-  }
   .list {
     padding: 40px 40px !important;
   }
-  .list .right:last-child {
-    width: 100% !important;
+  .dropdown {
+    top: -610px !important;
+  }
+  .health-heading {
+    margin: 400px auto 0 auto;
+  }
+  .Amount,
+  .Custom-amount {
+    padding: 8px 8px !important;
+    font-size: 12px !important;
+    border: 1px solid black;
+  }
+  .donate-button {
+    width: 78% !important;
   }
 }
 
@@ -1096,6 +1083,54 @@ footer a:hover {
 }
 
 @media (max-width: 794px) {
+  .Amount,
+  .Custom-amount {
+    padding: 8px 13px;
+    font-size: 14px;
+    border: 1px solid black;
+  }
+  .header-section h1 {
+    width: 100% !important;
+    text-align: center !important;
+  }
+  .list .right:last-child {
+    width: 100% !important;
+  }
+  .dropdown {
+    top: -510px;
+  }
+  .list .left {
+    width: 100%;
+  }
+  .health-heading {
+    margin: 460px auto 0 auto;
+  }
+
+  .list,
+  .list .right,
+  .left {
+    flex-direction: column !important;
+  }
+  .fi1stlis .left,
+  .se2ndlis {
+    width: 100% !important;
+    margin-top: 5px;
+  }
+  .header-section h1 {
+    text-align: center;
+    font-size: 28px !important;
+  }
+  .fi1stlis {
+    margin-right: 0px !important;
+    margin-top: 0 !important;
+  }
+  .se2ndlis {
+    margin-top: 10px !important ;
+  }
+
+  .left {
+    margin-bottom: 20px !important;
+  }
   .hero-section h1 {
     font-size: 26px !important;
   }

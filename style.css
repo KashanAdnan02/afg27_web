@@ -1141,8 +1141,6 @@ footer a:hover {
     top: 135px;
     z-index: 1;
     padding: 40px 60px;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
   }
   .navbar-nav {
     gap: 10px !important;
@@ -1194,9 +1192,6 @@ footer a:hover {
   .hero-ress {
     height: 272px !important;
   }
-  .container {
-    padding: 0 20px !important;
-  }
   .donation-container .progress_con {
     top: -40% !important;
   }
@@ -1220,10 +1215,10 @@ footer a:hover {
     margin-top: 0 !important;
   }
 
-  footer .fs-48{
+  footer .fs-48 {
     font-size: 38px;
   }
-  footer .fs-5{
+  footer .fs-5 {
     font-size: 1rem !important;
   }
 
@@ -1237,6 +1232,35 @@ footer a:hover {
     border: 1px solid black;
   }
 
+  .partner_sec .img-fluid {
+    max-height: 45px !important;
+  }
+  .carousel-indicators-custom {
+    display: none !important;
+  }
+  footer form.w-75 {
+    flex-direction: column;
+    width: 100% !important;
+    gap: 10px;
+    padding: 10px !important;
+    margin-top: 20px !important;
+  }
+
+  footer form button.ms-2 {
+    margin: 0 !important;
+  }
+  .related-videos {
+    display: none;
+  }
+  .footer-bottom-line {
+    width: 100% !important;
+  }
+  .social-icons {
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .Custom-amount img {
     width: 14px;
   }
@@ -1269,16 +1293,16 @@ footer a:hover {
     line-height: 42px !important;
   }
   .carousel-caption {
-    bottom: 50% !important;
+    bottom: 46% !important;
   }
   .media-center-container {
     height: 320px !important;
   }
   .donation-container {
-    height: 320px !important;
+    height: 428px !important;
   }
   .donation-container .progress_con {
-    top: -70% !important;
+    top: -30% !important;
   }
   .video-item .video-info h6 {
     font-size: 14px !important;
@@ -1286,8 +1310,8 @@ footer a:hover {
   .btn-donate {
     font-size: 10px;
   }
-  .container {
-    padding: 0 20px !important;
+  .partner_sec {
+    margin: 0 !important;
   }
   .video-thumbnail img {
     height: 63px !important;

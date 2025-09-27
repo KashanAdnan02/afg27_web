@@ -1154,7 +1154,7 @@ footer a:hover {
   .navbar-nav {
     gap: 10px !important;
   }
-  
+
   .navbar-collapse {
     background-color: white;
     position: fixed;
@@ -1293,11 +1293,11 @@ footer a:hover {
   footer form button.ms-2 {
     margin: 0 !important;
   }
-  .footer-bottom-line {
-    width: 100% !important;
-  }
   .related-videos {
     display: none;
+  }
+  .footer-bottom-line {
+    width: 100% !important;
   }
   .social-icons {
     width: 100% !important;

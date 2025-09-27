@@ -203,12 +203,6 @@ html {
   border-bottom: 1px solid #f0f0f0;
   transition: background-color 0.2s ease;
 }
-@media (max-width: 991.98px) {
-  .navbar img {
-    height: 40px;
-  }
-}
-
 .dropdown-option:hover {
   background-color: #f8f9fa;
 }

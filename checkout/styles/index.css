@@ -552,6 +552,15 @@ footer a:hover {
 /* laptop responsive ends here  */
 
 /* tab responsive starts here */
+@media (max-width: 460px) {
+  .order-section .container {
+    padding: 0 !important;
+    max-width: 95% !important;
+  }
+  .navbar-container img:first-child {
+    height: 40px !important;
+  }
+}
 @media (max-width: 991px) {
   .navbar-collapse {
     background-color: white;

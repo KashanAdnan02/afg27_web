@@ -1370,3 +1370,23 @@ footer a:hover {
     font-size: 12px !important;
   }
 }
+@media (max-width: 1652px) {
+  .card-1 {
+    width: 450px !important;
+  }
+}
+@media (max-width: 1542px) {
+  .card-1 {
+    width: 400px !important;
+  }
+}
+@media (max-width: 1372px) {
+  .card-1 {
+    width: 360px !important;
+  }
+  .Amount,
+  .Custom-amount {
+    padding: 12px 10px !important;
+    font-size: 13px !important;
+  }
+}

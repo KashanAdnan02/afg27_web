@@ -1129,6 +1129,29 @@ footer a:hover {
   .story-card {
     margin-bottom: 2rem;
   }
+  #mainNavbar {
+    max-width: none !important;
+  }
+
+  .navbar-collapse {
+    background-color: white;
+    position: fixed;
+    left: 0%;
+    width: 100%;
+    top: 135px;
+    z-index: 1;
+    padding: 40px 60px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+  .navbar-nav {
+    gap: 10px !important;
+  }
+
+  .navbar-collapse div:last-child {
+    margin-left: 0 !important;
+    margin-top: 40px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1185,8 +1208,23 @@ footer a:hover {
 
 /* mobile responsive starts here */
 @media (max-width: 460px) {
+  .red,
+  .black {
+    display: none !important;
+  }
   .card-1 {
     width: 340px !important;
+  }
+  footer {
+    padding: 40px 20px !important;
+    margin-top: 0 !important;
+  }
+
+  footer .fs-48{
+    font-size: 38px;
+  }
+  footer .fs-5{
+    font-size: 1rem !important;
   }
 
   .card-1 .Amount,
@@ -1206,7 +1244,7 @@ footer a:hover {
     width: 78% !important;
   }
   .navbar-container img:first-child {
-    height: 50px !important;
+    height: 38px !important;
   }
   .btn-custom-red {
     width: fit-content !important;
@@ -1261,31 +1299,11 @@ footer a:hover {
     height: 254px !important;
   }
 
-  #mainNavbar {
-    max-width: none !important;
+  .related-videos {
+    width: 100% !important;
   }
 
-  .navbar-collapse {
-    background-color: white;
-    position: fixed;
-    left: 0%;
-    width: 100%;
-    top: 135px;
-    z-index: 1;
-    padding: 40px 60px;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
-  }
-  .navbar-nav {
-    gap: 10px !important;
-  }
-
-  .navbar-collapse div:last-child {
-    margin-left: 0 !important;
-    margin-top: 40px;
-  }
-
-  .related-videos h6{
+  .related-videos h6 {
     font-size: 14px;
   }
 }

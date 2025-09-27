@@ -153,8 +153,12 @@ body {
   background-color: #d0011c;
   color: white;
   text-align: center;
-  height: 300px;
+  /* height: 300px; */
   padding: 30px 0 0 0;
+}
+
+.cart-sec {
+  height: 300px !important;
 }
 
 .hero-section h2,

@@ -1168,9 +1168,6 @@ footer a:hover {
     margin-left: 0 !important;
     margin-top: 40px;
   }
-  .col-md-3 {
-    width: 50% !important;
-  }
 }
 
 @media (max-width: 767px) {

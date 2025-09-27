@@ -1075,6 +1075,12 @@ footer a:hover {
 
 /* tab responsive starts here */
 @media (max-width: 991px) {
+  .sign-up-btn {
+    color: black !important;
+  }
+  .sign-up-btn:hover {
+    color: white !important;
+  }
   .container {
     max-width: 90% !important;
   }

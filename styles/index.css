@@ -153,6 +153,7 @@ body {
   background-color: #d0011c;
   color: white;
   text-align: center;
+  height: 300px;
   padding: 30px 0 0 0;
 }
 
@@ -1031,6 +1032,17 @@ footer a:hover {
   color: #333333;
 }
 
+.donate-btn {
+  background: #dc2626;
+  color: #fff;
+  font-weight: 600;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+
 @media (max-width: 1280px) {
   .navbar a {
     font-size: 16px !important;
@@ -1136,10 +1148,17 @@ footer a:hover {
     margin-left: 0 !important;
     margin-top: 40px;
   }
+  .card-custom .ms-md-3 .d-flex {
+    flex-wrap: wrap !important;
+  }
 }
 
 /* mack screen responsive */
 @media (max-width: 460px) {
+  .order-section .container {
+    padding: 0 !important;
+    max-width: 95% !important;
+  }
   .card {
     max-width: 90% !important;
   }

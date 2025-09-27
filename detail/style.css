@@ -677,21 +677,251 @@ footer a:hover {
 
 @media (max-width: 1670px) {
   .top-bar {
-    font-size: 13px !important;
+    display: none !important;
+  }
+}
+@media (max-width: 1290px) {
+  .large {
+    height: fit-content !important;
+  }
+  .large .Description {
+    flex-wrap: wrap !important;
+  }
+}
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: white;
+    position: fixed;
+    left: 0%;
+    width: 100%;
+    top: 135px;
+    z-index: 1;
+    padding: 40px 60px;
+  }
+  .navbar-collapse div:last-child {
+    margin-left: 0 !important;
+    margin-top: 40px;
+  }
+  #mainNavbar {
+    max-width: 100% !important;
+  }
+  .hero-bg {
+    background-position: center;
+  }
+  .red,
+  .black {
+    display: none !important;
+  }
+  footer {
+    padding: 40px 0 !important;
+    margin-top: 40px !important;
+  }
+  .line {
+    display: none !important;
+  }
+}
+@media (max-width: 1525px) {
+  .container {
+    max-width: 95% !important;
+  }
+  .main-details {
+    width: 95% !important;
+    transform: translate(3%, 100%) !important;
+  }
+  .bg-container .container-row {
+    width: 95% !important;
+  }
+  .large {
+    width: 95% !important;
+  }
+}
+@media (max-width: 1325px) {
+  .bg-container .container-row {
+    width: 95% !important;
+    flex-direction: column !important;
+  }
+}
+@media (max-width: 760px) {
+  .footer-bottom-line {
+    width: 100% !important;
+  }
+  .social-icons {
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  footer form.w-75 {
+    flex-direction: column;
+    width: 100% !important;
+    gap: 10px;
+    padding: 10px !important;
+    margin-top: 20px !important;
+  }
+
+  footer form button.ms-2 {
+    margin: 0 !important;
+  }
+  .container1 {
+    padding: 20px 10px !important ;
+    height: fit-content;
+  }
+  .sign {
+    gap: 10px !important;
+    margin: 20px 0 !important;
+    flex-wrap: wrap !important;
+  }
+  .dollar {
+    width: 100% !important;
+    height: 50px !important;
+  }
+  .button1 {
+    flex-wrap: wrap;
+  }
+  .button1 .cart1 {
+    width: 100% !important;
+    gap: 20px;
+  }
+  .button1 .svg {
+    width: 100% !important;
+    gap: 20px;
+  }
+  .button-container {
+    height: fit-content !important;
+  }
+  .main-details .details-heading {
+    flex-direction: column;
+  }
+  .main-details .paragraph {
+    flex-direction: column;
+  }
+  .button {
+    padding: 10px 20px !important;
+  }
+  .Now {
+    padding: 10px 18px !important;
+  }
+  .Remaining,
+  .last {
+    display: none;
+  }
+  .wishlist {
+    width: 100% !important;
+    justify-content: flex-start;
+    margin-top: 20px !important;
+  }
+}
+@media (max-width: 460px) {
+  .bg-container .container-row {
+    width: 90% !important;
+  }
+  .large {
+    width: 90% !important;
+  }
+  .hero-bg {
+    background-position: center;
+  }
+  .Description {
+    gap: 40px !important  ;
+  }
+  .update-container .content3 div span:first-child {
+    font-size: 14px !important;
+  }
+  .update-container .content3 div img {
+    width: 50px !important;
+  }
+  .health-cards-container {
+    width: 90% !important;
+    margin: 0 auto !important;
+  }
+  .donate-button {
+    width: 80% !important;
+  }
+  .card-1 {
+    width: 100% !important;
+  }
+  .Amount,
+  .Custom-amount {
+    padding: 8px 8px !important;
+    font-size: 12px !important;
+  }
+  .main-details {
+    padding: 50px 30px !important;
+  }
+  .button {
+    padding: 10px 20px !important;
+  }
+  .Now {
+    padding: 10px 18px !important;
+  }
+  .Remaining,
+  .last {
+    display: none;
+  }
+  .line {
+    display: none;
+  }
+  .bg-container {
+    padding: 390px 0 40px 0 !important;
+  }
+  .container1 {
+    padding: 20px 10px !important ;
+    height: fit-content;
+  }
+  .sign {
+    gap: 10px !important;
+    margin: 20px 0 !important;
+    flex-wrap: wrap !important;
+  }
+  .dollar {
+    width: 100% !important;
+    height: 50px !important;
+  }
+  .button1 {
+    flex-wrap: wrap;
+  }
+  .button1 .cart1 {
+    width: 100% !important;
+    gap: 20px;
+  }
+  .button1 .svg {
+    width: 100% !important;
+    gap: 20px;
+  }
+  .navbar-container img:first-child {
+    height: 45px !important;
+  }
+  .button-container {
+    height: fit-content !important;
+  }
+  .coulmn {
+    height: fit-content !important;
+  }
+  .button a,
+  .Now a {
+    font-size: 16px !important;
+  }
+
+  .main-details .details-heading {
+    flex-direction: column;
+  }
+  .main-details .paragraph {
+    flex-direction: column;
   }
 }
 
-@media (max-width: 1545px) {
-  .top-bar {
-    font-size: 11.5px !important;
+@media (max-width: 532px) {
+  .container3 {
+    max-height: 470px !important;
   }
-
+}
+@media (max-width: 1545px) {
   .navbar-nav .nav-link {
     font-size: 14px !important;
   }
 
   .navbar-container img:first-child {
-    height: 50px !important;
+    height: 50px;
   }
 
   .sign-up-btn {
@@ -706,35 +936,10 @@ footer a:hover {
 }
 
 @media (max-width: 1510px) {
-  .top-bar {
-    font-size: 12px !important;
-  }
   .container {
     width: 95% !important;
   }
   .navbar-nav .nav-link {
     font-size: 16px !important;
-  }
-}
-
-@media (max-width: 1445px) {
-  .top-bar {
-    font-size: 11.5px !important;
-  }
-}
-
-@media (max-width: 1410px) {
-  .top-bar {
-    font-size: 10.5px !important;
-  }
-}
-/* laptop responsive ends here  */
-
-/* tab responsive starts here */
-@media (max-width: 991px) {
-  .top-bar {
-    height: auto;
-    font-size: 12px !important;
-    padding: 20px 0 !important;
   }
 }

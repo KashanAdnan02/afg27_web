@@ -200,6 +200,15 @@ body {
   justify-content: space-between;
 }
 
+.card {
+  width: 352px !important;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 500px;
+}
+
 .card-body {
   padding: 30px 0 0 0 !important;
 }
@@ -273,7 +282,9 @@ body {
 .related-videos::-webkit-scrollbar {
   display: none;
 }
-
+.card-container {
+  gap: 2rem !important;
+}
 .video-item {
   transition: all 0.3s ease;
   cursor: pointer;
@@ -609,9 +620,57 @@ footer a:hover {
   .video-section .col-lg-4 {
     width: 100%;
   }
+  .red,
+  .black {
+    display: none !important;
+  }
+  footer {
+    margin-top: 0 !important;
+    padding: 40px 0 !important;
+  }
+  .related-videos {
+    display: none !important;
+  }
+  .navbar-collapse {
+    background-color: white;
+    position: fixed;
+    left: 0%;
+    width: 100%;
+    top: 135px;
+    z-index: 1;
+    padding: 40px 60px;
+  }
+  .sign-in-btn,
+  .sign-up-btn {
+    display: block !important;
+  }
+  .sign-up-btn {
+    color: black !important;
+  }
+  .sign-up-btn:hover{
+    color: white !important;
+  }
+  #mainNavbar {
+    max-width: none !important;
+  }
+  .navbar-collapse div:last-child {
+    margin-left: 0 !important;
+    margin-top: 40px;
+  }
 }
 
 /* mack screen responsive */
+@media (max-width: 460px) {
+  .card {
+    max-width: 90% !important;
+  }
+  .navbar-brand img {
+    max-height: 40px !important;
+  }
+  .story-card {
+    width: 450px !important;
+  }
+}
 
 @media (max-width: 1670px) {
   .card {
@@ -649,15 +708,6 @@ footer a:hover {
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 2rem;
-  }
-
-  .card {
-    width: 320px !important;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    height: 500px;
   }
 
   .media-center-container {

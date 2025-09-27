@@ -876,6 +876,7 @@ footer a:hover {
     height: 70px !important;
   }
 }
+
 @media (max-width: 1893px) {
   .btn-donate {
     padding: 13px 13px !important;
@@ -1150,6 +1151,10 @@ footer a:hover {
     max-width: none !important;
   }
 
+  .navbar-nav {
+    gap: 10px !important;
+  }
+  
   .navbar-collapse {
     background-color: white;
     position: fixed;
@@ -1159,10 +1164,6 @@ footer a:hover {
     z-index: 1;
     padding: 40px 60px;
   }
-  .navbar-nav {
-    gap: 10px !important;
-  }
-
   .navbar-collapse div:last-child {
     margin-left: 0 !important;
     margin-top: 40px;

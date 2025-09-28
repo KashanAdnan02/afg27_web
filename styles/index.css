@@ -77,7 +77,12 @@ body {
   height: auto;
   flex-shrink: 0;
 }
-
+.dropdown:hover {
+  background-color: #1f1f1f !important;
+}
+.dropdown {
+  transition: 0.5s !important;
+}
 .dropdown-arrow {
   transition: transform 0.3s ease;
 }
@@ -85,7 +90,6 @@ body {
 .language.active .dropdown-arrow {
   transform: rotate(180deg);
 }
-
 
 .sign-up-btn {
   padding: 14px 14px;
